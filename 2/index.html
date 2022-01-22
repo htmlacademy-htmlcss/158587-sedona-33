@@ -7,11 +7,9 @@
 </head>
   <body>
     <header class="page-header">
-	  <nav class="navigation">
-	    <ul class="navigation-list">
-		  <li class="navigation-item">
-		    <a class="navigation-link"><img class="logo" src="" alt="Логотип города Седона"></a>
-		  </li>
+	  <a class="logo-link"><img class="logo" src="" alt="Логотип города Седона"></a>   <!--класс ссылки логотипа нужен?  -->
+	  <nav class="navigation"
+	    <Ul class="navigation-list">
 		  <li class="navigation-item">
 		    <a class="navigation-link navigation-link-current">Главная</a>
 		  </li>
@@ -22,9 +20,7 @@
 		    <a class="navigation-link" href="hotels.html">Гостиницы</a>
 		  </li>
 		</ul>
-	  </nav>
-	  <nav class="navigation navigation-user">
-	    <ul class="navigation-list">
+	    <ul class="navigation-list navigation-user">
 		  <li class="navigation-item">
 		    <a class="navigation-link">
 			  <span class="visuality-hidden">
@@ -45,33 +41,32 @@
 		</ul>
 	  </nav>
     </header>
-	<main class="main-index">
+	<main class="main">
 	  <h1 class="visuality-hidden">Седона: достопимечательности, преимущества и условия жизни в городе</h1>
 	  <section class="invitation-to-sedona">
 	    <h2 class="visuality-hidden">Приглашение</h2>
+		<img class="invitation" src="" alt=""><!--будет 3 рисунка с текстом -->
+		<img class="invitation" src="" alt="">
+		<img class="invitation" src="" alt="">
 	  </section>
-	  <article class="sedona">
-	    <h2 class="visuality-hidden">Всё о Седоне</h2>
-	    <header class="article-header">
-		  <span class="upper-text">
-		    Седона — небольшой городок в Аризоне,<br>заслуживающий большего!
-		  </span>
-		  <span class="bottom-text">
+	  <section class="sedona">
+	    <h2 class="sedona-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+		  <p class="sedona-text">
 		    Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!
-		  </span>
-		</header>
+		  </p>
+	  </section>	  
 		<section class="sedona-info">
 		  <ul class="sedona-info-list">
 		    <li class="sedona-info-item">
 			  <h3 class="sedona-info-title">Настоящий городок</h3>
-			  <span class="advantages-number">
+			  <span class="sedona-info-number">
 			    — №1 —
 			  </span>
 			  <p class="sedona-info-description">
 			    Седона — не аттракцион<br> для туристов, там течёт<br> своя жизнь
 			  </p>
 			</li>
-		    <li class="sedona-info-item">
+		    <li class="sedona-info-item sedona-info-item-img">
 			  <img class="img-main" src="" alt="Кафе в городке">
 			</li>
 		    <li class="sedona-info-item">
@@ -92,12 +87,12 @@
 			    Не только китайского,<br> но и настоящего местного<br> производства!
 			  </p>
 			</li>
-		    <li class="sedona-info-item">
+		    <li class="sedona-info-item sedona-info-item-img">
 			  <img class="img-main" src="" alt="Мост дьявола">
 			</li>
 		    <li class="sedona-info-item">
 			  <h3 class="sedona-info-title">Там есть<br> мост дьявола</h3>
-			  <span class="advantages-number">
+			  <span class="sedona-info-number">
 			    — №2 —
 			  </span>
 			  <p class="sedona-info-description">
@@ -106,7 +101,7 @@
 			</li>
 		    <li class="sedona-info-item">
 			  <h3 class="sedona-info-title">Небольшая<br> площадь</h3>
-			  <span class="advantages-number">
+			  <span class="sedona-info-number">
 			    — №3 —
 			  </span>
 			  <p class="sedona-info-description">
@@ -115,7 +110,7 @@
 			</li>
 		    <li class="sedona-info-item">
 			  <h3 class="sedona-info-title">Красивая<br>дорога</h3>
-			  <span class="advantages-number">
+			  <span class="sedona-info-number">
 			    — №4 —
 			  </span>
 			  <p class="sedona-info-description">
@@ -124,7 +119,7 @@
 			</li>
 		    <li class="sedona-info-item">
 			  <h3 class="sedona-info-title">Мало<br> туристов</h3>
-			  <span class="advantages-number">
+			  <span class="sedona-info-number">
 			    — №5 —
 			  </span>
 			  <p class="sedona-info-description">
@@ -133,31 +128,28 @@
 			</li>
 		  </ul>
 		</section>
-	  </article>
 	  <section class="choice-hotel">
 	   <h2 class="visuality-hidden">Поиск гостиницы по дате</h2>
-	   <span class="choice-hotel-title">
+	   <p class="choice-hotel-text">
 	     Заинтересовались?
-	   </span>
-	   <span class="choice-hotel-description">
+	   </p>
+	   <p class="choice-hotel-description">
 	     Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне
-	   </span>
-	   <a class="button button-choice-hotel" href="@">ПОИСК ГОСТИНИЦЫ В седоне</a>
+	   </p>
+	   <a class="button button-choice-hotel" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
 	  </section>
 	  <section class="mailing">
-	    <h2 class="visuality-hidden">Предложение рассылки</h2>
-		<span class="mailing-title">Подпишитесь на рассылку</span>
+		<h2 class="mailing-title">Подпишитесь на рассылку</h2>
 		<p class="mailing-description">
-		  Только полезная информация и никакого спама,<br> честное бойскаутское!
+		  Только полезная информация и никакого спама, честное бойскаутское!
 		</p>
-		<form class="e-mail" action="" method="post">
+		<form class="e-mail" action="https://echo.htmlacademy.ru" method="post">
 		  <input class="email" type="email" name="mail" placeholder="Ваш e-mail">
 		  <button class="button button-mailing" type="submit">Подписаться</button>
 		</form>
 	  </section>
 	</main>
 	<footer class="page-footer">
-	  <section class="footer-social">
 	    <h2 class="visuality-hidden">Социальные сети</h2>
 		<ul class="footer-social-list">
 		  <li class="footer-social-item">
@@ -179,19 +171,12 @@
 		   </a>	  
 		  </li>
 		</ul>
-	  </section>
-	  <section class="footer-contacts">
 	    <h2 class="visuality-hidden">Контактный телефон</h2>
-		<address class="footer-contacts-phone">
 		  <a class="contact-tel" href="tel:78128121212">+7 (812) 812-12-12</a>
-		</address>
-	  </section>
-	  <section class="footer-logo">
 	    <h2 class="visuality-hidden">Разработчик сайта</h2>
 		<a class="htmlacalemy-link" href="https://htmlacademy.ru">
 		  <img class="footer-logo" src="" alt="Логотип разработчика сайта">
 		</a>
-	  </section>
 	</footer>
   </body>
 </html>
