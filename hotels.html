@@ -10,13 +10,13 @@
 	  <nav class="navigation">
 	    <ul class="navigation-list">
 		  <li class="navigation-item">
-		    <a class="navigation-link navigation-link">Главная</a>
+		    <a class="navigation-link navigation-link" href="index.html">Главная</a>
 		  </li>
 		  <li class="navigation-item">
 		    <a class="navigation-link" href="#">О Седоне</a>
 		  </li>
 		  <li class="navigation-item">
-		    <a class="navigation-link-current" href="hotels.html">Гостиницы</a>
+		    <a class="navigation-link-current">Гостиницы</a>
 		  </li>
 		</ul>
 	    <ul class="navigation-list navigation-user">
@@ -35,7 +35,7 @@
 			</a>
 		  </li>
 		  <li class="navigation-item">
-		    <a class="navigation-link" href="hotels.html">Хочу сюда!</a>
+		    <a class="navigation-link" href="#">Хочу сюда!</a>
 		  </li>
 		</ul>
 	  </nav>
@@ -44,9 +44,7 @@
 	    <h1 class="page-title-hotels">Гостиницы Седоны</h1>
 		<ul class="breadrumbs-list">
 		  <li class="breadrumbs-item">
-		    <a class="breadrumbs-link" href="index.html">
-			  <img class="breadrumbs-to-index" src="#" alt="ссылка на главную">
-            </a>		    	  
+		    <a class="breadrumbs-link" href="index.html"></a>
 		  </li>
 		  <li class="breadrumbs-item">
 		    <a class="breadrumbs-link">Гостиницы</a>
@@ -54,7 +52,7 @@
 		</ul>
 	  <section class="choice">
 	    <h2 class="visuality-hidden">Выбор по параметрам</h2>
-		<form class="choice-hotels" action="https://echo.htmlacademy.ru" method="post">
+		<form class="choice-hotels" action="https://echo.htmlacademy.ru" method="get">
 		  <fieldset class="form-part">
 		    <legend>Инфраструктура</legend>
 			  <label>
@@ -86,67 +84,123 @@
 			  </label>
 		  </fieldset>
 		  <fieldset class="form-part-coste">
-		    <legend>Стоимость, ₽:</legend>
+		    <legend>Стоимость, ₽:</legend><!--Я понялл, что чекбоксы, радиокнопки и сам блок СТОИМОСТЬ
+должен выглядеть по другому. Попробую сам в свободное время. Думаю, урок на эту тему позже будет.
+прошу пока оставить так как у меня. Временно, конечно. А все остальные замечания устранил. И блок ПРЕИМУЩЕСТВА на главной исправил.-->
+			
+			<div class="wrapper">
+			  <div class="wrapper-cost">
+			    <input class="cost-number" type="number" id="min" placeholder="0">
+				<label for="min">от</label>
+			  </div>
+			  <div class="wrapper-cost">
+			    <input class="cost-number" type="number" id="max" placeholder="0">
+				<label for="max">от</label>
+			  </div>
+			</div>
+			  <!--
 			  <input class="number" type="number" name="min-price" placeholder="0 от">
 			  <input class="number" type="number" name="max-price" placeholder="900 до">
 			  <input type="range" min="0" max="900" name="price">
+			  -->
 		  </fieldset>
-		  <button class="button dutton-choise-hotel" type="submit">Применить</button>
-		  <button class="reset" type="button">Сбросить</button>
+		  <div><button class="button button-choise-hotel" type="submit">Применить</button></div>
+		  <div><button class="button-reset" type="reset">Сбросить</button></div>
 		</form>
 	  </section>
 	  <section class="selected-hotels">
 	    <h2 class="visuality-hidden">выбранные гостиницы</h2>
 		<span class="selected-hotels-title">Найдено гостиниц: 38</span>
-		
 		 <select class="select-control" aria-label="Сортировка">
-          <option value="popular">Сначала дешёвые</option>
+          <option value="cheap">Сначала дешёвые</option>
+          <option value="the-best">Сначала лучшие</option>
         </select>
-		<a class="view-page" href="#">
-          <span class="visuality-hidden">Показать список></span>
+		<div class="view-page">
+		<a class="view-page view-page-current" href="#"><img src="#" alt="Показать плитками">
+          <span class="visuality-hidden">Показать плитками</span>
         </a>
-        <a class="button" href="#">
-          <span class="visually-hidden">Показать карточки</span>
+		<a class="view-page view-page" href="#"><img src="#" alt="Показать слайд-шоу">
+          <span class="visuality-hidden">Показать слайд-шоу</span>
         </a>
+		<a class="view-page view-page" href="#"><img src="#" alt="Показать списком">
+          <span class="visuality-hidden">Показать списком</span>
+        </a>
+		</div>
 	  </section>
 	  <section class="selected-hotels-catalog">
-	    <ol class="selected-hotels-catalog-list">     <!--при этом важна очерёдность -->
-		  <li class="selected-hotels-catalog-item">
-		    <h3 class="selectil-hotels-catalog-title">Amara Resort & Spa</h3>
-			<img class="viev-house" src="#" alt="Amara Resort & Spa">
-			<span class="type">Гостиница</span>
-			<span class="cost">От 4000 ₽</span>
-			<a class="button button-selected-house">Подробнее</a>
-			<button class="button button-selected-house" type="button">В избранное</button>
-			<span class="rating">Рейтинг: 8,5</span>
-		  </li>
-		  <li class="selected-hotels-catalog-item">
-		    <h3 class="selectil-hotels-catalog-title">Desert Quail Inn</h3>
-			<img class="viev-house" src="#" alt="Desert Quail Inn">
-			<span class="type">Гостиница</span>
-			<span class="cost">От 3000 ₽</span>
-			<a class="button button-selected-house">Подробнее</a>
-			<button class="button button-selected-house" type="button">В избранное</button>
-			<span class="rating">Рейтинг: 8,9</span>
-		  </li>
-		  <li class="selected-hotels-catalog-item">
-		    <h3 class="selectil-hotels-catalog-title">Villas at Poco Diablo</h3>
-			<img class="viev-house" src="#" alt="Villas at Poco Diablo">
-			<span class="type">Гостиница</span>
-			<span class="cost">От 2000 ₽</span>
-			<a class="button button-selected-house">Подробнее</a>
-			<button class="button button-selected-house" type="button">В избранное</button>
-			<span class="rating">Рейтинг: 9,2</span>
-		  </li>
-		  <li class="selected-hotels-catalog-item">
-		    <h3 class="selectil-hotels-catalog-title">GreenTree Inn</h3>
-			<img class="viev-house" src="#" alt="GreenTree Inn">
-			<span class="type">Гостиница</span>
-			<span class="cost">От 3000 ₽</span>
-			<a class="button button-selected-house">Подробнее</a>
-			<button class="button button-selected-house" type="button">В избранное</button>
-			<span class="rating">Рейтинг: 9,2</span>
-		  </li>
+	    <ol class="selected-hotels-catalog-list">
+		 <li class="selected-hotels-catalog-item">
+           <h3 class="selected-hotels-catalog-title">Amara Resort & Spa</h3>
+           <div class="selected-hotels-catalog-img">
+             <img class="viev-house" src="#" alt="Amara Resort & Spa">
+           </div>
+           <div class="selected-hotels-catalog-wrapper">
+             <span class="selected-hotels-catalog-type">Гостиница</span>
+             <span class="selected-hotels-catalog-cost">От 4000 ₽</span>
+           </div>
+           <div class="selected-hotels-catalog-wrapper">
+             <a class="button button-selected-more" href="#">Подробнее</a> 
+             <a class="button button-selected-favorites" href="#">В избранное</a>
+           </div>
+          <div class="selected-hotels-catalog-wrapper">
+            <img src="#" alt="Рейтинг">
+            <span class="selected-hotels-catalog-rating">Рейтинг: 8,5</span>
+           </div>
+         </li>
+		 <li class="selected-hotels-catalog-item">
+           <h3 class="selected-hotels-catalog-title">Desert Quail Inn</h3>
+           <div class="selected-hotels-catalog-img">
+             <img class="viev-house" src="#" alt="Desert Quail Inn">
+           </div>
+           <div class="selected-hotels-catalog-wrapper">
+             <span class="selected-hotels-catalog-type">Гостиница</span>
+             <span class="selected-hotels-catalog-cost">От 3000 ₽</span>
+           </div>
+           <div class="selected-hotels-catalog-wrapper">
+             <a class="button button-selected-more" href="#">Подробнее</a> 
+             <a class="button button-selected-favorites" href="#">В избранное</a>
+           </div>
+          <div class="selected-hotels-catalog-wrapper">
+            <img src="#" alt="Рейтинг">
+            <span class="selected-hotels-catalog-rating">Рейтинг: 8,9</span>
+           </div>
+         </li>
+		 <li class="selected-hotels-catalog-item">
+           <h3 class="selected-hotels-catalog-title">Villas at Poco Diablo</h3>
+           <div class="selected-hotels-catalog-img">
+             <img class="viev-house" src="#" alt="Villas at Poco Diablo">
+           </div>
+           <div class="selected-hotels-catalog-wrapper">
+             <span class="selected-hotels-catalog-type">Гостиница</span>
+             <span class="selected-hotels-catalog-cost">От 2000 ₽</span>
+           </div>
+           <div class="selected-hotels-catalog-wrapper">
+             <a class="button button-selected-more" href="#">Подробнее</a> 
+             <a class="button button-selected-in-favorites" href="#">В избранном</a>
+           </div>
+          <div class="selected-hotels-catalog-wrapper">
+            <img src="#" alt="Рейтинг">
+            <span class="selected-hotels-catalog-rating">Рейтинг: 9,2</span>
+           </div>
+         </li>
+		 <li class="selected-hotels-catalog-item">
+           <h3 class="selected-hotels-catalog-title">GreenTree Inn</h3>
+           <div class="selected-hotels-catalog-img">
+             <img class="viev-house" src="#" alt="GreenTree Inn">
+           </div>
+           <div class="selected-hotels-catalog-wrapper">
+             <span class="selected-hotels-catalog-type">Гостиница</span>
+             <span class="selected-hotels-catalog-cost">От 3000 ₽</span>
+           </div>
+           <div class="selected-hotels-catalog-wrapper">
+             <a class="button button-selected-more" href="#">Подробнее</a> 
+             <a class="button button-selected-favorites" href="#">В избранное</a>
+           </div>
+          <div class="selected-hotels-catalog-wrapper">
+            <img src="#" alt="Рейтинг">
+            <span class="selected-hotels-catalog-rating">Рейтинг: 9,2</span>
+           </div>
+         </li>
 		</ol>
 		<button class="button button-selected-add" type="button">Загрузить ещё</button>
 	  </section>
@@ -154,26 +208,32 @@
 	    <h2 class="visuality-hidden">Пагинация</h2>
 		<ul class="pagination-list">
 		  <li class="pagination-item">
-		    <a class="pagination-link pagination-link-current">1</a>
+		    <a class="pagination-link pagination-link-current" href="#">1</a>
 		  </li>
 		  <li class="pagination-item">
-		    <a class="pagination-link">2</a>
+		    <a class="pagination-link" href="#">2</a>
 		  </li>
 		  <li class="pagination-item">
-		    <a class="pagination-link">3</a>
+		    <a class="pagination-link" href="#">3</a>
 		  </li>
 		  <li class="pagination-item">
-		    <a class="pagination-link">4</a>
+		    <a class="pagination-link" href="#">4</a>
 		  </li>
 		  <li class="pagination-item">
-		    <a class="pagination-link">...</a>
+		    <a class="pagination-link" href="#">...</a>
 		  </li>
 		  <li class="pagination-item">
-		    <a class="pagination-link">10</a>
+		    <a class="pagination-link" href="#">10</a>
 		  </li>
 		</ul>
-		<span>Гостиниц на странице:</span>
-		<button class="select" type="button">4</button>
+		<div class="quantity-in-page">
+		  <span>Гостиниц на странице:</span>
+		  <select class="select-control" aria-label="гостиниц на странице">
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+		</div>
 	  </section>
 	  <section class="mailing mailing-hotels">
 		<h2 class="mailing-title">Подпишитесь на рассылку</h2>
