@@ -55,39 +55,59 @@
 		<form class="choice-hotels" action="https://echo.htmlacademy.ru" method="get">
 		  <fieldset class="form-part">
 		    <legend>Инфраструктура</legend>
-			  <label>
-			    <input type="checkbox" name="swimming" checked>
-				Бассейн
-			  </label>
-			  <label>
-			    <input type="checkbox" name="parking" checked>
-				Парковка
-			  </label>
-			  <label>
-			    <input type="checkbox" name="wi-fi">
-				Wi-Fi
-			  </label>
+		    <ul class="filter-list">
+              <li class="filter-item">			
+			    <label>             <!--Может, это тут лишнее? -->
+			    <input class="visuality-hidden" type="checkbox" name="swimming" checked>
+				<span class="mark"></span>  <!--Тут будет стилизованный рисунок -->
+				<span class="label">Бассейн</span>
+			    </label>
+			  </li>
+              <li class="filter-item">			
+			    <label>             <!--Может, это тут лишнее? -->
+			    <input class="visuality-hidden" type="checkbox" name="parking" checked>
+				<span class="mark"></span>  <!--Тут будет стилизованный рисунок -->
+				<span class="label">Парковка</span>
+			    </label>
+			  </li>
+              <li class="filter-item">			
+			    <label>             <!--Может, это тут лишнее? -->
+			    <input class="visuality-hidden" type="checkbox" name="wi-fi">
+				<span class="mark"></span>  <!--Тут будет стилизованный рисунок -->
+				<span class="label">Wi-Fi</span>
+			    </label>
+			  </li>
+			</ul>
 		  </fieldset>
 		  <fieldset class="form-part">
 		    <legend>Тип жилья</legend>
-			  <label>
-			    <input type="radio" name="housing" value="hotel" checked>
-				Гостиница
-			  </label>
-			  <label>
-			    <input type="radio" name="housing" value="motel">
-				Мотель
-			  </label>
-			  <label>
-			    <input type="radio" name="housing" value="apartments">
-				Апартаменты
-			  </label>
+			<ul class="filter-list">
+              <li class="filter-item">
+                <label>
+                  <input class="visually-hidden" type="radio" name="housing" value="hotel">
+                  <span class="cmark"></span>
+                  <span class="label">Гостиница</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label>
+                  <input class="visually-hidden" type="radio" name="housing" value="motel">
+                  <span class="cmark"></span>
+                  <span class="label">Мотель</span>
+                </label>
+              </li>
+              <li class="filter-item">
+                <label>
+                  <input class="visually-hidden" type="radio" name="housing" value="apartments">
+                  <span class="cmark"></span>
+                  <span class="label">Апартаменты</span>
+                </label>
+              </li>
 		  </fieldset>
+		  
+		  
 		  <fieldset class="form-part-coste">
-		    <legend>Стоимость, ₽:</legend><!--Я понялл, что чекбоксы, радиокнопки и сам блок СТОИМОСТЬ
-должен выглядеть по другому. Попробую сам в свободное время. Думаю, урок на эту тему позже будет.
-прошу пока оставить так как у меня. Временно, конечно. А все остальные замечания устранил. И блок ПРЕИМУЩЕСТВА на главной исправил.-->
-			
+		    <legend>Стоимость, ₽:</legend>
 			<div class="wrapper">
 			  <div class="wrapper-cost">
 			    <input class="cost-number" type="number" id="min" placeholder="0">
@@ -98,11 +118,6 @@
 				<label for="max">от</label>
 			  </div>
 			</div>
-			  <!--
-			  <input class="number" type="number" name="min-price" placeholder="0 от">
-			  <input class="number" type="number" name="max-price" placeholder="900 до">
-			  <input type="range" min="0" max="900" name="price">
-			  -->
 		  </fieldset>
 		  <div><button class="button button-choise-hotel" type="submit">Применить</button></div>
 		  <div><button class="button-reset" type="reset">Сбросить</button></div>
