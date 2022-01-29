@@ -33,3 +33,21 @@ body {
   color: #333333;
   background-color: #e5e5e5;
 }
+
+.invitation-bg {
+	background-image: url(../images/index-background.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+.mailing {
+	background-image: url(../images/mailing-bg.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+.filter {
+	background-image: url(../images/filter-bg.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
