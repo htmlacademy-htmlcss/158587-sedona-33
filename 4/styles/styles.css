@@ -30,24 +30,101 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #333333;
-  background-color: #e5e5e5;
+  color: #333333; /*Уточнить позднее*/
+  background-color: #e5e5e5;/*Уточнить позднее*/
+}
+.button {
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	color: #ffffff;
+	background-color: #756257;
+	border: none;
+}
+.button-nav {
+	width: 160px;
+	height: 37px;
+	line-height: 20px;
+	padding: 9px 15px 8px 15px;
+}
+.page-header {
+	background-color: #ffffff;
+}
+
+.navigation-list {
+	margin: 0;
+	padding: 0;
+	width: 345px;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: 700;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.navigation-user {
+	margin: 0;
+	padding: 0;
+	width: 264px;
+}
+.invitation {
+	text-align: center;
+}
+.invintation-title {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #000000;
+}
+.invitation-description {
+	font-size: 22px;
+	line-height: 36px;
+	font-weight: 400;
+	color: #333333;
 }
 
 .invitation-bg {
-	background-image: url(../images/index-background.jpg);
+	background-image: url("../images/index-background.jpg");
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 
+.info-item {
+	width: 400px;
+}
+.info-item-full {
+	color: #ffffff;
+	background-color: #83b3d3;
+}
+.info-img: {
+	width: 800px;
+}
+
 .mailing {
-	background-image: url(../images/mailing-bg.jpg);
+	background-image: url"(../images/mailing-bg.jpg");
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 
 .filter {
-	background-image: url(../images/filter-bg.jpg);
+	background-image: url("../images/filter-bg.jpg");
 	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+.info-item-housing {
+	background-image: url("../images/housing.svg");
+	background-size: 75px 72px;
+	background-repeat: no-repeat;
+}	
+.info-item-meal {
+	background-image: url("../images/meal.svg");
+	background-size: 74px 70px;
+	background-repeat: no-repeat;
+}
+.info-item-souvenirs {
+	background-image: url("../images/souvenirs.svg");
+	background-size: 64px 76px;
 	background-repeat: no-repeat;
 }
