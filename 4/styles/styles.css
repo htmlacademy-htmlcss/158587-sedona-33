@@ -67,6 +67,8 @@ body {
 	padding: 0;
 	width: 264px;
 }
+
+
 .invitation {
 	text-align: center;
 }
@@ -83,23 +85,50 @@ body {
 	font-weight: 400;
 	color: #333333;
 }
-
 .invitation-bg {
-	background-image: url("../images/index-background.jpg");
-	background-size: 100% auto;
-	background-repeat: no-repeat;
+	background: url("..images/under-bg.svg") 100% 57px center bottom no-repeat,
+				url("../images/index-background.jpg") 100% auto no-repeat;
 }
 
-.info-item {
+
+.info-content, .info-content-inner {   
 	width: 400px;
+	color: #000000;
+	text-align: center;
+}
+.info-item {
+	color: #000000;
 }
 .info-item-full {
 	color: #ffffff;
 	background-color: #83b3d3;
 }
-.info-img: {
+.info-img {
 	width: 800px;
 }
+.info-title {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 700;
+	text-transform: uppercace;
+}
+.info-description, info-number {
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 400; /*Может это лишнее, по умлчанию?*/
+}
+
+.info-item-inner-housing {
+	background-image: url("..images/housing.svg") 75px 72px no-repeat;
+}
+.info-item-inner-meal {
+	background-image: url("..images/meal.svg") 74px 70px no-repeat;
+}
+.info-item-inner-souvenirs {
+	background-image: url("..images/souvenirs.svg") 64px 76px no-repeat;
+}
+
+
 
 .mailing {
 	background-image: url"(../images/mailing-bg.jpg");
