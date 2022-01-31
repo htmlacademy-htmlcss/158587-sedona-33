@@ -84,15 +84,31 @@ body {
 	color: #333333;
 }
 
+
 .invitation-bg {
-	background-image: url("../images/index-background.jpg");
-	background-size: 100% auto;
-	background-repeat: no-repeat;
+	background: url("..images/under-bg.svg") 100% 57px center bottom no-repeat,
+				url("../images/index-background.jpg") 100% auto no-repeat;
 }
+
+
+
+
 
 .info-item {
 	width: 400px;
 }
+
+.info-item-inner-housing {
+	background-image: url("..images/housing.svg") 75px 72px no-repeat;
+}
+.info-item-inner-meal {
+	background-image: url("..images/meal.svg") 74px 70px no-repeat;
+}
+.info-item-inner-souvenirs {
+	background-image: url("..images/souvenirs.svg") 64px 76px no-repeat;
+}
+
+
 .info-item-full {
 	color: #ffffff;
 	background-color: #83b3d3;
