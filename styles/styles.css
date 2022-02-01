@@ -40,12 +40,25 @@ body {
 	color: #ffffff;
 	background-color: #756257;
 	border: none;
+	font-style: normal;
+	color: inherit;
 }
 .button-nav {
 	width: 160px;
 	height: 37px;
 	line-height: 20px;
 	padding: 9px 15px 8px 15px;
+}
+.button-search {
+	font-size: 20px;
+	line-height: 36px;
+}
+.button-mailing {
+	font-size: 20px;
+	line-height: 26px;
+	background-color: #f2f2f2;
+	border-radius: 0 10px 10px 0;
+	
 }
 .page-header {
 	background-color: #ffffff;
@@ -91,18 +104,9 @@ body {
 }
 
 
-.info-content, .info-content-inner {   
-	width: 400px;
-	color: #000000;
-	text-align: center;
-}
-.info-item {
-	color: #000000;
-}
-.info-item-full {
-	color: #ffffff;
-	background-color: #83b3d3;
-}
+
+/* блок info - убрать потом в разметке лишние классы, если бкдкт */
+
 .info-img {
 	width: 800px;
 }
@@ -110,13 +114,27 @@ body {
 	font-size: 24px;
 	line-height: 28px;
 	font-weight: 700;
+	color: #000000;
 	text-transform: uppercace;
 }
-.info-description, info-number {
+
+
+.info-description, .info-number {
 	font-size: 18px;
 	line-height: 21px;
+	color: rgba(51, 51, 51, 1);
 	font-weight: 400; /*Может это лишнее, по умлчанию?*/
 }
+.info-wrapper {
+	color: #ffffff;
+}
+.info-list-inner, .info-item {
+	background-color: rgba(131,179, 211, 0.12);
+}
+.info-item-inner-meal {
+	background-color: #ffffff;
+}
+
 
 .info-item-inner-housing {
 	background-image: url("..images/housing.svg") 75px 72px no-repeat;
@@ -129,18 +147,6 @@ body {
 }
 
 
-
-.mailing {
-	background-image: url"(../images/mailing-bg.jpg");
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-}
-
-.filter {
-	background-image: url("../images/filter-bg.jpg");
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-}
 
 .info-item-housing {
 	background-image: url("../images/housing.svg");
@@ -157,3 +163,41 @@ body {
 	background-size: 64px 76px;
 	background-repeat: no-repeat;
 }
+
+.search {
+	background-color: #ffffff;
+	color: #000000;
+}
+.mailing {
+	background-color: rgba(131,179, 211, 0.12);
+	background-image: url"(../images/mailing-bg.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	color: #ffffff;
+}
+.search-title, .mailing-title {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
+}	
+.search-description, .mailing-description {
+	font-size: 30px;
+	line-height: 36px;
+}
+.search-description	{
+	color: rgba(51, 51, 51, 1);
+}
+.page-footer {
+	background-color: #ffffff;
+}
+
+
+
+.filter {
+	background-image: url("../images/filter-bg.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+
