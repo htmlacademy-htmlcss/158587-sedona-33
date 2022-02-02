@@ -1,0 +1,235 @@
+@font-face {  
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/pt-sans-regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/pt-sans-bold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("fonts/pt-sans-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("fonts/pt-sans-bold-italic.woff2") format("woff2");
+  font-display: swap;
+}
+body {
+  margin: 0;	
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333; /*Уточнить позднее*/
+  background-color: #e5e5e5;/*Уточнить позднее*/
+}
+.button {
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: #ffffff;
+	background-color: #756257;
+	border: none;
+	font-style: normal;
+}
+.button-nav {
+	width: 160px;
+	height: 37px;
+	line-height: 20px;
+	color: #ffffff;
+	padding: 9px 15px 8px 15px;
+}
+.button-search {
+	width: 575px;
+	height: 60px;
+	font-size: 20px;
+	line-height: 36px;
+	border-radius: 10px;
+}
+.button-mailing {
+	width: 200px;
+	height: 60px;
+	font-size: 20px;
+	line-height: 26px;
+	background-color: #83b3d3;
+	border-radius: 0 10px 10px 0;
+	
+}
+.page-header {
+	background-color: #ffffff;
+}
+/*навигация*/
+.navigation-link {
+	color: inherit;
+	text-decoration: none;
+}
+.navigation-list {
+	margin: 0;
+	padding: 0;
+	width: 345px;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: 700;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.navigation-user {
+	margin: 0;
+	padding: 0;
+	width: 264px;
+}
+
+/*приглашение*/
+.invitation {
+	text-align: center;
+}
+.invintation-title {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #000000;
+}
+.invitation-description {
+	font-size: 22px;
+	line-height: 36px;
+	font-weight: 400;
+	color: #333333;
+}
+/*
+.invitation-bg {
+	background: url("..images/under-bg.svg") 100% 57px bottom no-repeat,
+				url("../images/index-background.jpg") 100% auto no-repeat;
+}  ДВОЙНОЙ ФОН НЕ РАБОТАЕТ.   Почему????
+*/
+.invitation-bg {
+		background-image: url("../images/index-background.jpg");
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+}
+
+
+/* блок info - убрать потом в разметке лишние классы, если бкдкт */
+.info {
+	background-color: rgba(131,179, 211, 0.12);
+}
+.info-content {
+	width:400px;
+}
+.info-img {
+	width: 800px;
+}
+.info-title {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
+}
+.info-description, .info-number {
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 400; /*Может это лишнее, по умлчанию?*/
+	color: rgba(51, 51, 51, 1);
+}
+.info-wrapper .info-content{
+	color: #ffffff;
+}
+.info-item-inner-meal {
+	background-color: #ffffff;
+}
+.info-item div:nth-child(2) {
+	background-color: rgba(131,179, 211, 0.2);
+}
+
+.info-item-inner-housing {
+	background: url("..images/housing.svg") 75px 72px no-repeat;
+}
+.info-item-inner-meal {
+	background: url("..images/meal.svg") 74px 70px no-repeat;
+}
+.info-item-inner-souvenirs {
+	background: url("..images/souvenirs.svg") 64px 76px no-repeat;
+}
+
+/*поиск*/
+.search {
+	background-color: #ffffff;
+	color: #000000;
+}
+.search-title, .mailing-title {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
+}	
+.search-description, .mailing-description {
+	font-size: 22px;
+	line-height: 26px;
+}
+.search-description	{
+	color: rgba(51, 51, 51, 1);
+}
+/*подписка*/
+
+.mailing-title {
+	font-size: 30px;
+	line-height: 36px
+}
+.mailing-description{
+	font-size: 22px;
+	line-height: 26px;
+}
+.mailing-description-hotels {
+	color: rgba(51, 51, 51, 1);
+}
+.mailing-input {
+	background-color: #f2f2f2;
+	border-radius: 10px 0 0 10px;
+}
+
+.mailing-index {
+	background-color: rgba(131,179, 211, 0.12);
+	background-image: url("../images/mailing-bg.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	color: #ffffff;
+}
+.mailing-hotels {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+/*футер*/
+
+.page-footer {
+	background-color: #ffffff;
+}
+.page-footer-tel {
+	color: inherit;
+}
+
+/*вторая страница*/
+
+.filter {
+	background-image: url("../images/filter-bg.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	color: #ffffff;
+}
+
+
+
+
