@@ -108,10 +108,18 @@ body {
 	font-weight: 400;
 	color: #333333;
 }
+/*
 .invitation-bg {
-	background: url("..images/under-bg.svg") 100% 57px center bottom no-repeat,
+	background: url("..images/under-bg.svg") 100% 57px bottom no-repeat,
 				url("../images/index-background.jpg") 100% auto no-repeat;
+}  ДВОЙНОЙ ФОН НЕ РАБОТАЕТ.   Почему????
+*/
+.invitation-bg {
+		background-image: url("../images/index-background.jpg");
+		background-size: 100% auto;
+		background-repeat: no-repeat;
 }
+
 
 /* блок info - убрать потом в разметке лишние классы, если бкдкт */
 .info {
@@ -128,7 +136,7 @@ body {
 	line-height: 28px;
 	font-weight: 700;
 	color: #000000;
-	text-transform: uppercace;
+	text-transform: uppercase;
 }
 .info-description, .info-number {
 	font-size: 18px;
@@ -137,7 +145,7 @@ body {
 	color: rgba(51, 51, 51, 1);
 }
 .info-wrapper .info-content{
-	color: red/*#ffffff*/;
+	color: #ffffff;
 }
 .info-item-inner-meal {
 	background-color: #ffffff;
@@ -175,22 +183,42 @@ body {
 	color: rgba(51, 51, 51, 1);
 }
 /*подписка*/
-.mailing {
-	background-color: rgba(131,179, 211, 0.12);
-	background-image: url("../images/mailing-bg.jpg");
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	color: #ffffff;
+
+.mailing-title {
+	font-size: 30px;
+	line-height: 36px
+}
+.mailing-description{
+	font-size: 22px;
+	line-height: 26px;
+}
+.mailing-description-hotels {
+	color: rgba(51, 51, 51, 1);
 }
 .mailing-input {
 	background-color: #f2f2f2;
 	border-radius: 10px 0 0 10px;
 }
 
+.mailing-index {
+	background-color: rgba(131,179, 211, 0.12);
+	background-image: url("../images/mailing-bg.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	color: #ffffff;
+}
+.mailing-hotels {
+	color: #000000;
+	background-color: #ffffff;
+}
+
 /*футер*/
 
 .page-footer {
 	background-color: #ffffff;
+}
+.page-footer-tel {
+	color: inherit;
 }
 
 /*вторая страница*/
