@@ -63,7 +63,7 @@ body {
 .page-header {
 	background-color: #ffffff;
 }
-
+/*навигация*/
 .navigation-list {
 	margin: 0;
 	padding: 0;
@@ -81,7 +81,7 @@ body {
 	width: 264px;
 }
 
-
+/*приглашение*/
 .invitation {
 	text-align: center;
 }
@@ -103,10 +103,13 @@ body {
 				url("../images/index-background.jpg") 100% auto no-repeat;
 }
 
-
-
 /* блок info - убрать потом в разметке лишние классы, если бкдкт */
-
+.info {
+	background-color: rgba(131,179, 211, 0.12);
+}
+.info-content {
+	width:400px;
+}
 .info-img {
 	width: 800px;
 }
@@ -117,53 +120,33 @@ body {
 	color: #000000;
 	text-transform: uppercace;
 }
-
-
 .info-description, .info-number {
 	font-size: 18px;
 	line-height: 21px;
-	color: rgba(51, 51, 51, 1);
 	font-weight: 400; /*Может это лишнее, по умлчанию?*/
+	color: rgba(51, 51, 51, 1);
 }
-.info-wrapper {
-	color: #ffffff;
-}
-.info-list-inner, .info-item {
-	background-color: rgba(131,179, 211, 0.12);
+.info-wrapper .info-content{
+	color: red/*#ffffff*/;
 }
 .info-item-inner-meal {
 	background-color: #ffffff;
 }
-
+.info-item div:nth-child(2) {
+	background-color: rgba(131,179, 211, 0.2);
+}
 
 .info-item-inner-housing {
-	background-image: url("..images/housing.svg") 75px 72px no-repeat;
+	background: url("..images/housing.svg") 75px 72px no-repeat;
 }
 .info-item-inner-meal {
-	background-image: url("..images/meal.svg") 74px 70px no-repeat;
+	background: url("..images/meal.svg") 74px 70px no-repeat;
 }
 .info-item-inner-souvenirs {
-	background-image: url("..images/souvenirs.svg") 64px 76px no-repeat;
+	background: url("..images/souvenirs.svg") 64px 76px no-repeat;
 }
 
-
-
-.info-item-housing {
-	background-image: url("../images/housing.svg");
-	background-size: 75px 72px;
-	background-repeat: no-repeat;
-}	
-.info-item-meal {
-	background-image: url("../images/meal.svg");
-	background-size: 74px 70px;
-	background-repeat: no-repeat;
-}
-.info-item-souvenirs {
-	background-image: url("../images/souvenirs.svg");
-	background-size: 64px 76px;
-	background-repeat: no-repeat;
-}
-
+/*поиск и подписка*/
 .search {
 	background-color: #ffffff;
 	color: #000000;
@@ -188,16 +171,21 @@ body {
 .search-description	{
 	color: rgba(51, 51, 51, 1);
 }
+/*футер*/
+
 .page-footer {
 	background-color: #ffffff;
 }
 
-
+/*вторая страница*/
 
 .filter {
 	background-image: url("../images/filter-bg.jpg");
 	background-size: 100% auto;
 	background-repeat: no-repeat;
+	color: #ffffff;
 }
+
+
 
 
