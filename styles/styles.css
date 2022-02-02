@@ -35,28 +35,34 @@ body {
 }
 .button {
 	font-weight: 700;
+	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
 	color: #ffffff;
 	background-color: #756257;
 	border: none;
 	font-style: normal;
-	color: inherit;
 }
 .button-nav {
 	width: 160px;
 	height: 37px;
 	line-height: 20px;
+	color: #ffffff;
 	padding: 9px 15px 8px 15px;
 }
 .button-search {
+	width: 575px;
+	height: 60px;
 	font-size: 20px;
 	line-height: 36px;
+	border-radius: 10px;
 }
 .button-mailing {
+	width: 200px;
+	height: 60px;
 	font-size: 20px;
 	line-height: 26px;
-	background-color: #f2f2f2;
+	background-color: #83b3d3;
 	border-radius: 0 10px 10px 0;
 	
 }
@@ -64,6 +70,10 @@ body {
 	background-color: #ffffff;
 }
 /*навигация*/
+.navigation-link {
+	color: inherit;
+	text-decoration: none;
+}
 .navigation-list {
 	margin: 0;
 	padding: 0;
@@ -146,17 +156,10 @@ body {
 	background: url("..images/souvenirs.svg") 64px 76px no-repeat;
 }
 
-/*поиск и подписка*/
+/*поиск*/
 .search {
 	background-color: #ffffff;
 	color: #000000;
-}
-.mailing {
-	background-color: rgba(131,179, 211, 0.12);
-	background-image: url"(../images/mailing-bg.jpg");
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	color: #ffffff;
 }
 .search-title, .mailing-title {
 	font-size: 30px;
@@ -165,12 +168,25 @@ body {
 	text-transform: uppercase;
 }	
 .search-description, .mailing-description {
-	font-size: 30px;
-	line-height: 36px;
+	font-size: 22px;
+	line-height: 26px;
 }
 .search-description	{
 	color: rgba(51, 51, 51, 1);
 }
+/*подписка*/
+.mailing {
+	background-color: rgba(131,179, 211, 0.12);
+	background-image: url("../images/mailing-bg.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	color: #ffffff;
+}
+.mailing-input {
+	background-color: #f2f2f2;
+	border-radius: 10px 0 0 10px;
+}
+
 /*футер*/
 
 .page-footer {
