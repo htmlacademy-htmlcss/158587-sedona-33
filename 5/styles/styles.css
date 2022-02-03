@@ -25,15 +25,32 @@
   src: url("fonts/pt-sans-bold-italic.woff2") format("woff2");
   font-display: swap;
 }
+
+*,
+::after,
+::before {
+	box-sizing: inherit; /* А почему тут сразу не поставить BORDER-BOX ?*/
+}
+html {
+	box-sizing: border-box;
+	background-color: #e5e5e5;
+}
+
 body {
   margin: 0;	
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #333333; /*Уточнить позднее*/
-  background-color: #e5e5e5;/*Уточнить позднее*/
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 .button {
+	font-family: inherit;
 	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -41,25 +58,22 @@ body {
 	color: #ffffff;
 	background-color: #756257;
 	border: none;
-	font-style: normal;
+	display: inline-block; /*чтоб воспринимались отступы*/
 }
 .button-nav {
 	width: 160px;
-	height: 37px;
 	line-height: 20px;
 	color: #ffffff;
 	padding: 9px 15px 8px 15px;
 }
 .button-search {
 	width: 575px;
-	height: 60px;
 	font-size: 20px;
 	line-height: 36px;
 	border-radius: 10px;
 }
 .button-mailing {
 	width: 200px;
-	height: 60px;
 	font-size: 20px;
 	line-height: 26px;
 	background-color: #83b3d3;
@@ -108,20 +122,18 @@ body {
 	font-weight: 400;
 	color: #333333;
 }
-/*
+
 .invitation-bg {
-	background: url("..images/under-bg.svg") 100% 57px bottom no-repeat,
-				url("../images/index-background.jpg") 100% auto no-repeat;
-}  ДВОЙНОЙ ФОН НЕ РАБОТАЕТ.   Почему????
-*/
-.invitation-bg {
-		background-image: url("../images/index-background.jpg");
-		background-size: 100% auto;
-		background-repeat: no-repeat;
-}
+	background: url("..images/under-bg.svg"), url("../images/index-background.jpg"), 
+				url("../images/index-background.jpg");
+	background-size: 100%, cover;
+	background-color: #5a5a5a;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}  
 
 
-/* блок info - убрать потом в разметке лишние классы, если бкдкт */
+/* блок info - убрать потом в разметке лишние классы, будут */
 .info {
 	background-color: rgba(131,179, 211, 0.12);
 }
@@ -141,27 +153,35 @@ body {
 .info-description, .info-number {
 	font-size: 18px;
 	line-height: 21px;
-	font-weight: 400; /*Может это лишнее, по умлчанию?*/
+	font-weight: 400; 
 	color: rgba(51, 51, 51, 1);
 }
 .info-wrapper .info-content{
 	color: #ffffff;
+	background-color: #83b3d3;
 }
 .info-item-inner-meal {
 	background-color: #ffffff;
 }
-.info-item div:nth-child(2) {
+.info-list li:nth-child(4) {
 	background-color: rgba(131,179, 211, 0.2);
 }
 
 .info-item-inner-housing {
-	background: url("..images/housing.svg") 75px 72px no-repeat;
+	background-image: url("..images/housing.svg");
+	background-size: 75px 72px;
+	background-repeat: no-repeat;
 }
 .info-item-inner-meal {
-	background: url("..images/meal.svg") 74px 70px no-repeat;
+	background-image: url("..images/meal.svg");
+	background-size: 74px 70px;
+	background-repeat: no-repeat
+	
 }
 .info-item-inner-souvenirs {
-	background: url("..images/souvenirs.svg") 64px 76px no-repeat;
+	background: url("..images/souvenirs.svg");
+	background-size: 64px 76px;
+	background-repeat: no-repeat
 }
 
 /*поиск*/
@@ -169,13 +189,13 @@ body {
 	background-color: #ffffff;
 	color: #000000;
 }
-.search-title, .mailing-title {
+.title {
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: 700;
 	text-transform: uppercase;
 }	
-.search-description, .mailing-description {
+.description {
 	font-size: 22px;
 	line-height: 26px;
 }
@@ -203,7 +223,7 @@ body {
 .mailing-index {
 	background-color: rgba(131,179, 211, 0.12);
 	background-image: url("../images/mailing-bg.jpg");
-	background-size: 100% auto;
+	background-size: cover;
 	background-repeat: no-repeat;
 	color: #ffffff;
 }
@@ -219,6 +239,7 @@ body {
 }
 .page-footer-tel {
 	color: inherit;
+	text-decoration: none;
 }
 
 /*вторая страница*/
