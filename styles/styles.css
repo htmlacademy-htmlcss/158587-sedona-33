@@ -50,11 +50,12 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 main {
-	flex-grow: 1; /*Так ведь лучше, и сласса дополнительного не надо.*/
+	flex-grow: 1; /*Так ведь лучше, и сласса дополнительного не надо. Или я ошибаюсь?*/
 }	
 .page-wrapper {
 	width: 1200px;
 	margin: 0 auto;
+	outline: 1px solid green; /*временно*/
 }
 .list-reset {
 	margin: 0;
@@ -158,7 +159,8 @@ main {
 	background-color: rgba(131,179, 211, 0.12);
 }
 .info-content {
-	width:400px;
+	width: 400px;
+	text-align: center;
 }
 .info-img {
 	width: 800px;
@@ -260,11 +262,22 @@ main {
 /*футер*/
 
 .page-footer {
+	display: flex;
+	justify-content: space-between;
 	background-color: #ffffff;
 }
+.footer-social-list {
+	width: 107p[
+}
 .page-footer-tel {
+	width: 720px;
+}
+.page-footer-tel-link {   /*НЕ РАБОТАТ ПОЧЕМУ ???*/
 	color: inherit;
 	text-decoration: none;
+}
+.page-footer-logo {
+	width: 115px;
 }
 
 /*вторая страница*/
@@ -274,6 +287,16 @@ main {
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	color: #ffffff;
+	background-color: #83b3d3;
+}
+.result-list {
+	display: flex;
+}
+.result-item {
+	width: 340px;
+}
+.pagination-list {   /*НЕ РАБОТАЕТ ПОЧЕЬУ???*/
+	display: flex;
 }
 
 
