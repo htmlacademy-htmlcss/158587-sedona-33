@@ -2,29 +2,30 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/pt-sans-regular.woff2") format("woff2");
+  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/pt-sans-bold.woff2") format("woff2");
+  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: "PT Sans";
   font-style: italic;
   font-weight: 400;
-  src: url("fonts/pt-sans-italic.woff2") format("woff2");
+  src: url("../fonts/pt-sans-italic.woff2") format("woff2");
 }
 @font-face {
   font-family: "PT Sans";
   font-style: italic;
   font-weight: 700;
-  src: url("fonts/pt-sans-bold-italic.woff2") format("woff2");
+  src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
   font-display: swap;
 }
+/*Общие стили*/
 
 *,
 ::after,
@@ -32,17 +33,28 @@
 	box-sizing: inherit; /* А почему тут сразу не поставить BORDER-BOX ?*/
 }
 html {
+	height: 100%;
 	box-sizing: border-box;
 	background-color: #e5e5e5;
 }
 
 body {
-  margin: 0;	
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /*Почему именно min-height а не просто height?*/
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+main {
+	flex-grow: 1; /*Так ведь лучше, и сласса дополнительного не надо.*/
+}	
+.page-wrapper {
+	width: 1200px;
+	margin: 0 auto;
 }
 .list-reset {
 	margin: 0;
@@ -60,6 +72,7 @@ body {
 	border: none;
 	display: inline-block; /*чтоб воспринимались отступы*/
 }
+/*Конец общих стилей*/
 .button-nav {
 	width: 160px;
 	line-height: 20px;
@@ -81,16 +94,23 @@ body {
 	
 }
 .page-header {
+	display: flex;
+	width: 1060px;
+	margin: 0 auto;
 	background-color: #ffffff;
+	outline: 1px solid red; /*временно*/
 }
 /*навигация*/
+.navigation {
+	display: flex;
+	width: 888px;
+	margin-left: 34px;
+}
 .navigation-link {
 	color: inherit;
 	text-decoration: none;
 }
 .navigation-list {
-	margin: 0;
-	padding: 0;
 	width: 345px;
 	font-size: 20px;
 	line-height: 26px;
@@ -100,9 +120,8 @@ body {
 }
 
 .navigation-user {
-	margin: 0;
-	padding: 0;
 	width: 264px;
+	margin-left: auto;
 }
 
 /*приглашение*/
@@ -119,12 +138,11 @@ body {
 .invitation-description {
 	font-size: 22px;
 	line-height: 36px;
-	font-weight: 400;
 	color: #333333;
 }
 
 .invitation-bg {
-	background: url("..images/under-bg.svg"), url("../images/index-background.jpg"), 
+	background: url("../images/under-bg.svg"), 
 				url("../images/index-background.jpg");
 	background-size: 100%, cover;
 	background-color: #5a5a5a;
@@ -135,6 +153,8 @@ body {
 
 /* блок info - убрать потом в разметке лишние классы, будут */
 .info {
+	display: flex;
+	justify-content: space-between;
 	background-color: rgba(131,179, 211, 0.12);
 }
 .info-content {
@@ -168,24 +188,26 @@ body {
 }
 
 .info-item-inner-housing {
-	background-image: url("..images/housing.svg");
+	background-image: url("../images/housing.svg");
 	background-size: 75px 72px;
 	background-repeat: no-repeat;
 }
 .info-item-inner-meal {
-	background-image: url("..images/meal.svg");
+	background-image: url("../images/meal.svg");
 	background-size: 74px 70px;
 	background-repeat: no-repeat
 	
 }
 .info-item-inner-souvenirs {
-	background: url("..images/souvenirs.svg");
+	background: url("../images/souvenirs.svg");
 	background-size: 64px 76px;
 	background-repeat: no-repeat
 }
 
+
 /*поиск*/
 .search {
+	text-align: center;
 	background-color: #ffffff;
 	color: #000000;
 }
@@ -203,6 +225,9 @@ body {
 	color: rgba(51, 51, 51, 1);
 }
 /*подписка*/
+.mailing {
+	text-align: center;
+}
 
 .mailing-title {
 	font-size: 30px;
