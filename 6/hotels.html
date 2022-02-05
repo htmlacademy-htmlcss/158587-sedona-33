@@ -7,7 +7,7 @@
     <base href="https://htmlacademy-htmlcss.github.io/158587-sedona-33/6/">
 </head>
   <body>
-  <div class="page-wrapper">
+  <!--<div class="page-wrapper"> центровка в body-->
 	<header class="page-header">
 		<a class="page-header-logo" href="index.html">
 			<img src="images/logo.svg" width="139" height="70" alt="Логотип города Седона">
@@ -18,7 +18,7 @@
 					<a class="navigation-link" href="index.html">Главная</a>
 				</li>
 				<li class="navigation-item">
-					<a class="navigation-link" href="#">О Седоне</a>
+					<a class="navigation-link" href="#">О&nbsp;Седоне</a>
 				</li>
 				<li class="navigation-item">
 					<a class="navigation-link navigation-link-current">Гостиницы</a>
@@ -47,7 +47,8 @@
 			</ul>
 		</nav>
     </header>
-	<main class="main-hotels">
+	<main class="main main-container">
+	<div class="beginning">
 	    <h1 class="page-title">Гостиницы Седоны</h1>
 		<section class="breadrumbs">
 			<ul class="breadrumbs-list list-reset">
@@ -139,6 +140,7 @@
 					<button class="form-reset" type="reset">Сбросить</button>
 				</fieldset>
 			</form>
+		</div>
 		</section>
 		<section class="sorting">
 			<h2 class="visuality-hidden">Выбранные гостиницы</h2>
@@ -174,8 +176,8 @@
 						<span class="result-feature">От 4000 ₽</span>
 					</div>
 					<div class="result-wrapper">
-						<a class="button result-button-more" href="#">Подробнее</a> 
-						<a class="button result-button-favorites" href="#">В избранное</a>
+						<a class="button button-result-more" href="#">Подробнее</a> 
+						<a class="button button-result-favorites" href="#">В избранное</a>
 					</div>
 					<div class="result-wrapper">
 						<div class="result-stars">
@@ -194,8 +196,8 @@
 						<span class="result-feature">От 3000 ₽</span>
 					</div>
 					<div class="result-wrapper">
-						<a class="button result-button-more" href="#">Подробнее</a> 
-						<a class="button result-button-favorites" href="#">В избранное</a>
+						<a class="button button-result-more" href="#">Подробнее</a> 
+						<a class="button button-result-favorites" href="#">В избранное</a>
 					</div>
 					<div class="result-wrapper">
 						<div class="result-stars">
@@ -214,8 +216,8 @@
 						<span class="result-feature">От 2000 ₽</span>
 					</div>
 					<div class="result-wrapper">
-						<a class="button result-button-more" href="#">Подробнее</a> 
-						<a class="button result-button-favorites result-button-favorites-current" href="#">В избранном</a>
+						<a class="button button-result-more" href="#">Подробнее</a> 
+						<a class="button button-result-favorites result-button-favorites-current" href="#">В избранном</a>
 					</div>
 					<div class="result-wrapper">
 						<div class="result-stars">
@@ -234,8 +236,8 @@
 						<span class="result-feature">От 3000 ₽</span>
 					</div>
 					<div class="result-wrapper">
-						<a class="button result-button-more" href="#">Подробнее</a> 
-						<a class="button result-button-favorites" href="#">В избранное</a>
+						<a class="button button-result-more" href="#">Подробнее</a> 
+						<a class="button button-result-favorites" href="#">В избранное</a>
 					</div>
 					<div class="result-wrapper">
 						<div class="result-stars">
@@ -246,7 +248,7 @@
 				</li>
 			</ol>
 			<div class="result-more">
-				<a class="button result-button-more" href="#">Загрузить ещё</a>
+				<a class="button button-result-add" href="#">Загрузить ещё</a>
 			</div>
 		</section>
 		<section class="pagination">
@@ -313,15 +315,11 @@
 		   </a>	  
 		  </li>
 		</ul>
-		<div class="page-footer-tel">
-			<a class="page-footer-tel-link" href="tel:78128121212">+7 (812) 812-12-12</a>
-		</div>
-		<div class="page-footer-logo">
-			<a class="page-footer-logo-link" href="https://htmlacademy.ru/">
-				<img src="images/logo-academy.svg" width="115" height="33" alt="Логотип разработчика сайта">
-			</a>
-		</div>
+		<a class="page-footer-tel-link" href="tel:78128121212">+7 (812) 812-12-12</a>
+		<a class="page-footer-logo-link" href="https://htmlacademy.ru/">
+			<img src="images/logo-academy.svg" width="115" height="33" alt="Логотип разработчика сайта">
+		</a>
 	</footer>
-  </div>  	
+  <!--</div>-->  	
   </body>
 </html>

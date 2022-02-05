@@ -30,33 +30,34 @@
 *,
 ::after,
 ::before {
-	box-sizing: inherit; /* А почему тут сразу не поставить BORDER-BOX ?*/
+	box-sizing: border-box; 
 }
 html {
 	height: 100%;
-	box-sizing: border-box;
 	background-color: #e5e5e5;
 }
-
 body {
-  margin: 0;
+  margin: 0 auto;
+  width: 1200px;
   display: flex;
   flex-direction: column;
-  min-height: 100%; /*Почему именно min-height а не просто height?*/
+  min-height: 100%; 
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-main {
-	flex-grow: 1; /*Так ведь лучше, и сласса дополнительного не надо. Или я ошибаюсь?*/
-}	
+.main-container {
+	flex-grow: 1; /*Если бы не критерии, то лучше просто MAIN*/
+}
+	
 .page-wrapper {
 	width: 1200px;
 	margin: 0 auto;
 	outline: 1px solid green; /*временно*/
 }
+
 .list-reset {
 	margin: 0;
 	padding: 0;
@@ -74,6 +75,7 @@ main {
 	display: inline-block; /*чтоб воспринимались отступы*/
 }
 /*Конец общих стилей*/
+/*кнопки*/
 .button-nav {
 	width: 160px;
 	line-height: 20px;
@@ -92,27 +94,52 @@ main {
 	line-height: 26px;
 	background-color: #83b3d3;
 	border-radius: 0 10px 10px 0;
-	
 }
+.button-result-more {
+	width: 133px;
+	height: 18px;
+	font-size: 21px;
+}
+.button-result-favorites {
+	background-color: #83b3d3;
+}
+.button-result-favorites-current {
+	background-color: #70854f;
+}
+.button-result-add {
+	width: 619px;
+	height: 60px;
+	background-color: #83b3d3;
+}
+/*конец кнопок*/
+
 .page-header {
 	display: flex;
-	width: 1060px;
-	margin: 0 auto;
+	padding: 0 70px;
 	background-color: #ffffff;
 	outline: 1px solid red; /*временно*/
+}
+.page-header-logo {
+	display: inline-block;
+	width: 139px;
+	height: 70px;
 }
 /*навигация*/
 .navigation {
 	display: flex;
-	width: 888px;
 	margin-left: 34px;
+	margin-right: 70px;
 }
 .navigation-link {
-	color: inherit;
+	display: inline-block;
+	padding: 20px 17px 19px 17px;
+	margin-right: 24px;
+	color: #000000;
 	text-decoration: none;
+	outline: 1px solid blue; /*временно*/
 }
 .navigation-list {
-	width: 345px;
+	display: flex;
 	font-size: 20px;
 	line-height: 26px;
 	font-weight: 700;
@@ -121,7 +148,7 @@ main {
 }
 
 .navigation-user {
-	width: 264px;
+	display: flex;
 	margin-left: auto;
 }
 
@@ -136,7 +163,7 @@ main {
 	text-transform: uppercase;
 	color: #000000;
 }
-.invitation-description {
+.invitation-text {
 	font-size: 22px;
 	line-height: 36px;
 	color: #333333;
@@ -151,12 +178,15 @@ main {
 	background-repeat: no-repeat;
 }  
 
-
 /* блок info - убрать потом в разметке лишние классы, будут */
-.info {
+
+/* Если так, то страница почему то ломается
+.info-list {      
 	display: flex;
-	justify-content: space-between;
-	background-color: rgba(131,179, 211, 0.12);
+}
+*/
+.info-list-inner {
+	display: flex;
 }
 .info-content {
 	width: 400px;
@@ -176,20 +206,26 @@ main {
 	font-size: 18px;
 	line-height: 21px;
 	font-weight: 400; 
-	color: rgba(51, 51, 51, 1);
+	color: #333333;
 }
-.info-wrapper .info-content{
-	color: #ffffff;
+.info-wrapper .info-content{   /*блок с одним классом внутри блока с другим. ПОЧЕМУ НЕ РАБОТАЕТ??? Ведь цвет текста можно родителю задать*/
 	background-color: #83b3d3;
+	color: #ffffff;
 }
+
+
 .info-item-inner-meal {
 	background-color: #ffffff;
 }
 .info-list li:nth-child(4) {
 	background-color: rgba(131,179, 211, 0.2);
 }
+.info-list li:nth-child(3), .info-list li:nth-child(5) {
+	background-color: rgba(131,179, 211, 0.12);
+}
 
 .info-item-inner-housing {
+	background-color: rgba(131, 179, 211, 0.12);
 	background-image: url("../images/housing.svg");
 	background-size: 75px 72px;
 	background-repeat: no-repeat;
@@ -201,7 +237,8 @@ main {
 	
 }
 .info-item-inner-souvenirs {
-	background: url("../images/souvenirs.svg");
+	background-color: rgba(131, 179, 211, 0.12);
+	background-image: url("../images/souvenirs.svg");
 	background-size: 64px 76px;
 	background-repeat: no-repeat
 }
@@ -210,7 +247,6 @@ main {
 /*поиск*/
 .search {
 	text-align: center;
-	background-color: #ffffff;
 	color: #000000;
 }
 .title {
@@ -267,13 +303,13 @@ main {
 	background-color: #ffffff;
 }
 .footer-social-list {
-	width: 107p[
+	width: 107px;
 }
-.page-footer-tel {
+.page-footer-tel {   /*По макету эта ширина 720зч*/
 	width: 720px;
 }
-.page-footer-tel-link {   /*НЕ РАБОТАТ ПОЧЕМУ ???*/
-	color: inherit;
+.page-footer-tel-link {   
+	color: #000000;
 	text-decoration: none;
 }
 .page-footer-logo {
@@ -281,13 +317,24 @@ main {
 }
 
 /*вторая страница*/
+.page-title {
+	font-size: 60px;
+	line-height: #ffffff;
+	font-weight: 700;
+}
 
-.filter {
+.beginning {
 	background-image: url("../images/filter-bg.jpg");
-	background-size: 100% auto;
+	background-size: cover;
 	background-repeat: no-repeat;
 	color: #ffffff;
 	background-color: #83b3d3;
+}
+.sorting-title {
+	font-size: 30px;
+	line-height: 39px;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 .result-list {
 	display: flex;
@@ -295,8 +342,29 @@ main {
 .result-item {
 	width: 340px;
 }
+.result-title {
+	font-size: 24px;
+	line-height: 31px;
+	font-weight: 700;
+}
+.result-feature {
+	font-size: 18px;
+	line-height: 23px;
+}
+.result-rating {
+	font-size: 16px;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+
 .pagination-list {   /*НЕ РАБОТАЕТ ПОЧЕЬУ???*/
 	display: flex;
+}
+.pagination-link {
+	display: inline-block; /* а почему именно ссылкам не просто BLOCK ?*/
+}
+.pagination-item {
+	background-color: #83b3d3;
 }
 
 
