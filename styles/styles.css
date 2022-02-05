@@ -106,12 +106,18 @@ main {
 	display: flex;
 	width: 888px;
 	margin-left: 34px;
+	margin-right: 70px;
 }
 .navigation-link {
+	display: block;
+	padding: 20px 17px 19px 17px;
+	margin-right: 24px;
 	color: inherit;
 	text-decoration: none;
+	outline: 1px solid blue; /*временно*/
 }
 .navigation-list {
+	display: flex;
 	width: 345px;
 	font-size: 20px;
 	line-height: 26px;
@@ -121,8 +127,10 @@ main {
 }
 
 .navigation-user {
+	display: flex;
 	width: 264px;
 	margin-left: auto;
+	
 }
 
 /*приглашение*/
