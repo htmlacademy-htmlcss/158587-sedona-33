@@ -179,11 +179,6 @@ body {
 /*Конец приглашения*/
 /* блок info - убрать потом в разметке лишние классы, будут */
 
-/* Если так, то страница почему то ломается
-.info-list {      
-	display: flex;
-}
-*/
 .info-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -223,13 +218,10 @@ body {
 .info-wrapper .info-content{   
 	background-color: #83b3d3;
 }
-.info-item-inner-meal {
-	background-color: #ffffff;
-}
-.info-list li:nth-child(4) {
+.info-list li:nth-child(2) {
 	background-color: rgba(131,179, 211, 0.2);
 }
-.info-list li:nth-child(3), .info-list li:nth-child(5) {
+.info-list li:nth-child(1), .info-list li:nth-child(3) {
 	background-color: rgba(131,179, 211, 0.12);
 }
 
@@ -240,6 +232,7 @@ body {
 	background-repeat: no-repeat;
 }
 .info-item-inner-meal {
+	background-color: #ffffff;
 	background-image: url("../images/meal.svg");
 	background-size: 74px 70px;
 	background-repeat: no-repeat
