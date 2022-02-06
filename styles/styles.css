@@ -186,10 +186,14 @@ body {
 */
 .info-list {
 	display: flex;
+	flex-wrap: wrap;
 }
+
 .info-list-inner {
 	display: flex;
+	flex-wrap: wrap;
 }
+
 .info-content {
 	width: 400px;
 	text-align: center;
@@ -321,7 +325,7 @@ body {
 /*вторая страница*/
 .page-title {
 	font-size: 60px;
-	line-height: #ffffff;
+	line-height: 78px;
 	font-weight: 700;
 }
 .beginning {
