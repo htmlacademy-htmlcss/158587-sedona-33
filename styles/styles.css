@@ -215,6 +215,9 @@ body {
 .info-description-full {
 	color: #ffffff;
 }
+.info-wrapper {
+	background-color: #ffffff;
+}
 .info-wrapper .info-content{   
 	background-color: #83b3d3;
 }
