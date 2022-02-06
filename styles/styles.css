@@ -37,7 +37,8 @@ html {
 	background-color: #e5e5e5;
 }
 body {
-  margin: 0 auto;
+	
+  margin: 0 auto;    
   width: 1200px;
   display: flex;
   flex-direction: column;
@@ -48,11 +49,11 @@ body {
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-.main-container {
-	flex-grow: 1; /*Если бы не критерии, то лучше просто MAIN*/
+.main {
+	flex-grow: 1; /*Если бы не критерии, то лучше просто MAIN -- не класс, а тег*/
 }
 	
-.page-wrapper {
+.page-wrapper {  /*Пока закомментировал. Временно?*/
 	width: 1200px;
 	margin: 0 auto;
 	outline: 1px solid green; /*временно*/
@@ -112,7 +113,7 @@ body {
 	background-color: #83b3d3;
 }
 /*конец кнопок*/
-
+/*шапка*/
 .page-header {
 	display: flex;
 	padding: 0 70px;
@@ -146,12 +147,11 @@ body {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-
 .navigation-user {
 	display: flex;
 	margin-left: auto;
 }
-
+/*Конец шапки и навигации*/
 /*приглашение*/
 .invitation {
 	text-align: center;
@@ -168,7 +168,6 @@ body {
 	line-height: 36px;
 	color: #333333;
 }
-
 .invitation-bg {
 	background: url("../images/under-bg.svg"), 
 				url("../images/index-background.jpg");
@@ -177,7 +176,7 @@ body {
 	background-position: bottom;
 	background-repeat: no-repeat;
 }  
-
+/*Конец приглашения*/
 /* блок info - убрать потом в разметке лишние классы, будут */
 
 /* Если так, то страница почему то ломается
@@ -185,6 +184,9 @@ body {
 	display: flex;
 }
 */
+.info-list {
+	display: flex;
+}
 .info-list-inner {
 	display: flex;
 }
@@ -202,18 +204,21 @@ body {
 	color: #000000;
 	text-transform: uppercase;
 }
-.info-description, .info-number {
+.info-title-full {
+	color: #ffffff;
+}
+.info-description {
 	font-size: 18px;
 	line-height: 21px;
 	font-weight: 400; 
 	color: #333333;
 }
-.info-wrapper .info-content{   /*блок с одним классом внутри блока с другим. ПОЧЕМУ НЕ РАБОТАЕТ??? Ведь цвет текста можно родителю задать*/
-	background-color: #83b3d3;
+.info-description-full {
 	color: #ffffff;
 }
-
-
+.info-wrapper .info-content{   
+	background-color: #83b3d3;
+}
 .info-item-inner-meal {
 	background-color: #ffffff;
 }
@@ -242,8 +247,7 @@ body {
 	background-size: 64px 76px;
 	background-repeat: no-repeat
 }
-
-
+/*Конец блока info*/
 /*поиск*/
 .search {
 	text-align: center;
@@ -266,7 +270,6 @@ body {
 .mailing {
 	text-align: center;
 }
-
 .mailing-title {
 	font-size: 30px;
 	line-height: 36px
@@ -282,7 +285,6 @@ body {
 	background-color: #f2f2f2;
 	border-radius: 10px 0 0 10px;
 }
-
 .mailing-index {
 	background-color: rgba(131,179, 211, 0.12);
 	background-image: url("../images/mailing-bg.jpg");
@@ -305,15 +307,15 @@ body {
 .footer-social-list {
 	width: 107px;
 }
-.page-footer-tel {   /*По макету эта ширина 720зч*/
-	width: 720px;
-}
-.page-footer-tel-link {   
+.page-footer-tel-link {
+	display: inline-block;
+	font-size: 40px;
+	line-height: 40px;
 	color: #000000;
 	text-decoration: none;
 }
-.page-footer-logo {
-	width: 115px;
+.page-footer-logo-link {
+	display: inline-block;
 }
 
 /*вторая страница*/
@@ -322,7 +324,6 @@ body {
 	line-height: #ffffff;
 	font-weight: 700;
 }
-
 .beginning {
 	background-image: url("../images/filter-bg.jpg");
 	background-size: cover;
@@ -357,11 +358,11 @@ body {
 	text-transform: uppercase;
 }
 
-.pagination-list {   /*НЕ РАБОТАЕТ ПОЧЕЬУ???*/
+.pagination-list {  
 	display: flex;
 }
 .pagination-link {
-	display: inline-block; /* а почему именно ссылкам не просто BLOCK ?*/
+	display: inline-block; 
 }
 .pagination-item {
 	background-color: #83b3d3;
