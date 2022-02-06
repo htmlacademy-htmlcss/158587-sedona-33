@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+  <!--<div class="page-wrapper"> центровка в body-->   
     <header class="page-header">
 		<a class="page-header-logo">
 			<img src="images/logo.svg" width="139" height="70" alt="Логотип города Седона">
@@ -16,7 +17,7 @@
 					<a class="navigation-link navigation-link-current">Главная</a>
 				</li>
 				<li class="navigation-item">
-					<a class="navigation-link" href="#">О Седоне</a>
+					<a class="navigation-link" href="#">О&nbsp;Седоне</a>
 				</li>
 				<li class="navigation-item">
 					<a class="navigation-link" href="hotels.html">Гостиницы</a>
@@ -62,9 +63,9 @@
 				<li class="info-item-full">
 					<div class="info-wrapper">
 						<div class="info-content">
-							<h3 class="info-title">Настоящий городок</h3>
-							<span class="info-number">— №1 —</span>
-							<p class="info-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+							<h3 class="info-title info-title-full">Настоящий городок</h3>
+							<span class="info-description info-description-full">— №1 —</span>
+							<p class="info-description info-description-full">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
 						</div>
 						<div class="info-img">
 							<img src="images/kafe.jpg" width="800" height="384" alt="Кафе в городке">
@@ -91,38 +92,42 @@
 						</li>
 					</ul>
 				</li>
-				<li class="nfo-item-full">
+				<li class="info-item-full">
 					<div class="info-wrapper">
 						<div class="info-img">
 							<img src="images/brige-diablo.jpg" width="800" height="384" alt="Мост дьявола">
 						</div>
 						<div class="info-content">
-							<h3 class="info-title">Там есть мост дьявола</h3>
-							<span class="info-number">— №2 —</span>
-							<p class="info-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+							<h3 class="inf-title info-title-full">Там есть мост дьявола</h3>
+							<span class="info-description info-description-full">— №2 —</span>
+							<p class="info-description info-description-full">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
 						</div>    
 					</div>
 				</li>
-				<li class="info-item">
-					<div class="info-content">
-						<h3 class="info-title">Небольшая площадь</h3>
-						<span class="info-number">— №3 —</span>
-						<p class="info-description">Все достопримечательности находятся очень близко</p>
-					</div>
-				</li>
-				<li class="info-item">
-					<div class="info-content">
-						<h3 class="info-title">Красивая дорога</h3>
-						<span class="info-number">— №4 —</span>
-						<p class="info-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-					</div>
-				</li>
-				<li class="info-item">
-					<div class="info-content">
-						<h3 class="info-title">Мало туристов</h3>
-						<span class="info-number">— №5 —</span>
-						<p class="info-description">Большинство едет в Гранд Каньон и толпится там</p>
-					</div>
+				<li>
+					<ul class="info-list-inner list-reset">	
+						<li class="info-item">
+							<div class="info-content">
+								<h3 class="info-title">Небольшая площадь</h3>
+								<span class="info-description">— №3 —</span>
+								<p class="info-description">Все достопримечательности находятся очень близко</p>
+							</div>
+						</li>
+						<li class="info-item">
+							<div class="info-content">
+								<h3 class="info-title">Красивая дорога</h3>
+								<span class="info-description">— №4 —</span>
+								<p class="info-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+							</div>
+						</li>
+						<li class="info-item">
+							<div class="info-content">
+								<h3 class="info-title">Мало туристов</h3>
+								<span class="info-description">— №5 —</span>
+								<p class="info-description">Большинство едет в Гранд Каньон и толпится там</p>
+							</div>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
@@ -136,7 +141,7 @@
 			</p>
 			<a class="button button-search" href="#">Поиск гостиницы в Седоне</a>
 		</section>
-		<section class="mailing-index">
+		<section class="mailing mailing-index">
 			<h2 class="title">Подпишитесь на рассылку</h2>
 			<p class="description">
 				Только полезная информация и никакого спама, честное бойскаутское!
@@ -148,7 +153,7 @@
 		</section>
 	</main>
 	<footer class="page-footer">
-			    <h2 class="visuality-hidden">Социальные сети</h2>
+		<h2 class="visuality-hidden">Социальные сети</h2>
 		<ul class="footer-social-list list-reset">
 		  <li class="footer-social-item">
 		    <a class="footer-social-link footer-social-link-twitter" href="https://twitter.com/htmlacademy_ru">
@@ -169,10 +174,11 @@
 		   </a>	  
 		  </li>
 		</ul>
-			<a class="page-footer-tel" href="tel:78128121212">+7 (812) 812-12-12</a>
-			<a class="page-footer-htmlacalemy" href="https://htmlacademy.ru/">
-				<img src="images/logo-academy.svg" width="115" height="33" alt="Логотип разработчика сайта">
-			</a>
+		<a class="page-footer-tel-link" href="tel:78128121212">+7 (812) 812-12-12</a>
+		<a class="page-footer-logo-link" href="https://htmlacademy.ru/">
+			<img src="images/logo-academy.svg" width="115" height="33" alt="Логотип разработчика сайта">
+		</a>
 	</footer>
+  <!--</div>-->
   </body>
 </html>

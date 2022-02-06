@@ -2,48 +2,63 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/pt-sans-regular.woff2") format("woff2");
+  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/pt-sans-bold.woff2") format("woff2");
+  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: "PT Sans";
   font-style: italic;
   font-weight: 400;
-  src: url("fonts/pt-sans-italic.woff2") format("woff2");
+  src: url("../fonts/pt-sans-italic.woff2") format("woff2");
 }
 @font-face {
   font-family: "PT Sans";
   font-style: italic;
   font-weight: 700;
-  src: url("fonts/pt-sans-bold-italic.woff2") format("woff2");
+  src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
   font-display: swap;
 }
+/*Общие стили*/
 
 *,
 ::after,
 ::before {
-	box-sizing: inherit; /* А почему тут сразу не поставить BORDER-BOX ?*/
+	box-sizing: border-box; 
 }
 html {
-	box-sizing: border-box;
+	height: 100%;
 	background-color: #e5e5e5;
 }
-
 body {
-  margin: 0;	
+	
+  margin: 0 auto;    
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; 
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+.main {
+	flex-grow: 1; /*Если бы не критерии, то лучше просто MAIN -- не класс, а тег*/
+}
+	
+.page-wrapper {  /*Пока закомментировал. Временно?*/
+	width: 1200px;
+	margin: 0 auto;
+	outline: 1px solid green; /*временно*/
+}
+
 .list-reset {
 	margin: 0;
 	padding: 0;
@@ -60,6 +75,8 @@ body {
 	border: none;
 	display: inline-block; /*чтоб воспринимались отступы*/
 }
+/*Конец общих стилей*/
+/*кнопки*/
 .button-nav {
 	width: 160px;
 	line-height: 20px;
@@ -78,33 +95,63 @@ body {
 	line-height: 26px;
 	background-color: #83b3d3;
 	border-radius: 0 10px 10px 0;
-	
 }
+.button-result-more {
+	width: 133px;
+	height: 18px;
+	font-size: 21px;
+}
+.button-result-favorites {
+	background-color: #83b3d3;
+}
+.button-result-favorites-current {
+	background-color: #70854f;
+}
+.button-result-add {
+	width: 619px;
+	height: 60px;
+	background-color: #83b3d3;
+}
+/*конец кнопок*/
+/*шапка*/
 .page-header {
+	display: flex;
+	padding: 0 70px;
 	background-color: #ffffff;
+	outline: 1px solid red; /*временно*/
+}
+.page-header-logo {
+	display: inline-block;
+	width: 139px;
+	height: 70px;
 }
 /*навигация*/
+.navigation {
+	display: flex;
+	margin-left: 34px;
+	margin-right: 70px;
+}
 .navigation-link {
-	color: inherit;
+	display: inline-block;
+	padding: 20px 17px 19px 17px;
+	margin-right: 24px;
+	color: #000000;
 	text-decoration: none;
+	outline: 1px solid blue; /*временно*/
 }
 .navigation-list {
-	margin: 0;
-	padding: 0;
-	width: 345px;
+	display: flex;
 	font-size: 20px;
 	line-height: 26px;
 	font-weight: 700;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-
 .navigation-user {
-	margin: 0;
-	padding: 0;
-	width: 264px;
+	display: flex;
+	margin-left: auto;
 }
-
+/*Конец шапки и навигации*/
 /*приглашение*/
 .invitation {
 	text-align: center;
@@ -116,29 +163,35 @@ body {
 	text-transform: uppercase;
 	color: #000000;
 }
-.invitation-description {
+.invitation-text {
 	font-size: 22px;
 	line-height: 36px;
-	font-weight: 400;
 	color: #333333;
 }
-
 .invitation-bg {
-	background: url("..images/under-bg.svg"), url("../images/index-background.jpg"), 
+	background: url("../images/under-bg.svg"), 
 				url("../images/index-background.jpg");
 	background-size: 100%, cover;
 	background-color: #5a5a5a;
 	background-position: bottom;
 	background-repeat: no-repeat;
 }  
-
-
+/*Конец приглашения*/
 /* блок info - убрать потом в разметке лишние классы, будут */
-.info {
-	background-color: rgba(131,179, 211, 0.12);
+
+.info-list {
+	display: flex;
+	flex-wrap: wrap;
 }
+
+.info-list-inner {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .info-content {
-	width:400px;
+	width: 400px;
+	text-align: center;
 }
 .info-img {
 	width: 800px;
@@ -150,43 +203,54 @@ body {
 	color: #000000;
 	text-transform: uppercase;
 }
-.info-description, .info-number {
+.info-title-full {
+	color: #ffffff;
+}
+.info-description {
 	font-size: 18px;
 	line-height: 21px;
 	font-weight: 400; 
-	color: rgba(51, 51, 51, 1);
+	color: #333333;
 }
-.info-wrapper .info-content{
+.info-description-full {
 	color: #ffffff;
-	background-color: #83b3d3;
 }
-.info-item-inner-meal {
+.info-wrapper {
 	background-color: #ffffff;
 }
-.info-list li:nth-child(4) {
+.info-wrapper .info-content{   
+	background-color: #83b3d3;
+}
+.info-list li:nth-child(2) {
 	background-color: rgba(131,179, 211, 0.2);
+}
+.info-list li:nth-child(1), .info-list li:nth-child(3) {
+	background-color: rgba(131,179, 211, 0.12);
 }
 
 .info-item-inner-housing {
-	background-image: url("..images/housing.svg");
+	background-color: rgba(131, 179, 211, 0.12);
+	background-image: url("../images/housing.svg");
 	background-size: 75px 72px;
 	background-repeat: no-repeat;
 }
 .info-item-inner-meal {
-	background-image: url("..images/meal.svg");
+	background-color: #ffffff;
+	background-image: url("../images/meal.svg");
 	background-size: 74px 70px;
 	background-repeat: no-repeat
 	
 }
 .info-item-inner-souvenirs {
-	background: url("..images/souvenirs.svg");
+	background-color: rgba(131, 179, 211, 0.12);
+	background-image: url("../images/souvenirs.svg");
 	background-size: 64px 76px;
 	background-repeat: no-repeat
 }
-
+/*Конец блока info*/
 /*поиск*/
 .search {
-	background-color: #ffffff;
+	text-align: center;
 	color: #000000;
 }
 .title {
@@ -203,7 +267,9 @@ body {
 	color: rgba(51, 51, 51, 1);
 }
 /*подписка*/
-
+.mailing {
+	text-align: center;
+}
 .mailing-title {
 	font-size: 30px;
 	line-height: 36px
@@ -219,7 +285,6 @@ body {
 	background-color: #f2f2f2;
 	border-radius: 10px 0 0 10px;
 }
-
 .mailing-index {
 	background-color: rgba(131,179, 211, 0.12);
 	background-image: url("../images/mailing-bg.jpg");
@@ -235,20 +300,72 @@ body {
 /*футер*/
 
 .page-footer {
+	display: flex;
+	justify-content: space-between;
 	background-color: #ffffff;
 }
-.page-footer-tel {
-	color: inherit;
+.footer-social-list {
+	width: 107px;
+}
+.page-footer-tel-link {
+	display: inline-block;
+	font-size: 40px;
+	line-height: 40px;
+	color: #000000;
 	text-decoration: none;
+}
+.page-footer-logo-link {
+	display: inline-block;
 }
 
 /*вторая страница*/
-
-.filter {
+.page-title {
+	font-size: 60px;
+	line-height: 78px;
+	font-weight: 700;
+}
+.beginning {
 	background-image: url("../images/filter-bg.jpg");
-	background-size: 100% auto;
+	background-size: cover;
 	background-repeat: no-repeat;
 	color: #ffffff;
+	background-color: #83b3d3;
+}
+.sorting-title {
+	font-size: 30px;
+	line-height: 39px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.result-list {
+	display: flex;
+}
+.result-item {
+	width: 340px;
+}
+.result-title {
+	font-size: 24px;
+	line-height: 31px;
+	font-weight: 700;
+}
+.result-feature {
+	font-size: 18px;
+	line-height: 23px;
+}
+.result-rating {
+	font-size: 16px;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+
+.pagination-list {  
+	display: flex;
+}
+.pagination-link {
+	display: inline-block; 
+}
+.pagination-item {
+	background-color: #83b3d3;
 }
 
 
