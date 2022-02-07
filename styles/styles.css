@@ -49,8 +49,18 @@ body {
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+.visuality-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border:0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
 .main {
-	flex-grow: 1; /*Если бы не критерии, то лучше просто MAIN -- не класс, а тег*/
+	flex-grow: 1; /*Если бы не критерии, то лучше просто MAIN -- не класс, а тег ?*/
 }
 	
 .page-wrapper {  /*Пока закомментировал. Временно?*/
@@ -73,6 +83,7 @@ body {
 	color: #ffffff;
 	background-color: #756257;
 	border: none;
+	border-radius: 4px;
 	display: inline-block; /*чтоб воспринимались отступы*/
 }
 /*Конец общих стилей*/
@@ -105,7 +116,7 @@ body {
 	background-color: #83b3d3;
 }
 .button-result-favorites-current {
-	background-color: #70854f;
+	background-color: #7db54f;
 }
 .button-result-add {
 	width: 619px;
@@ -138,6 +149,9 @@ body {
 	color: #000000;
 	text-decoration: none;
 	outline: 1px solid blue; /*временно*/
+}
+.navigation-item {
+	margin-right: 24px;
 }
 .navigation-list {
 	display: flex;
@@ -215,12 +229,14 @@ body {
 .info-description-full {
 	color: #ffffff;
 }
+
 .info-wrapper {
 	background-color: #ffffff;
 }
 .info-wrapper .info-content{   
 	background-color: #83b3d3;
 }
+
 .info-list li:nth-child(2) {
 	background-color: rgba(131,179, 211, 0.2);
 }
@@ -300,13 +316,17 @@ body {
 /*футер*/
 
 .page-footer {
+	padding: 0 72px;
 	display: flex;
 	justify-content: space-between;
 	background-color: #ffffff;
 }
-.footer-social-list {
-	width: 107px;
+.footer-social-list {  /*Почему не прижимается к левому краю ?*/
+	display: flex;
 }
+.footer-social-item {
+	margin-right: 30px;
+}	
 .page-footer-tel-link {
 	display: inline-block;
 	font-size: 40px;
@@ -319,6 +339,9 @@ body {
 }
 
 /*вторая страница*/
+.wrapper-inner {
+	padding: 0 72px;
+}
 .page-title {
 	font-size: 60px;
 	line-height: 78px;
@@ -339,6 +362,8 @@ body {
 }
 .result-list {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; /*Почему к правому краю не прижимается?*/
 }
 .result-item {
 	width: 340px;
@@ -363,8 +388,6 @@ body {
 }
 .pagination-link {
 	display: inline-block; 
-}
-.pagination-item {
 	background-color: #83b3d3;
 }
 
