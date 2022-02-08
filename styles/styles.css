@@ -63,7 +63,7 @@ body {
 	flex-grow: 1; /*Если бы не критерии, то лучше просто MAIN -- не класс, а тег ?*/
 }
 	
-.page-wrapper {  /*Пока закомментировал. Временно?*/
+.page-wrapper {  /*Не нужен этот блок, если центровка через BODY ???*/
 	width: 1200px;
 	margin: 0 auto;
 	outline: 1px solid green; /*временно*/
@@ -87,6 +87,7 @@ body {
 	display: inline-block; /*чтоб воспринимались отступы*/
 }
 /*Конец общих стилей*/
+
 /*кнопки*/
 .button-nav {
 	width: 160px;
@@ -128,7 +129,6 @@ body {
 .page-header {
 	display: flex;
 	padding: 0 70px;
-	background-color: #ffffff;
 	outline: 1px solid red; /*временно*/
 }
 .page-header-logo {
@@ -166,6 +166,7 @@ body {
 	margin-left: auto;
 }
 /*Конец шапки и навигации*/
+
 /*приглашение*/
 .invitation {
 	text-align: center;
@@ -191,18 +192,16 @@ body {
 	background-repeat: no-repeat;
 }  
 /*Конец приглашения*/
-/* блок info - убрать потом в разметке лишние классы, будут */
 
+/* блок info - убрать потом в разметке лишние классы, будут */
 .info-list {
 	display: flex;
 	flex-wrap: wrap;
 }
-
 .info-list-inner {
 	display: flex;
 	flex-wrap: wrap;
 }
-
 .info-content {
 	width: 400px;
 	text-align: center;
@@ -217,8 +216,11 @@ body {
 	color: #000000;
 	text-transform: uppercase;
 }
-.info-title-full {
-	color: #ffffff;
+.info-item-full .info-title {
+	color: #000000;
+}
+.info-item-full .info-description {
+	color: #000000;
 }
 .info-description {
 	font-size: 18px;
@@ -226,17 +228,18 @@ body {
 	font-weight: 400; 
 	color: #333333;
 }
-.info-description-full {
-	color: #ffffff;
-}
-
 .info-wrapper {
+	display: flex;
+}
+.info-wrapper {   /*Должен и без этого быть белый фон. Но не работает. Почему???*/
 	background-color: #ffffff;
 }
 .info-wrapper .info-content{   
 	background-color: #83b3d3;
 }
-
+.info-wrapper img {
+	display: block;
+}
 .info-list li:nth-child(2) {
 	background-color: rgba(131,179, 211, 0.2);
 }
@@ -255,7 +258,6 @@ body {
 	background-image: url("../images/meal.svg");
 	background-size: 74px 70px;
 	background-repeat: no-repeat
-	
 }
 .info-item-inner-souvenirs {
 	background-color: rgba(131, 179, 211, 0.12);
@@ -264,6 +266,7 @@ body {
 	background-repeat: no-repeat
 }
 /*Конец блока info*/
+
 /*поиск*/
 .search {
 	text-align: center;
@@ -319,7 +322,6 @@ body {
 	padding: 0 72px;
 	display: flex;
 	justify-content: space-between;
-	background-color: #ffffff;
 }
 .footer-social-list {  /*Почему не прижимается к левому краю ?*/
 	display: flex;
