@@ -129,6 +129,7 @@ body {
 .page-header {
 	display: flex;
 	padding: 0 70px;
+	background-color: e5e5e5;
 	outline: 1px solid red; /*временно*/
 }
 .page-header-logo {
@@ -137,33 +138,49 @@ body {
 	height: 70px;
 }
 /*навигация*/
-.navigation {
+.navigation { /*Почему кнопка вылезла вправо из блока .navigation. Ведь она внутри него !*/
 	display: flex;
+	justify-content: space-between; /*Почему польз меню не прижимается вправо???*/
 	margin-left: 34px;
-	margin-right: 70px;
+	outline: 1px solid green;
 }
 .navigation-link {
 	display: inline-block;
 	padding: 20px 17px 19px 17px;
-	margin-right: 24px;
 	color: #000000;
 	text-decoration: none;
-	outline: 1px solid blue; /*временно*/
-}
-.navigation-item {
-	margin-right: 24px;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: 700;
 }
 .navigation-list {
 	display: flex;
 	font-size: 20px;
 	line-height: 26px;
 	font-weight: 700;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	align-items: center;
+	margin-right: 294px;
 }
 .navigation-user {
 	display: flex;
-	margin-left: auto;
+	margin-left: auto; /*Не прижимается вправо и так тоже. Почему?*/
+	align-items: center;
+	width: 264px;
+}
+.button-nav::after {
+	content: "12";
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color:#7db54f;
+	font-size: 10px;
+	line-height: 13px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	position: absolute;
+	top: 15px;
+	right: 380px;
 }
 /*Конец шапки и навигации*/
 
