@@ -56,7 +56,6 @@ body {
 	margin: -1px;
 	padding: 0;
 	border:0;
-	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
 .main {
@@ -103,6 +102,7 @@ body {
 }
 .button-mailing {
 	width: 200px;
+	height: 60px;
 	font-size: 20px;
 	line-height: 26px;
 	background-color: #83b3d3;
@@ -122,6 +122,9 @@ body {
 .button-result-add {
 	width: 619px;
 	height: 60px;
+	padding-top: 17px;
+	font-size: 20px;
+	line-height: 26px;
 	background-color: #83b3d3;
 }
 /*конец кнопок*/
@@ -295,6 +298,7 @@ body {
 .search {
 	text-align: center;
 	color: #000000;
+	padding: 91px 0 93px;
 }
 .title {
 	font-size: 30px;
@@ -302,29 +306,34 @@ body {
 	font-weight: 700;
 	text-transform: uppercase;
 }	
-.description {
+.search-description {
 	font-size: 22px;
 	line-height: 26px;
+	color: #333333;
 }
-.search-description	{
-	color: rgba(51, 51, 51, 1);
-}
-/*подписка*/
-.mailing {
-	text-align: center;
-}
-.mailing-title {
+
+
+.title {
 	font-size: 30px;
 	line-height: 36px
 }
-.mailing-description{
+.description {
 	font-size: 22px;
-	line-height: 26px;
+	line-height: 26px
+}	
+
+
+/*подписка*/
+.mailing {
+	text-align: center;
+	padding: 94px 0 94px;
 }
-.mailing-description-hotels {
+.mailing-description-hotels {  /*Разобраться*/
 	color: rgba(51, 51, 51, 1);
 }
 .mailing-input {
+	width: 600px;
+	height: 60px;
 	background-color: #f2f2f2;
 	border-radius: 10px 0 0 10px;
 }
@@ -335,20 +344,20 @@ body {
 	background-repeat: no-repeat;
 	color: #ffffff;
 }
-.mailing-hotels {
-	color: #000000;
-	background-color: #ffffff;
-}
 
 /*футер*/
 
 .page-footer {
-	padding: 0 72px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	padding: 40px 72px;
+	outline: 2px solid red; /*Временно*/
 }
 .footer-social-list {  /*Почему не прижимается к левому краю ?*/
 	display: flex;
+	outline: 2px solid blue;
+	
 }
 .footer-social-item {
 	margin-right: 30px;
@@ -408,13 +417,23 @@ body {
 	line-height: 21px;
 	text-transform: uppercase;
 }
+.result-more {
+	width: 619px;
+	margin: 0 auto;
+	outline: 2px solid red;
+}
 
 .pagination-list {  
 	display: flex;
+	margin-top: 60px;
+}
+.pagination-item {
+	margin-right: 8px;
 }
 .pagination-link {
 	display: inline-block; 
 	background-color: #83b3d3;
+	padding: 10px;
 }
 
 
