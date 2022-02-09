@@ -93,7 +93,7 @@ body {
 	width: 160px;
 	line-height: 20px;
 	color: #ffffff;
-	padding: 9px 15px 8px 15px;
+	padding: 9px 15px;
 }
 .button-search {
 	width: 575px;
@@ -130,7 +130,6 @@ body {
 	display: flex;
 	padding: 0 70px;
 	background-color: e5e5e5;
-	outline: 1px solid red; /*временно*/
 }
 .page-header-logo {
 	display: inline-block;
@@ -140,9 +139,10 @@ body {
 /*навигация*/
 .navigation { /*Почему кнопка вылезла вправо из блока .navigation. Ведь она внутри него !*/
 	display: flex;
-	justify-content: space-between; /*Почему польз меню не прижимается вправо???*/
+	justify-content: space-between;
+	width: 100%;
 	margin-left: 34px;
-	outline: 1px solid green;
+	outline: 2px solid red;
 }
 .navigation-link {
 	display: inline-block;
@@ -155,38 +155,33 @@ body {
 }
 .navigation-list {
 	display: flex;
+	flex-wrap: wrap; /*Для возможного добаления пунктов меню*/
+	width: 440px;
 	font-size: 20px;
 	line-height: 26px;
 	font-weight: 700;
 	align-items: center;
-	margin-right: 294px;
+	/*margin-right: 294px;*/
+	outline: 2px solid green;
 }
 .navigation-user {
 	display: flex;
 	margin-left: auto; /*Не прижимается вправо и так тоже. Почему?*/
 	align-items: center;
 	width: 264px;
-}
-.button-nav::after {
-	content: "12";
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background-color:#7db54f;
-	font-size: 10px;
-	line-height: 13px;
-	text-align: center;
-	display: table-cell;
-	vertical-align: middle;
-	position: absolute;
-	top: 15px;
-	right: 380px;
+	outline: 2px solid blue;
 }
 /*Конец шапки и навигации*/
 
 /*приглашение*/
 .invitation {
 	text-align: center;
+	padding-top: 63px;
+	padding-bottom: 80px;
+}
+.invitation-img {
+	margin-top: 51px;
+	margin-bottom: 82px;
 }
 .invintation-title {
 	font-size: 30px;
@@ -233,11 +228,20 @@ body {
 	color: #000000;
 	text-transform: uppercase;
 }
-.info-item-full .info-title {
-	color: #000000;
+.info-wrapper .info-title {
+	color: #ffffff;
 }
-.info-item-full .info-description {
-	color: #000000;
+.info-wrapper .info-description {
+	color: #ffffff;
+}
+.info-wrapper .info-content {
+	padding: 98px 0 87px;
+}
+.info-list-inner .info-content {
+	padding: 184px 0 79px;;
+}
+.info-list li:nth-child(3) .info-content { /*Это последнии 3 блочка в info*/
+	padding: 98px 0 108px;
 }
 .info-description {
 	font-size: 18px;
@@ -269,18 +273,21 @@ body {
 	background-image: url("../images/housing.svg");
 	background-size: 75px 72px;
 	background-repeat: no-repeat;
+	background-position: top 89px center;
 }
 .info-item-inner-meal {
 	background-color: #ffffff;
 	background-image: url("../images/meal.svg");
 	background-size: 74px 70px;
-	background-repeat: no-repeat
+	background-repeat: no-repeat;
+	background-position: top 91px center;
 }
 .info-item-inner-souvenirs {
 	background-color: rgba(131, 179, 211, 0.12);
 	background-image: url("../images/souvenirs.svg");
 	background-size: 64px 76px;
-	background-repeat: no-repeat
+	background-repeat: no-repeat;
+	background-position: top 85px center;
 }
 /*Конец блока info*/
 
