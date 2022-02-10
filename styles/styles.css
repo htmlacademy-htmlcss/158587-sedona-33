@@ -118,6 +118,7 @@ body {
 	height: 18px;
 	font-size: 16px;
 	line-height: 21px;
+	margin-right: 26px;
 }
 .button-result-favorites {
 	width: 141px;
@@ -140,7 +141,7 @@ body {
 .page-header {
 	display: flex;
 	padding: 0 70px;
-	background-color: e5e5e5;
+	background-color: #e5e5e5;
 }
 .page-header-logo {
 	display: inline-block;
@@ -407,7 +408,8 @@ body {
 	background-repeat: no-repeat;
 	color: #ffffff;
 	background-color: #83b3d3;
-	padding: 0 71px 83px;;
+	padding: 0 71px 83px;
+	margin-bottom: 50px;
 }
 .breadrumbs-list {
 	display: flex;
@@ -423,16 +425,46 @@ body {
 .form-part {
 	border: none;
 }
+.form-part legend {
+	font-size: 20px;
+	line-height: 26px;
+	color: inherit;
+	margin-bottom: 35px;
+}
+.filter-item {
+	margin-bottom: 13px; /* добавить, что без последнего блока*/
+}
+.sorting {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 76px;
+}
+.sorting-control {
+	width: 141px;
+	height: 23px;
+}
 .sorting-title {
 	font-size: 30px;
 	line-height: 39px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
+.sorting-link {
+	display: inline-block;
+	margin-left: 24px;
+}
 .result-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between; /*Почему к правому краю не прижимается?*/
+}
+.result-img {
+	margin-bottom: 16px;
+}
+.result-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
 }
 .result-item {
 	width: 340px;
@@ -445,6 +477,7 @@ body {
 .result-feature {
 	font-size: 18px;
 	line-height: 23px;
+	margin-right: 25px;
 }
 .result-rating {
 	font-size: 16px;
