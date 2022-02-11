@@ -71,7 +71,7 @@ body {
 .list-reset {
 	margin: 0;
 	padding: 0;
-	list-style: none;
+	list-style-type: none;
 }
 .button {
 	font-family: inherit;
@@ -141,7 +141,6 @@ body {
 .page-header {
 	display: flex;
 	padding: 0 70px;
-	background-color: #e5e5e5;
 }
 .page-header-logo {
 	display: inline-block;
@@ -372,13 +371,30 @@ body {
 	padding: 40px 72px;
 	outline: 2px solid red; /*Временно*/
 }
-.footer-social-list {  /*Почему не прижимается к левому краю ?*/
+.page-footer > a {
+	display: inline-block;
+}
+.footer-social-list {  
+	width: 230px;
+	margin-right: auto;
 	display: flex;
-	outline: 2px solid blue;
+	flex-wrap: wrap;
+	align-items: center;/*Почему не работает?*/
+	outline: 2px solid blue;/*временно*/
 	
 }
 .footer-social-item {
-	margin-right: 30px;
+	width: 56px;
+	height: 44px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	outline: 1px solid red: /*временно. Почему не работает?*/
+}
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
+}
+.footer-social-link {
+	display: block;
 }	
 .page-footer-tel-link {
 	display: inline-block;
@@ -456,7 +472,8 @@ body {
 .result-list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between; /*Почему к правому краю не прижимается?*/
+	justify-content: space-between; 
+	margin-bottom: 16px;
 }
 .result-img {
 	margin-bottom: 16px;
@@ -468,6 +485,9 @@ body {
 }
 .result-item {
 	width: 340px;
+	padding: 20px;
+	margin-bottom: 18px;
+	outline: 1px solid red;
 }
 .result-title {
 	font-size: 24px;
@@ -484,16 +504,31 @@ body {
 	line-height: 21px;
 	text-transform: uppercase;
 }
+.decor {
+	height: 0;
+	border: 1px solid #e6e6e6;
+}
 .result-more {
 	width: 619px;
-	margin: 0 auto;
+	margin: 30px auto;
 	outline: 2px solid red;
 }
-
-.pagination-list {  
+.pagination {
 	display: flex;
-	margin-top: 60px;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+	margin-bottom: 73px;
 }
+
+.pagination-list { 
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/*margin-top: 60px;*/
+}
+
 .pagination-item {
 	margin-right: 8px;
 }
