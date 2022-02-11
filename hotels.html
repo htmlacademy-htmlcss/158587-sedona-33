@@ -8,33 +8,33 @@
   <body>
   <!--<div class="page-wrapper"> центровка в body-->
 	<header class="page-header">
-		<a class="page-header-logo" href="index.html">
+			<a class="page-header-logo">
 			<img src="images/logo.svg" width="139" height="70" alt="Логотип города Седона">
 		</a>
 		<nav class="navigation">
 			<ul class="navigation-list list-reset">
 				<li class="navigation-item">
-					<a class="navigation-link" href="index.html">Главная</a>
+					<a class="navigation-link navigation-link-current">Главная</a>
 				</li>
 				<li class="navigation-item">
 					<a class="navigation-link" href="#">О&nbsp;Седоне</a>
 				</li>
 				<li class="navigation-item">
-					<a class="navigation-link navigation-link-current">Гостиницы</a>
+					<a class="navigation-link" href="hotels.html">Гостиницы</a>
 				</li>
 			</ul>
 			<ul class="navigation-user list-reset">
 				<li class="navigation-user-item">
-					<a class="navigation-user-icon navigation-user-icon-search" href="#">
-						<img src="images/search.svg" width="18" height="18" alt="">
+					<a class="navigation-link" href="#">
+						<img src="images/search.svg" width="18" height="18" alt=""> 
 						<span class="visuality-hidden">
 							Поиск  
 						</span>
 					</a>
 				</li>
 				<li class="navigation-user-item">
-					<a class="navigation-user-icon navigation-user-icon-favorites" href="#">
-						<img src="images/favorite.svg" width="20" height="20" alt="">
+					<a class="navigation-link" href="#">
+						<img src="images/favorite.svg" width="20" height="20" alt="">  
 						<span class="visuality-hidden">
 							Нравится  
 						</span>
@@ -45,10 +45,11 @@
 				</li>
 			</ul>
 		</nav>
+
     </header>
 	<main class="main">
 	<div class="beginning">
-	    <h1 class="page-title">Гостиницы Седоны</h1>
+	   <h1 class="title-hotels">Гостиницы Седоны</h1>
 		<section class="breadrumbs">
 			<ul class="breadrumbs-list list-reset">
 				<li class="breadrumbs-item">
@@ -136,7 +137,7 @@
 				</fieldset>
 				<fieldset class="form-part form-part-button">
 					<button class="button form-submit" type="submit">Применить</button>
-					<button class="form-reset" type="reset">Сбросить</button>
+					<a class="form-reset" type="reset">Сбросить</button>
 				</fieldset>
 			</form>
 		</section>	
@@ -148,7 +149,7 @@
 			<select class="sorting-control" aria-label="Сортировка">
 				<option value="cheap">Сначала дешёвые</option>
 				<option value="the-best">Сначала лучшие</option>
-			</select>
+			</select> 
 			<div class="sorting-view">
 				<a class="sorting-link sorting-link-tile sorting-view-link-current" href="#">
 					<img src="images/mode-tile.svg" alt="Показать плитками">
@@ -284,7 +285,6 @@
 				</select>
 			</div> 
 		</section>
-		
 		
 		<section class="mailing mailing-hotels">
 			<h2 class="title">Подпишитесь на рассылку</h2>

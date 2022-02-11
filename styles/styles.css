@@ -115,13 +115,14 @@ body {
 }
 .button-result-more {
 	width: 133px;
-	height: 18px;
+	height: 37px;
 	font-size: 16px;
 	line-height: 21px;
 	margin-right: 26px;
 }
 .button-result-favorites {
 	width: 141px;
+	height: 37px;
 	background-color: #83b3d3;
 }
 .button-result-favorites-current {
@@ -147,8 +148,9 @@ body {
 	width: 139px;
 	height: 70px;
 }
+
 /*навигация*/
-.navigation { /*Почему кнопка вылезла вправо из блока .navigation. Ведь она внутри него !*/
+.navigation { 
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -177,7 +179,6 @@ body {
 }
 .navigation-user {
 	display: flex;
-	margin-left: auto; /*Не прижимается вправо и так тоже. Почему?*/
 	align-items: center;
 	width: 264px;
 	outline: 2px solid blue;
@@ -328,8 +329,6 @@ body {
 	line-height: 26px;
 	color: #333333;
 }
-
-
 .title {
 	font-size: 30px;
 	line-height: 36px
@@ -339,14 +338,17 @@ body {
 	line-height: 26px
 }	
 
-
 /*подписка*/
 .mailing {
 	text-align: center;
 	padding: 94px 0 94px;
 }
-.mailing-description-hotels {  /*Разобраться*/
-	color: rgba(51, 51, 51, 1);
+.mailing-description-hotels {  
+	color: #333333;
+}
+.wrapper-inner .mailing {
+	padding: 0;
+	margin-bottom: 180px;
 }
 .mailing-input {
 	width: 600px;
@@ -376,7 +378,6 @@ body {
 }
 .footer-social-list {  
 	width: 230px;
-	margin-right: auto;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;/*Почему не работает?*/
@@ -415,8 +416,6 @@ body {
 	font-size: 60px;
 	line-height: 78px;
 	font-weight: 700;
-	margin-top: 35px;
-	margin-bottom: 5px;
 }
 .beginning {
 	background-image: url("../images/filter-bg.jpg");
@@ -424,15 +423,25 @@ body {
 	background-repeat: no-repeat;
 	color: #ffffff;
 	background-color: #83b3d3;
-	padding: 0 71px 83px;
+	padding: 35px 71px 83px;
 	margin-bottom: 50px;
+}
+.title-hotels {
+	font-size: 60px;
+	line-height: 78px;
+	font-weight: 700;
+	margin: 0;
 }
 .breadrumbs-list {
 	display: flex;
+	margin-top: 5px;
 	margin-bottom: 45px;
 }
 .breadrumbs-item {
 	margin-right: 30px;
+}
+.breadrumbs-link {
+	display: inline-block;
 }
 .form {
 	display: flex;
@@ -441,6 +450,18 @@ body {
 .form-part {
 	border: none;
 }
+.form-part > button {
+	display: block;
+}
+.form-submit {
+	width: 180px;
+	height: 48px;
+	font-size: 18px;
+	line-height: 23px;
+	margin-bottom: 20px;
+	background-color: #83b3d3;
+}
+
 .form-part legend {
 	font-size: 20px;
 	line-height: 26px;
@@ -448,7 +469,10 @@ body {
 	margin-bottom: 35px;
 }
 .filter-item {
-	margin-bottom: 13px; /* добавить, что без последнего блока*/
+	margin-bottom: 13px; 
+}
+.filter-item:last-child {
+	margin-bottom: 0;
 }
 .sorting {
 	display: flex;
@@ -531,11 +555,19 @@ body {
 
 .pagination-item {
 	margin-right: 8px;
+	background-color: #83b3d3;
 }
 .pagination-link {
-	display: inline-block; 
-	background-color: #83b3d3;
-	padding: 10px;
+	display: block;
+	text-align: center;
+	padding-top: 13px;
+	width: 55px;
+	height: 55px;
+	color: #ffffff;
+	font-weight: 700;
+	text-decoration: none;
+	
+	
 }
 
 
