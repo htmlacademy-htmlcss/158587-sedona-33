@@ -1,0 +1,575 @@
+@font-face {  
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
+  font-display: swap;
+}
+/*Общие стили*/
+
+*,
+::after,
+::before {
+	box-sizing: border-box; 
+}
+html {
+	height: 100%;
+	background-color: #e5e5e5;
+}
+body {
+	
+  margin: 0 auto;    
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; 
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.visuality-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border:0;
+	overflow: hidden;
+}
+.main {
+	flex-grow: 1; /*Если бы не критерии, то лучше просто MAIN -- не класс, а тег ?*/
+}
+	
+.page-wrapper {  /*Не нужен этот блок, если центровка через BODY ???*/
+	width: 1200px;
+	margin: 0 auto;
+	outline: 1px solid green; /*временно*/
+}
+
+.list-reset {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.button {
+	font-family: inherit;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: #ffffff;
+	background-color: #756257;
+	border: none;
+	border-radius: 4px;
+	display: inline-block; /*чтоб воспринимались отступы*/
+}
+/*Конец общих стилей*/
+
+/*кнопки*/
+.button-nav {
+	width: 160px;
+	line-height: 20px;
+	color: #ffffff;
+	padding: 9px 15px;
+}
+.button-search {
+	width: 575px;
+	font-size: 20px;
+	line-height: 36px;
+	border-radius: 10px;
+}
+.button-mailing {
+	width: 200px;
+	height: 60px;
+	font-size: 20px;
+	line-height: 26px;
+	background-color: #83b3d3;
+	border-radius: 0 10px 10px 0;
+}
+.result-list .button {
+	font-size: 16px;
+	line-height: 21px;
+	height: 18px;
+}
+.button-result-more {
+	width: 133px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 21px;
+	margin-right: 26px;
+}
+.button-result-favorites {
+	width: 141px;
+	height: 37px;
+	background-color: #83b3d3;
+}
+.button-result-favorites-current {
+	width: 141px;
+	background-color: #7db54f;
+}
+.button-result-add {
+	width: 619px;
+	height: 60px;
+	padding-top: 17px;
+	font-size: 20px;
+	line-height: 26px;
+	background-color: #83b3d3;
+}
+/*конец кнопок*/
+/*шапка*/
+.page-header {
+	display: flex;
+	padding: 0 70px;
+}
+.page-header-logo {
+	display: inline-block;
+	width: 139px;
+	height: 70px;
+}
+
+/*навигация*/
+.navigation { 
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-left: 34px;
+	outline: 2px solid red;
+}
+.navigation-link {
+	display: inline-block;
+	padding: 20px 17px 19px 17px;
+	color: #000000;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: 700;
+}
+.navigation-list {
+	display: flex;
+	flex-wrap: wrap; /*Для возможного добаления пунктов меню*/
+	width: 440px;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: 700;
+	align-items: center;
+	/*margin-right: 294px;*/
+	outline: 2px solid green;
+}
+.navigation-user {
+	display: flex;
+	align-items: center;
+	width: 264px;
+	outline: 2px solid blue;
+}
+/*Конец шапки и навигации*/
+
+/*приглашение*/
+.invitation {
+	text-align: center;
+}
+.invitation-img {
+	margin-top: 51px;
+	margin-bottom: 82px;
+}
+.invitation-title {
+	margin-top: 63px;
+	margin-bottom: 31px;
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #000000;
+}
+.invitation-text {
+	font-size: 22px;
+	line-height: 36px;
+	color: #333333;
+	margin-bottom: 80px;
+}
+.invitation-bg {
+	background: url("../images/under-bg.svg"), 
+				url("../images/index-background.jpg");
+	background-size: 100%, cover;
+	background-color: #5a5a5a;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}  
+/*Конец приглашения*/
+
+/* блок info - убрать потом в разметке лишние классы, будут */
+.info-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.info-list-inner {
+	display: flex;
+	flex-wrap: wrap;
+}
+.info-content {
+	width: 400px;
+	text-align: center;
+}
+.info-img {
+	width: 800px;
+}
+.info-title {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
+	margin-top: 97px;
+	margin-bottom: 30px;
+}
+.info-wrapper .info-number {
+	margin-bottom: 30px;
+}
+.info-wrapper .info-title {
+	color: #ffffff;
+}
+.info-wrapper .info-description {
+	color: #ffffff;
+}
+.info-description {
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 400; 
+	color: #333333;
+	margin-bottom: 87px;
+}
+.info-wrapper {
+	display: flex;
+}
+.info-wrapper {   /*Должен и без этого быть белый фон. Но не работает. Почему???*/
+	background-color: #ffffff;
+}
+.info-wrapper .info-content{   
+	background-color: #83b3d3;
+}
+.info-wrapper img {
+	display: block;
+}
+.info-list li:nth-child(2) {
+	background-color: rgba(131,179, 211, 0.2);
+}
+.info-list li:nth-child(1), .info-list li:nth-child(3) {
+	background-color: rgba(131,179, 211, 0.12);
+}
+.info-list li:nth-child(3) .info-description {
+	margin-bottom: 108px; /*Это ряд с номерами 3, 4, 5*/
+}
+.info-list-inner .info-title {
+	margin-top: 184px;
+	margin-bottom: 20px; 
+}
+
+.info-list-inner .info-description {
+	margin-bottom: 79px; 
+}
+
+.info-item-inner-housing {
+	background-color: rgba(131, 179, 211, 0.12);
+	background-image: url("../images/housing.svg");
+	background-size: 75px 72px;
+	background-repeat: no-repeat;
+	background-position: top 89px center;
+}
+.info-item-inner-meal {
+	background-color: #ffffff;
+	background-image: url("../images/meal.svg");
+	background-size: 74px 70px;
+	background-repeat: no-repeat;
+	background-position: top 91px center;
+}
+.info-item-inner-souvenirs {
+	background-color: rgba(131, 179, 211, 0.12);
+	background-image: url("../images/souvenirs.svg");
+	background-size: 64px 76px;
+	background-repeat: no-repeat;
+	background-position: top 85px center;
+}
+/*Конец блока info*/
+
+/*поиск*/
+.search {
+	text-align: center;
+	color: #000000;
+	padding: 91px 0 93px;
+}
+.title {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
+}	
+.search-description {
+	font-size: 22px;
+	line-height: 26px;
+	color: #333333;
+}
+.title {
+	font-size: 30px;
+	line-height: 36px
+}
+.description {
+	font-size: 22px;
+	line-height: 26px
+}	
+
+/*подписка*/
+.mailing {
+	text-align: center;
+	padding: 94px 0 94px;
+}
+.mailing-description-hotels {  
+	color: #333333;
+}
+.wrapper-inner .mailing {
+	padding: 0;
+	margin-bottom: 180px;
+}
+.mailing-input {
+	width: 600px;
+	height: 60px;
+	background-color: #f2f2f2;
+	border-radius: 10px 0 0 10px;
+}
+.mailing-index {
+	background-color: rgba(131,179, 211, 0.12);
+	background-image: url("../images/mailing-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #ffffff;
+}
+
+/*футер*/
+
+.page-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 72px;
+	outline: 2px solid red; /*Временно*/
+}
+.page-footer > a {
+	display: inline-block;
+}
+.footer-social-list {  
+	width: 230px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;/*Почему не работает?*/
+	outline: 2px solid blue;/*временно*/
+	
+}
+.footer-social-item {
+	width: 56px;
+	height: 44px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	outline: 1px solid red: /*временно. Почему не работает?*/
+}
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
+}
+.footer-social-link {
+	display: block;
+}	
+.page-footer-tel-link {
+	display: inline-block;
+	font-size: 40px;
+	line-height: 40px;
+	color: #000000;
+	text-decoration: none;
+}
+.page-footer-logo-link {
+	display: inline-block;
+}
+
+/*вторая страница*/
+.wrapper-inner {
+	padding: 0 72px;
+}
+.page-title {
+	font-size: 60px;
+	line-height: 78px;
+	font-weight: 700;
+}
+.beginning {
+	background-image: url("../images/filter-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #ffffff;
+	background-color: #83b3d3;
+	padding: 35px 71px 83px;
+	margin-bottom: 50px;
+}
+.title-hotels {
+	font-size: 60px;
+	line-height: 78px;
+	font-weight: 700;
+	margin: 0;
+}
+.breadrumbs-list {
+	display: flex;
+	margin-top: 5px;
+	margin-bottom: 45px;
+}
+.breadrumbs-item {
+	margin-right: 30px;
+}
+.breadrumbs-link {
+	display: inline-block;
+}
+.form {
+	display: flex;
+	justify-content: space-between;
+}
+.form-part {
+	border: none;
+}
+.form-part > button {
+	display: block;
+}
+.form-submit {
+	width: 180px;
+	height: 48px;
+	font-size: 18px;
+	line-height: 23px;
+	margin-bottom: 20px;
+	background-color: #83b3d3;
+}
+
+.form-part legend {
+	font-size: 20px;
+	line-height: 26px;
+	color: inherit;
+	margin-bottom: 35px;
+}
+.filter-item {
+	margin-bottom: 13px; 
+}
+.filter-item:last-child {
+	margin-bottom: 0;
+}
+.sorting {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 76px;
+}
+.sorting-control {
+	width: 141px;
+	height: 23px;
+}
+.sorting-title {
+	font-size: 30px;
+	line-height: 39px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.sorting-link {
+	display: inline-block;
+	margin-left: 24px;
+}
+.result-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; 
+	margin-bottom: 16px;
+}
+.result-img {
+	margin-bottom: 16px;
+}
+.result-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+.result-item {
+	width: 340px;
+	padding: 20px;
+	margin-bottom: 18px;
+	outline: 1px solid red;
+}
+.result-title {
+	font-size: 24px;
+	line-height: 31px;
+	font-weight: 700;
+}
+.result-feature {
+	font-size: 18px;
+	line-height: 23px;
+	margin-right: 25px;
+}
+.result-rating {
+	font-size: 16px;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+.decor {
+	height: 0;
+	border: 1px solid #e6e6e6;
+}
+.result-more {
+	width: 619px;
+	margin: 30px auto;
+	outline: 2px solid red;
+}
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+	margin-bottom: 73px;
+}
+
+.pagination-list { 
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/*margin-top: 60px;*/
+}
+
+.pagination-item {
+	margin-right: 8px;
+	background-color: #83b3d3;
+}
+.pagination-link {
+	display: block;
+	text-align: center;
+	padding-top: 13px;
+	width: 55px;
+	height: 55px;
+	color: #ffffff;
+	font-weight: 700;
+	text-decoration: none;
+	
+	
+}
+
+
+
+
