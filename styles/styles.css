@@ -59,15 +59,8 @@ body {
 	overflow: hidden;
 }
 .main {
-	flex-grow: 1; /*Если бы не критерии, то лучше просто MAIN -- не класс, а тег ?*/
+	flex-grow: 1; 
 }
-	
-.page-wrapper {  /*Не нужен этот блок, если центровка через BODY ???*/
-	width: 1200px;
-	margin: 0 auto;
-	outline: 1px solid green; /*временно*/
-}
-
 .list-reset {
 	margin: 0;
 	padding: 0;
