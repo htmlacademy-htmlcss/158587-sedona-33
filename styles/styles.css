@@ -378,14 +378,15 @@ body {
 	width: 56px;
 	height: 44px;
 	margin-right: 8px;
-	margin-bottom: 8px;
-	outline: 1px solid red: /*временно. Почему не работает? И почему по вертикали не в центре?*/
 }
 .footer-social-item:nth-child(3n) {
   margin-right: 0;
 }
 .footer-social-link {
-	display: block;
+	display: table-cell;
+	height: 44px;
+	vertical-align: middle;
+	outline: 1px solid red;
 }	
 .page-footer-tel-link {
 	display: inline-block;
