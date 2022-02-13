@@ -340,9 +340,9 @@ body {
 .mailing-description-hotels {  
 	color: #333333;
 }
-.wrapper-inner .mailing {
+.mailing-hotels {
 	padding: 0;
-	margin-bottom: 180px;
+	margin-bottom: 140px;
 }
 .mailing-input {
 	width: 600px;
@@ -368,7 +368,7 @@ body {
 	outline: 2px solid red; /*Временно*/
 }
 .page-footer a {
-	display: inline-block;
+	display: block;
 }
 .footer-social-list {  
 	width: 230px;
@@ -376,22 +376,19 @@ body {
 	flex-wrap: wrap;
 	align-items: center;
 	outline: 2px solid blue;/*временно*/
-	
 }
-.footer-social-link {
+.footer-social-link {      
+	display: table-cell;
 	width: 56px;
 	height: 44px;
+	text-align: center;
+	vertical-align: middle; /*Почему не центрируется ???*/
 	margin-right: 8px;
+	outline: 2px solid red; /*временно*/
 }
 .footer-social-item:nth-child(3n) {
   margin-right: 0;
 }
-.footer-social-link {
-	display: table-cell;
-	height: 44px;
-	vertical-align: middle;
-	outline: 1px solid red;
-}	
 .page-footer-tel-link {
 	display: inline-block;
 	font-size: 40px;
@@ -539,7 +536,6 @@ body {
 	border-top: 1px solid #e6e6e6;
 }
 .pagination-list { 
-	margin-right: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
