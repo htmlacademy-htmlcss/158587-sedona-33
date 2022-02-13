@@ -1,25 +1,25 @@
 @font-face {  
-  font-family: "PT Sans";
+  font-family: "ptsans";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/pt-sans-regular.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: "PT Sans";
+  font-family: "ptsans";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/pt-sans-bold.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: "PT Sans";
+  font-family: "ptsans";
   font-style: italic;
   font-weight: 400;
   src: url("../fonts/pt-sans-italic.woff2") format("woff2");
 }
 @font-face {
-  font-family: "PT Sans";
+  font-family: "ptsans";
   font-style: italic;
   font-weight: 700;
   src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
@@ -43,7 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%; 
-  font-family: "PT Sans", sans-serif;
+  font-family: "ptsana", sans-serif;
   font-size: 16px;
   line-height: 24px;
   background-color: #ffffff;
@@ -59,15 +59,8 @@ body {
 	overflow: hidden;
 }
 .main {
-	flex-grow: 1; /*Если бы не критерии, то лучше просто MAIN -- не класс, а тег ?*/
+	flex-grow: 1; 
 }
-	
-.page-wrapper {  /*Не нужен этот блок, если центровка через BODY ???*/
-	width: 1200px;
-	margin: 0 auto;
-	outline: 1px solid green; /*временно*/
-}
-
 .list-reset {
 	margin: 0;
 	padding: 0;
@@ -166,6 +159,10 @@ body {
 	line-height: 26px;
 	font-weight: 700;
 }
+.navigation-user-link {
+	display: inline-block;
+	margin-right: 23px;
+}
 .navigation-list {
 	display: flex;
 	flex-wrap: wrap; /*Для возможного добаления пунктов меню*/
@@ -174,7 +171,6 @@ body {
 	line-height: 26px;
 	font-weight: 700;
 	align-items: center;
-	/*margin-right: 294px;*/
 	outline: 2px solid green;
 }
 .navigation-user {
@@ -230,6 +226,7 @@ body {
 .info-content {
 	width: 400px;
 	text-align: center;
+	padding-top: 97px;
 }
 .info-img {
 	width: 800px;
@@ -240,7 +237,6 @@ body {
 	font-weight: 700;
 	color: #000000;
 	text-transform: uppercase;
-	margin-top: 97px;
 	margin-bottom: 30px;
 }
 .info-wrapper .info-number {
@@ -261,8 +257,6 @@ body {
 }
 .info-wrapper {
 	display: flex;
-}
-.info-wrapper {   /*Должен и без этого быть белый фон. Но не работает. Почему???*/
 	background-color: #ffffff;
 }
 .info-wrapper .info-content{   
@@ -280,15 +274,15 @@ body {
 .info-list li:nth-child(3) .info-description {
 	margin-bottom: 108px; /*Это ряд с номерами 3, 4, 5*/
 }
+.info-list-inner .info-content {
+	padding-top: 184px;
+}
 .info-list-inner .info-title {
-	margin-top: 184px;
 	margin-bottom: 20px; 
 }
-
 .info-list-inner .info-description {
 	margin-bottom: 79px; 
 }
-
 .info-item-inner-housing {
 	background-color: rgba(131, 179, 211, 0.12);
 	background-image: url("../images/housing.svg");
@@ -346,9 +340,9 @@ body {
 .mailing-description-hotels {  
 	color: #333333;
 }
-.wrapper-inner .mailing {
+.mailing-hotels {
 	padding: 0;
-	margin-bottom: 180px;
+	margin-bottom: 140px;
 }
 .mailing-input {
 	width: 600px;
@@ -373,30 +367,28 @@ body {
 	padding: 40px 72px;
 	outline: 2px solid red; /*Временно*/
 }
-.page-footer > a {
-	display: inline-block;
+.page-footer a {
+	display: block;
 }
 .footer-social-list {  
 	width: 230px;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;/*Почему не работает?*/
+	align-items: center;
 	outline: 2px solid blue;/*временно*/
-	
 }
-.footer-social-item {
+.footer-social-link {      
+	display: table-cell;
 	width: 56px;
 	height: 44px;
+	text-align: center;
+	vertical-align: middle; /*Почему не центрируется ???*/
 	margin-right: 8px;
-	margin-bottom: 8px;
-	outline: 1px solid red: /*временно. Почему не работает?*/
+	outline: 2px solid red; /*временно*/
 }
 .footer-social-item:nth-child(3n) {
   margin-right: 0;
 }
-.footer-social-link {
-	display: block;
-}	
 .page-footer-tel-link {
 	display: inline-block;
 	font-size: 40px;
@@ -461,7 +453,6 @@ body {
 	margin-bottom: 20px;
 	background-color: #83b3d3;
 }
-
 .form-part legend {
 	font-size: 20px;
 	line-height: 26px;
@@ -497,7 +488,8 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between; 
-	margin-bottom: 16px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #e6e6e6;
 }
 .result-img {
 	margin-bottom: 16px;
@@ -528,31 +520,26 @@ body {
 	line-height: 21px;
 	text-transform: uppercase;
 }
-.decor {
-	height: 0;
-	border: 1px solid #e6e6e6;
-}
 .result-more {
 	width: 619px;
 	margin: 30px auto;
-	outline: 2px solid red;
+	outline: 2px solid red;/*временно*/
 }
+
 .pagination {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 30px;
 	margin-bottom: 73px;
+	padding-top: 30px;
+	border-top: 1px solid #e6e6e6;
 }
-
 .pagination-list { 
-	margin-right: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/*margin-top: 60px;*/
 }
-
 .pagination-item {
 	margin-right: 8px;
 	background-color: #83b3d3;
@@ -561,13 +548,11 @@ body {
 	display: block;
 	text-align: center;
 	padding-top: 13px;
-	width: 55px;
-	height: 55px;
+	min-width: 55px;
+	min-height: 55px;
 	color: #ffffff;
 	font-weight: 700;
 	text-decoration: none;
-	
-	
 }
 
 

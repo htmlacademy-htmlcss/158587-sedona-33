@@ -7,26 +7,25 @@
     <base href="https://htmlacademy-htmlcss.github.io/158587-sedona-33/7/">
 </head>
   <body>
-  <!--<div class="page-wrapper"> центровка в body-->
 	<header class="page-header">
-			<a class="page-header-logo">
+			<a class="page-header-logo" href="index.html">
 			<img src="images/logo.svg" width="139" height="70" alt="Логотип города Седона">
 		</a>
 		<nav class="navigation">
 			<ul class="navigation-list list-reset">
 				<li class="navigation-item">
-					<a class="navigation-link navigation-link-current">Главная</a>
+					<a class="navigation-link" href="index.html">Главная</a>
 				</li>
 				<li class="navigation-item">
 					<a class="navigation-link" href="#">О&nbsp;Седоне</a>
 				</li>
 				<li class="navigation-item">
-					<a class="navigation-link" href="hotels.html">Гостиницы</a>
+					<a class="navigation-link navigation-link-current" href="hotels.html">Гостиницы</a>
 				</li>
 			</ul>
 			<ul class="navigation-user list-reset">
 				<li class="navigation-user-item">
-					<a class="navigation-link" href="#">
+					<a class="navigation-user-link" href="#">
 						<img src="images/search.svg" width="18" height="18" alt=""> 
 						<span class="visuality-hidden">
 							Поиск  
@@ -34,7 +33,7 @@
 					</a>
 				</li>
 				<li class="navigation-user-item">
-					<a class="navigation-link" href="#">
+					<a class="navigation-user-link" href="#">
 						<img src="images/favorite.svg" width="20" height="20" alt="">  
 						<span class="visuality-hidden">
 							Нравится  
@@ -138,7 +137,7 @@
 				</fieldset>
 				<fieldset class="form-part form-part-button">
 					<button class="button form-submit" type="submit">Применить</button>
-					<a class="form-reset" type="reset">Сбросить</button>
+					<button class="form-reset" type="reset">Сбросить</button><!--Прописать стиди -->
 				</fieldset>
 			</form>
 		</section>	
@@ -249,11 +248,9 @@
 					</div>
 				</li>
 			</ol>
-			<hr class="decor">
 			<div class="result-more">
 				<a class="button button-result-add" href="#">Загрузить ещё</a>
 			</div>
-			<hr class="decor">
 		</section>
 		<section class="pagination">
 			<h2 class="visuality-hidden">Пагинация</h2>
