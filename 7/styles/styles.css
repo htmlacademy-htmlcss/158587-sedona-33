@@ -37,7 +37,6 @@ html {
 	background-color: #e5e5e5;
 }
 body {
-	
   margin: 0 auto;    
   width: 1200px;
   display: flex;
@@ -219,10 +218,12 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .info-list-inner {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .info-content {
 	width: 400px;
 	text-align: center;
@@ -266,10 +267,14 @@ body {
 	display: block;
 }
 .info-list li:nth-child(2) {
-	background-color: rgba(131,179, 211, 0.2);
+	background-color: #ffffff;
 }
-.info-list li:nth-child(1), .info-list li:nth-child(3) {
+
+.info-list li:nth-child(4), .info-list li:nth-child(6) {
 	background-color: rgba(131,179, 211, 0.12);
+}
+.info-list li:nth-child(5) {
+	background-color:rgba(131, 179, 211, 0.2);
 }
 .info-list li:nth-child(3) .info-description {
 	margin-bottom: 108px; /*Это ряд с номерами 3, 4, 5*/
@@ -367,9 +372,6 @@ body {
 	padding: 40px 72px;
 	outline: 2px solid red; /*Временно*/
 }
-.page-footer a {
-	display: block;
-}
 .footer-social-list {  
 	width: 230px;
 	display: flex;
@@ -377,13 +379,13 @@ body {
 	align-items: center;
 	outline: 2px solid blue;/*временно*/
 }
+.footer-social-item {
+	margin-right: 29px;
+}
 .footer-social-link {      
-	display: table-cell;
 	width: 56px;
 	height: 44px;
 	text-align: center;
-	vertical-align: middle; /*Почему не центрируется ???*/
-	margin-right: 8px;
 	outline: 2px solid red; /*временно*/
 }
 .footer-social-item:nth-child(3n) {
@@ -442,7 +444,7 @@ body {
 .form-part {
 	border: none;
 }
-.form-part > button {
+.form-part-button button  {
 	display: block;
 }
 .form-submit {
@@ -453,10 +455,16 @@ body {
 	margin-bottom: 20px;
 	background-color: #83b3d3;
 }
+.form-reset {
+	border: none;
+	color: #ffffff;
+	background-color: inherit;
+	
+}
 .form-part legend {
 	font-size: 20px;
 	line-height: 26px;
-	color: inherit;
+	color: #ffffff;
 	margin-bottom: 35px;
 }
 .filter-item {
@@ -489,7 +497,6 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-between; 
 	padding-bottom: 16px;
-	border-bottom: 1px solid #e6e6e6;
 }
 .result-img {
 	margin-bottom: 16px;
@@ -523,7 +530,8 @@ body {
 .result-more {
 	width: 619px;
 	margin: 30px auto;
-	outline: 2px solid red;/*временно*/
+	border-top: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
 }
 
 .pagination {
@@ -533,7 +541,6 @@ body {
 	margin-top: 30px;
 	margin-bottom: 73px;
 	padding-top: 30px;
-	border-top: 1px solid #e6e6e6;
 }
 .pagination-list { 
 	display: flex;
@@ -542,7 +549,6 @@ body {
 }
 .pagination-item {
 	margin-right: 8px;
-	background-color: #83b3d3;
 }
 .pagination-link {
 	display: block;
@@ -550,6 +556,7 @@ body {
 	padding-top: 13px;
 	min-width: 55px;
 	min-height: 55px;
+	background-color: #83b3d3;
 	color: #ffffff;
 	font-weight: 700;
 	text-decoration: none;
