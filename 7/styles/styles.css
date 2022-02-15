@@ -122,9 +122,10 @@ body {
 	background-color: #7db54f;
 }
 .button-result-add {
+	display: block;
 	width: 619px;
-	height: 60px;
-	padding-top: 17px;
+	padding: 17px;
+	margin: 0 auto;
 	font-size: 20px;
 	line-height: 26px;
 	background-color: #83b3d3;
@@ -223,7 +224,6 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 }
-
 .info-content {
 	width: 400px;
 	text-align: center;
@@ -380,12 +380,15 @@ body {
 	outline: 2px solid blue;/*временно*/
 }
 .footer-social-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin-right: 29px;
-}
-.footer-social-link {      
 	width: 56px;
 	height: 44px;
-	text-align: center;
+	outline: 3px solid black;
+}
+.footer-social-link {      
 	outline: 2px solid red; /*временно*/
 }
 .footer-social-item:nth-child(3n) {
@@ -459,7 +462,6 @@ body {
 	border: none;
 	color: #ffffff;
 	background-color: inherit;
-	
 }
 .form-part legend {
 	font-size: 20px;
@@ -528,19 +530,18 @@ body {
 	text-transform: uppercase;
 }
 .result-more {
-	width: 619px;
-	margin: 30px auto;
+	padding: 30px 0;
 	border-top: 1px solid #e6e6e6;
 	border-bottom: 1px solid #e6e6e6;
 }
 
+/*пагинация*/
 .pagination {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 30px;
-	margin-bottom: 73px;
-	padding-top: 30px;
+	padding-top: 60px;
+	padding-bottom: 73px;
 }
 .pagination-list { 
 	display: flex;
@@ -561,7 +562,3 @@ body {
 	font-weight: 700;
 	text-decoration: none;
 }
-
-
-
-
