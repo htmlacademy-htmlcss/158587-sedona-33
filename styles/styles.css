@@ -1,12 +1,12 @@
 @font-face {  
-  font-family: "ptsans";
+  font-family: "ptsans-400.woff2";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/pt-sans-regular.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: "ptsans";
+  font-family: "ptsans-700.woff2";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/pt-sans-bold.woff2") format("woff2");
@@ -269,10 +269,15 @@ body {
 .info-list-inner .info-title {
 	margin-bottom: 20px; 
 }
-.info-list-inner .info-description {
+
+
+
+.info-item-inner .info-description {
 	margin-bottom: 79px; 
 }
-.info-item-inner-housing {
+
+
+.info-content-housing {
 	background-color: rgba(131, 179, 211, 0.12);
 	background-image: url("../images/housing.svg");
 	background-size: 75px 72px;
