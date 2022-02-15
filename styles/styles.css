@@ -12,19 +12,6 @@
   src: url("../fonts/pt-sans-bold.woff2") format("woff2");
   font-display: swap;
 }
-@font-face {
-  font-family: "ptsans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/pt-sans-italic.woff2") format("woff2");
-}
-@font-face {
-  font-family: "ptsans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
-  font-display: swap;
-}
 /*Общие стили*/
 
 *,
@@ -42,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%; 
-  font-family: "ptsana", sans-serif;
+  font-family: "ptsans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   background-color: #ffffff;
@@ -66,7 +53,7 @@ body {
 	list-style-type: none;
 }
 .button {
-	font-family: inherit;
+	font-family: "ptsans", "Arial", sans-serif;
 	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -94,7 +81,6 @@ body {
 }
 .button-mailing {
 	width: 200px;
-	height: 60px;
 	font-size: 20px;
 	line-height: 26px;
 	background-color: #83b3d3;
@@ -103,18 +89,16 @@ body {
 .result-list .button {
 	font-size: 16px;
 	line-height: 21px;
-	height: 18px;
+	padding: 9px 0 10px;
 }
 .button-result-more {
 	width: 133px;
-	height: 37px;
 	font-size: 16px;
 	line-height: 21px;
 	margin-right: 26px;
 }
 .button-result-favorites {
 	width: 141px;
-	height: 37px;
 	background-color: #83b3d3;
 }
 .button-result-favorites-current {
@@ -375,7 +359,6 @@ body {
 .footer-social-list {  
 	width: 230px;
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
 	outline: 2px solid blue;/*временно*/
 }
@@ -384,11 +367,14 @@ body {
 	align-items: center;
 	justify-content: center;
 	margin-right: 29px;
-	width: 56px;
-	height: 44px;
 	outline: 3px solid black;
 }
-.footer-social-link {      
+.footer-social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
 	outline: 2px solid red; /*временно*/
 }
 .footer-social-item:nth-child(3n) {
@@ -452,9 +438,9 @@ body {
 }
 .form-submit {
 	width: 180px;
-	height: 48px;
-	font-size: 18px;
-	line-height: 23px;
+	padding: 10px 0 10px;
+	font-size: 16x;
+	line-height: 21px;
 	margin-bottom: 20px;
 	background-color: #83b3d3;
 }
