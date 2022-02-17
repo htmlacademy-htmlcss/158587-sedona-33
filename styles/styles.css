@@ -24,25 +24,30 @@ html {
 	background-color: #e5e5e5;
 }
 body {
-  margin: 0 auto;    
-  width: 1200px;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%; 
-  font-family: "ptsans", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: #ffffff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	width: 1200px;
+	min-height: 100%;
+	margin: 0 auto;
+
+	font-size: 16px;
+	line-height: 24px;
+	font-family: "ptsans", "Arial", sans-serif;
+
+	background-color: #ffffff;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
 }
 .visuality-hidden {
 	position: absolute;
+
 	width: 1px;
 	height: 1px;
 	margin: -1px;
 	padding: 0;
-	border:0;
 	overflow: hidden;
+
+	border: 0;
 }
 .main {
 	flex-grow: 1; 
@@ -50,68 +55,83 @@ body {
 .list-reset {
 	margin: 0;
 	padding: 0;
+	
 	list-style-type: none;
 }
 .button {
-	font-family: "ptsans", "Arial", sans-serif;
+	display: inline-block; /*чтоб воспринимались отступы*/
+
 	font-weight: 700;
-	text-decoration: none;
-	text-transform: uppercase;
+	font-family: inherit;
 	text-align: center;
 	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+
 	background-color: #756257;
 	border: none;
 	border-radius: 4px;
-	display: inline-block; /*чтоб воспринимались отступы*/
 }
 /*Конец общих стилей*/
 
 /*кнопки*/
 .button-nav {
 	width: 160px;
+	padding: 9px 15px;
+
 	line-height: 20px;
 	color: #ffffff;
-	padding: 9px 15px;
 }
 .button-search {
 	width: 575px;
+	padding: 16px 20px 8px;
+
 	font-size: 20px;
 	line-height: 36px;
+
 	border-radius: 10px;
 }
 .button-mailing {
 	width: 200px;
+	padding: 19px 16px 15px;
+
 	font-size: 20px;
 	line-height: 26px;
+
 	background-color: #83b3d3;
 	border-radius: 0 10px 10px 0;
 }
 .result-list .button {
 	font-size: 16px;
 	line-height: 21px;
-	padding: 9px 0 10px;
 }
 .button-result-more {
 	width: 133px;
+	margin-right: 26px;
+
 	font-size: 16px;
 	line-height: 21px;
-	margin-right: 26px;
 }
+
 .button-result-favorites {
 	width: 141px;
+	
 	background-color: #83b3d3;
 }
 .button-result-favorites-current {
 	width: 141px;
+	
 	background-color: #7db54f;
 }
 .button-result-add {
 	display: block;
 	width: 619px;
-	padding: 17px;
 	margin: 0 auto;
+	padding: 17px;
+
 	font-size: 20px;
 	line-height: 26px;
+
 	background-color: #83b3d3;
 }
 /*конец кнопок*/
@@ -131,37 +151,52 @@ body {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	margin-left: 34px;
-	outline: 2px solid red;
+	margin-left: 47px;
+
+	outline: 2px solid red; /*временно*/
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap; /*Для возможного добаления пунктов меню*/
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+
+  outline: 2px solid green; /*временно*/
+}
+
+.navigation-item {
+	margin-right: 35px;
 }
 .navigation-link {
 	display: inline-block;
-	padding: 20px 17px 19px 17px;
+	padding: 20px 0 18px 0;
+
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 26px;
 	color: #000000;
 	text-decoration: none;
-	font-size: 20px;
-	line-height: 26px;
-	font-weight: 700;
+
+	border-bottom: 2px solid transparent; /*Для выделения акт пункта меню ??*/
 }
-.navigation-user-link {
-	display: inline-block;
-	margin-right: 23px;
+.navigation-link-current {
+	border-bottom: 2px solid #756257;
 }
-.navigation-list {
-	display: flex;
-	flex-wrap: wrap; /*Для возможного добаления пунктов меню*/
-	width: 440px;
-	font-size: 20px;
-	line-height: 26px;
-	font-weight: 700;
-	align-items: center;
-	outline: 2px solid green;
-}
+
 .navigation-user {
 	display: flex;
 	align-items: center;
-	width: 264px;
-	outline: 2px solid blue;
+	margin-left: auto;
+
+	outline: 2px solid blue; /*временно*/
+}
+
+.navigation-user-link {
+	display: inline-block;
+	margin-right: 23px;
 }
 /*Конец шапки и навигации*/
 
@@ -170,32 +205,45 @@ body {
 	text-align: center;
 }
 .invitation-img {
-	margin-top: 51px;
-	margin-bottom: 82px;
+  display: block;
+  width: 458px;
+  height: 352px;
+  margin: 0 auto;
 }
+
+.invitation-description {
+  width: 700px;
+  margin: 0 auto;
+  padding: 38px 0 58px;
+}
+
 .invitation-title {
-	margin-top: 63px;
-	margin-bottom: 31px;
-	font-size: 30px;
-	line-height: 36px;
-	font-weight: 700;
-	text-transform: uppercase;
-	color: #000000;
+  margin-bottom: 31px;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  text-transform: uppercase;
 }
 .invitation-text {
-	font-size: 22px;
-	line-height: 36px;
-	color: #333333;
-	margin-bottom: 80px;
+  margin-top: 0;
+
+  font-size: 22px;
+  line-height: 36px;
+  color: #333333;
 }
 .invitation-bg {
-	background: url("../images/under-bg.svg"), 
-				url("../images/index-background.jpg");
-	background-size: 100%, cover;
-	background-color: #5a5a5a;
-	background-position: bottom;
-	background-repeat: no-repeat;
-}  
+  padding: 45px 0 83px;
+
+  background: url("../images/under-bg.svg"),
+    url("../images/index-background.jpg");
+  background-color: #5a5a5a;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%, cover;
+}
+
 /*Конец приглашения*/
 
 /* блок info - убрать потом в разметке лишние классы, будут */
@@ -204,100 +252,90 @@ body {
 	flex-wrap: wrap;
 }
 
-.info-list-inner {
-	display: flex;
-	flex-wrap: wrap;
+.info-wrapper {
+  display: flex;
 }
+
 .info-content {
-	width: 400px;
-	text-align: center;
-	padding-top: 97px;
+  width: 400px;
+  min-height: 384px;
+  padding: 98px 85px 50px;
+
+  text-align: center;
 }
 .info-img {
-	width: 800px;
+  width: 800px;
 }
 .info-title {
-	font-size: 24px;
-	line-height: 28px;
-	font-weight: 700;
-	color: #000000;
-	text-transform: uppercase;
-	margin-bottom: 30px;
+  width: 172px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  text-transform: uppercase;
 }
-.info-wrapper .info-number {
-	margin-bottom: 30px;
-}
-.info-wrapper .info-title {
-	color: #ffffff;
-}
-.info-wrapper .info-description {
-	color: #ffffff;
+.info-number {
+  display: inline-block;
+  margin-bottom: 30px;
 }
 .info-description {
-	font-size: 18px;
-	line-height: 21px;
-	font-weight: 400; 
-	color: #333333;
-	margin-bottom: 87px;
+  margin-top: 0;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
 }
-.info-wrapper {
-	display: flex;
-	background-color: #ffffff;
+.info-wrapper .info-content {
+  background-color: #83b3d3;
 }
-.info-wrapper .info-content{   
-	background-color: #83b3d3;
+.info-wrapper .info-title {
+  color: #ffffff;
+}
+.info-wrapper .info-description {
+  color: #ffffff;
+}
+.info-list-inner {
+  display: flex;
+  flex-wrap: wrap;
 }
 .info-wrapper img {
-	display: block;
+  display: block;
+  height: 100%;
 }
-.info-list li:nth-child(2) {
-	background-color: #ffffff;
-}
+.info-item-inner .info-content {
+  padding: 185px 90px 30px;
 
-.info-list li:nth-child(4), .info-list li:nth-child(6) {
-	background-color: rgba(131,179, 211, 0.12);
+  background-color: rgba(131, 179, 211, 0.12);
 }
-.info-list li:nth-child(5) {
-	background-color:rgba(131, 179, 211, 0.2);
+.info-item-inner:nth-child(2n) .info-content {
+  background-color: #ffffff;
 }
-.info-list li:nth-child(3) .info-description {
-	margin-bottom: 108px; /*Это ряд с номерами 3, 4, 5*/
+.info-item-inner .info-title {
+  margin-bottom: 18px;
 }
-.info-list-inner .info-content {
-	padding-top: 184px;
-}
-.info-list-inner .info-title {
-	margin-bottom: 20px; 
-}
-
-
-
-.info-item-inner .info-description {
-	margin-bottom: 79px; 
-}
-
-
 .info-content-housing {
-	background-color: rgba(131, 179, 211, 0.12);
-	background-image: url("../images/housing.svg");
-	background-size: 75px 72px;
-	background-repeat: no-repeat;
-	background-position: top 89px center;
+  background-image: url("../images/housing.svg");
+  background-repeat: no-repeat;
+  background-position: top 89px center;
+  background-size: 75px 72px;
 }
-.info-item-inner-meal {
-	background-color: #ffffff;
-	background-image: url("../images/meal.svg");
-	background-size: 74px 70px;
-	background-repeat: no-repeat;
-	background-position: top 91px center;
+.info-content-meal {
+  background-image: url("../images/meal.svg");
+  background-repeat: no-repeat;
+  background-position: top 91px center;
+  background-size: 74px 70px;
 }
-.info-item-inner-souvenirs {
-	background-color: rgba(131, 179, 211, 0.12);
-	background-image: url("../images/souvenirs.svg");
-	background-size: 64px 76px;
-	background-repeat: no-repeat;
-	background-position: top 85px center;
+.info-content-souvenirs {
+  background-image: url("../images/souvenirs.svg");
+  background-repeat: no-repeat;
+  background-position: top 85px center;
+  background-size: 64px 76px;
 }
+
 /*Конец блока info*/
 
 /*поиск*/
