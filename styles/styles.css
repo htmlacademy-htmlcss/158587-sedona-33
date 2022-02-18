@@ -241,6 +241,15 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 }
+.info-list li:nth-child(3), .info-list li:nth-child(5)  {
+	background-color: rgba(131, 179, 211, 0.12);
+}
+.info-list li:nth-child(4) {
+	background-color: rgba(131, 179, 211, 0.2);
+}
+.info-list-inner li:nth-child(odd) {
+	background-color: rgba(131, 179, 211, 0.12);
+}
 .info-wrapper {
   display: flex;
 }
@@ -297,9 +306,9 @@ body {
 .info-item-inner .info-content {
   padding: 185px 90px 30px;
 
-  background-color: rgba(131, 179, 211, 0.12);
+ /* background-color: rgba(131, 179, 211, 0.12);*/
 }
-.info-item-inner:nth-child(2n) .info-content {
+.info-item-inner:nth-child(2) .info-content {
   background-color: #ffffff;
 }
 .info-item-inner .info-title {
