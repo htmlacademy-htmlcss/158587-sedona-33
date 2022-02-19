@@ -132,6 +132,7 @@ body {
 	background-color: #83b3d3;
 }
 /*конец кнопок*/
+
 /*шапка*/
 .page-header {
 	display: flex;
@@ -305,8 +306,6 @@ body {
 }
 .info-item-inner .info-content {
   padding: 185px 90px 30px;
-
- /* background-color: rgba(131, 179, 211, 0.12);*/
 }
 .info-item-inner:nth-child(2) .info-content {
   background-color: #ffffff;
@@ -557,11 +556,15 @@ body {
 .sorting-view-link-current {
   border: 2px solid #000000;
 }
+
+/* result-list -выбранные гостиницы*/
+
 .result-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 16px;
+	display: grid;
+	grid-template-columns: repeat(3, 340px);
+	gap: 18px 10px;
+	
+	margin-bottom: 34px;
 }
 .result-img {
 	margin-bottom: 16px;
@@ -573,7 +576,6 @@ body {
 }
 .result-item {
   width: 340px;
-  margin-bottom: 18px;
   padding: 20px;
 
   outline: 1px solid red; /*временно*/
@@ -590,9 +592,15 @@ body {
   line-height: 23px;
 }
 .result-rating {
+  width: 160px;
+  text-align: center;
+  padding: 9px 0 10px;
+  
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
+  
+  background-color: #f2f2f2;
 }
 .result-more {
   padding: 30px 0;
