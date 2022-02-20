@@ -88,6 +88,13 @@ body {
 	color: #ffffff;
 	background-color: #756257;
 }
+.button-nav:hover {
+	background-color: #615048;
+}
+.button-nav:active {
+	background-color: #615048;
+	color: rgba(255, 255, 255, 0.3);
+}
 .button-search {
 	width: 575px;
 	padding: 16px 20px 8px;
@@ -97,6 +104,13 @@ body {
 
 	background-color: #756257;
 	border-radius: 10px;
+}
+.button-search:hover {
+	background-color: #615048;
+}
+.button-search:active {
+	color: rgba(255, 255, 255, 0.3); 
+	background-color: #615048;
 }
 .button-mailing {
 	width: 200px;
@@ -183,6 +197,12 @@ body {
 
 	border-bottom: 2px solid transparent; /*Для выделения акт пункта меню ??*/
 }
+.navigation-link:hover {
+	color: #756257;
+}
+.navigation-link:active {
+	color: rgba(117, 98, 87, 0.3);
+}
 .navigation-link-current {
 	border-bottom: 2px solid #756257;
 }
@@ -197,6 +217,14 @@ body {
 	display: inline-block;
 	margin-right: 23px;
 }
+.navigation-user-link:hover {
+	color: #756257;
+}
+.navigation-user-link:active {
+	color: #756257;
+	opacity: 0.3;
+}
+
 /*Конец шапки и навигации*/
 
 /*приглашение*/
@@ -386,6 +414,8 @@ body {
   height: 60px;
   
   padding-left: 22px;
+  
+  opacity: 0.6;
 
   background-color: #f2f2f2;
   border: none;
@@ -542,7 +572,7 @@ body {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
 }
-.sorting-link-title {
+.sorting-link-tile {
   background-image: url("../images/mode-tile.svg");
   background-repeat: no-repeat;
   background-position: center;
