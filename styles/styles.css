@@ -1,17 +1,24 @@
-@font-face {  
-  font-family: "ptsans-400.woff2";
+
+@font-face {
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  font-family: "ptsans";
+
   font-display: swap;
+
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
 }
+
 @font-face {
-  font-family: "ptsans-700.woff2";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  font-family: "ptsans";
+
   font-display: swap;
+
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
+
 /*Общие стили*/
 *,
 ::after,
@@ -66,7 +73,7 @@ body {
 	text-transform: uppercase;
 	text-decoration: none;
 
-	background-color: #756257;
+	background-color: #83b3d3;
 	border: none;
 	border-radius: 4px;
 }
@@ -79,6 +86,7 @@ body {
 
 	line-height: 20px;
 	color: #ffffff;
+	background-color: #756257;
 }
 .button-search {
 	width: 575px;
@@ -87,6 +95,7 @@ body {
 	font-size: 20px;
 	line-height: 36px;
 
+	background-color: #756257;
 	border-radius: 10px;
 }
 .button-mailing {
@@ -96,7 +105,6 @@ body {
 	font-size: 20px;
 	line-height: 26px;
 
-	background-color: #83b3d3;
 	border-radius: 0 10px 10px 0;
 }
 .result-list .button {
@@ -109,11 +117,11 @@ body {
 
 	font-size: 16px;
 	line-height: 21px;
+	
+	background-color: #756257;
 }
 .button-result-favorites {
 	width: 141px;
-	
-	background-color: #83b3d3;
 }
 .button-result-favorites-current {
 	width: 141px;
@@ -128,8 +136,6 @@ body {
 
 	font-size: 20px;
 	line-height: 26px;
-
-	background-color: #83b3d3;
 }
 /*конец кнопок*/
 
@@ -492,8 +498,6 @@ body {
 
   font-size: 18px;
   line-height: 23px;
-
-  background-color: #83b3d3;
 }
 .form-reset {
   color: #ffffff;
@@ -637,5 +641,10 @@ body {
   text-decoration: none;
 
   background-color: #83b3d3;
+}
+.pagination-link-current {
+	color: #000000;
+	
+	background-color: #f2f2f2;
 }
 
