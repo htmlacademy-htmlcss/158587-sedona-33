@@ -121,6 +121,18 @@ body {
 
 	border-radius: 0 10px 10px 0;
 }
+.button-mailing:hover {
+	background-color: #68a2ca;
+}
+.button-mailing:active {
+	background-color: #68a2ca;
+}
+.button-mailing:focus {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #68a2ca;
+	
+	border: 3px solid #756257;
+}
 .result-list .button {
 	font-size: 16px;
 	line-height: 21px;
@@ -415,11 +427,20 @@ body {
   
   padding-left: 22px;
   
-  opacity: 0.6;
-
   background-color: #f2f2f2;
   border: none;
   border-radius: 10px 0 0 10px;
+}
+.mailing-input:hover {
+	background-color: #e6e6e6;
+}
+.mailing-input:focus {
+	background-color: #e6e6e6;
+	border: 3px solid #83b3d3;
+}
+.mailing-input:invalid {
+	background-color: #ffffff;
+	border: 2px solid #ff5757;
 }
 .mailing-index {
   color: #ffffff;
@@ -460,6 +481,9 @@ body {
   height: 40px;
 
   outline: 2px solid red; /*временно*/
+}
+.soc {
+	fill: #000000;
 }
 .page-footer-tel-link {
   display: inline-block;
