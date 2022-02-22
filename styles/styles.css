@@ -113,6 +113,8 @@ body {
 	background-color: #615048;
 }
 .button-mailing {
+	box-sizing: border-box;
+	
 	width: 200px;
 	padding: 19px 16px 15px;
 
@@ -482,9 +484,21 @@ body {
 
   outline: 2px solid red; /*временно*/
 }
-.soc {
-	fill: #000000;
+.social-icon:hover {
+	fill: #68a2ca;
 }
+.social-icon:focus {
+	fill: #68a2ca;
+}
+.footer-social-item:focus {      /*не работает ни с -link,ни с social-icon*/
+	border: 3px colid #68a2ca;
+	border-radius: 3px;  /*взято наугад*/
+}
+.social-icon:active {
+	fill: #68a2ca;
+}
+
+
 .page-footer-tel-link {
   display: inline-block;
 
@@ -493,6 +507,18 @@ body {
   color: #000000;
   text-decoration: none;
 }
+.page-footer-tel-link:hover {
+	color: #756257;
+	border: 1px solid red;
+}
+.page-footer-tel-link:active {
+	color: #756257;
+	opacity: 0.3;
+}
+.page-footer-tel-link:focus {
+	color: #756257;
+}
+
 .page-footer-logo-link {
   display: inline-block;
   width: 115px;
