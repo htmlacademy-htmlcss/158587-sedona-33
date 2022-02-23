@@ -113,8 +113,6 @@ body {
 	background-color: #615048;
 }
 .button-mailing {
-	box-sizing: border-box;
-	
 	width: 200px;
 	padding: 19px 16px 15px;
 
@@ -130,7 +128,8 @@ body {
 	background-color: #68a2ca;
 }
 .button-mailing:focus {
-	color: rgba(255, 255, 255, 0.3);
+	outline: none; /*обнуляем браузерный стиль*/
+	color: rgba(255, 255, 255, 0.3);/*дергается - про формы ещё расскажут*/
 	background-color: #68a2ca;
 	
 	border: 3px solid #756257;
@@ -434,11 +433,11 @@ body {
   border-radius: 10px 0 0 10px;
 }
 .mailing-input:hover {
-	background-color: #e6e6e6;
+	background-color: #e5e5e5;
 }
 .mailing-input:focus {
-	background-color: #e6e6e6;
-	border: 3px solid #83b3d3;
+	outline: none; /*обнуляем браузерный стиль*/
+	border: 3px solid #756257;/* про формы ещё расскажут*/
 }
 .mailing-input:invalid {
 	background-color: #ffffff;
@@ -496,6 +495,20 @@ body {
 }
 .social-icon:active {
 	fill: #68a2ca;
+}
+
+.page-footer-logo-link svg:hover {
+	fill: #756257;
+}
+.page-footer-logo-link svg:active {
+	fill: rgba(117, 98, 87, 0.3);
+}
+.page-footer-logo-link svg:focus {
+	fill: #756257;
+}
+.page-footer-logo-link:focus {
+	outline: 4px solid #68a2ca;
+	outline-offset: 10px;
 }
 
 
