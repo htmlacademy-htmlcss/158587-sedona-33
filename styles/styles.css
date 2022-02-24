@@ -454,34 +454,33 @@ body {
 
 /*футер*/
 
+/*соц сети*/
 .page-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 72px 40px 61px;
-
-  outline: 2px solid red; /*Временно*/
 }
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
-  outline: 2px solid blue; /*временно*/
 }
 .footer-social-item {
   margin-right: 3px;
-
-  outline: 3px solid black;
 }
 .footer-social-link {
   display: flex;
   justify-content: center;
   align-items: center;
+  
   width: 40px;
   height: 40px;
-
-  outline: 2px solid red; /*временно*/
+}
+.footer-social-link:focus {
+   outline: none;       /*убираем браузерные стили*/
+   border: 3px solid #83b3d3;
+   border-radius: 10px; /*взято наугад*/
 }
 .social-icon:hover {
 	fill: #68a2ca;
@@ -489,13 +488,11 @@ body {
 .social-icon:focus {
 	fill: #68a2ca;
 }
-.footer-social-item:focus {      /*не работает ни с -link,ни с social-icon*/
-	border: 3px colid #68a2ca;
-	border-radius: 3px;  /*взято наугад*/
-}
 .social-icon:active {
 	fill: #68a2ca;
 }
+
+/*конец соц сетей*/
 
 .page-footer-logo-link svg:hover {
 	fill: #756257;
@@ -511,7 +508,6 @@ body {
 	outline-offset: 10px;
 }
 
-
 .page-footer-tel-link {
   display: inline-block;
 
@@ -522,14 +518,18 @@ body {
 }
 .page-footer-tel-link:hover {
 	color: #756257;
-	border: 1px solid red;
 }
 .page-footer-tel-link:active {
 	color: #756257;
 	opacity: 0.3;
 }
 .page-footer-tel-link:focus {
+	outline: none; /*обнуляем браузерные стили*/
 	color: #756257;
+	
+	padding: 15px;
+	border: 3px solid #83b3d3;
+	border-radius: 10px;
 }
 
 .page-footer-logo-link {
