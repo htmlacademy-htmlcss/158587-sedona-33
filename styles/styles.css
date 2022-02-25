@@ -72,10 +72,15 @@ body {
 	color: #ffffff;
 	text-transform: uppercase;
 	text-decoration: none;
+	
+	padding: 9px 0 10px 0; /*много таких кнопок на 2 странице*/
 
 	background-color: #83b3d3;
 	border: none;
 	border-radius: 4px;
+}
+.button:active {
+	color: rgba(255, 255, 255, 0.3);
 }
 /*Конец общих стилей*/
 
@@ -93,7 +98,6 @@ body {
 }
 .button-nav:active {
 	background-color: #615048;
-	color: rgba(255, 255, 255, 0.3);
 }
 .button-search {
 	width: 575px;
@@ -109,11 +113,11 @@ body {
 	background-color: #615048;
 }
 .button-search:active {
-	color: rgba(255, 255, 255, 0.3); 
 	background-color: #615048;
 }
 .button-mailing {
 	width: 200px;
+	max-height: 60px; /*иначе всё дёргается*/
 	padding: 19px 16px 15px;
 
 	font-size: 20px;
@@ -122,9 +126,6 @@ body {
 	border-radius: 0 10px 10px 0;
 }
 .button-mailing:hover {
-	background-color: #68a2ca;
-}
-.button-mailing:active {
 	background-color: #68a2ca;
 }
 .button-mailing:focus {
@@ -138,6 +139,7 @@ body {
 	font-size: 16px;
 	line-height: 21px;
 }
+
 .button-result-more {
 	width: 133px;
 	margin-right: 26px;
@@ -147,14 +149,48 @@ body {
 	
 	background-color: #756257;
 }
+.button-result-more:hover {
+	background-color: #615048;
+}
+.button-result-more:active {
+	background-color: #615048;
+}
+.button-result-more:focus {
+	background-color: #615048;
+	border: 3px solid #83b3d3;
+}
+
 .button-result-favorites {
 	width: 141px;
 }
+.button-result-favorites:hover {
+	background-color: #68a2ca;
+}
+.button-result-favorites:active {
+	background-color: #68a2ca;
+}
+.button-result-favorites:focus {
+	background-color: #68a2ca;
+	border: 3px solid #756257;
+}
+
 .button-result-favorites-current {
 	width: 141px;
 	
 	background-color: #7db54f;
 }
+.button-result-favorites-current:hover {
+	background-color: #6c9f42;
+}
+.button-result-favorites-current:active {
+	background-color: #6c9f42;
+}
+.button-result-favorites-current:focus {
+	background-color: #6c9f42;
+	border: 3px solid #756257;
+	
+}
+
 .button-result-add {
 	display: block;
 	width: 619px;
@@ -192,8 +228,6 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-
-  outline: 2px solid green; /*временно*/
 }
 .navigation-item {
 	margin-right: 35px;
@@ -223,8 +257,6 @@ body {
 	display: flex;
 	align-items: center;
 	margin-left: auto;
-
-	outline: 2px solid blue; /*временно*/
 }
 .navigation-user-link {
 	display: inline-block;
@@ -424,7 +456,6 @@ body {
 }
 .mailing-input {
   width: 600px;
-  /*height: 60px;*/
   
   padding-left: 22px;
   
@@ -534,7 +565,6 @@ body {
 	fill: #756257;
 	
 }
-
 .page-footer-logo-link:focus {
 	outline: none; /*обнуляем браузерные стили*/
 	padding: 19px 22px;
@@ -624,13 +654,11 @@ body {
   padding-bottom: 70px;
 }
 .sorting-control {
-	
 	width: 287px;
 	padding: 12px 19px;/*правый не работает !!!*/
 	
 	color: #333333;
 	border: 2px solid #e6e6e6;
-	
 }
 .sorting-title {
   font-weight: 700;
@@ -645,6 +673,15 @@ body {
 
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+}
+.sorting-link:hover {
+	border: 2px solid #83b3d3;
+}
+.sorting-link:active {
+	border: 2px solid #000000;
+}
+.sorting-link:focus {
+	border: #2px solid #83b3d3;
 }
 .sorting-link-tile {
   background-image: url("../images/mode-tile.svg");
