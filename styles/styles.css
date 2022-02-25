@@ -200,7 +200,7 @@ body {
 }
 .navigation-link {
 	display: inline-block;
-	padding: 20px 0 18px 0;
+	padding: 20px 0 20px 0;
 
 	font-weight: 700;
 	font-size: 20px;
@@ -424,7 +424,7 @@ body {
 }
 .mailing-input {
   width: 600px;
-  height: 60px;
+  /*height: 60px;*/
   
   padding-left: 22px;
   
@@ -437,7 +437,7 @@ body {
 }
 .mailing-input:focus {
 	outline: none; /*обнуляем браузерный стиль*/
-	border: 3px solid #756257;/* про формы ещё расскажут*/
+	border: 3px solid #756257;
 }
 .mailing-input:invalid {
 	background-color: #ffffff;
@@ -493,21 +493,7 @@ body {
 }
 
 /*конец соц сетей*/
-
-.page-footer-logo-link svg:hover {
-	fill: #756257;
-}
-.page-footer-logo-link svg:active {
-	fill: rgba(117, 98, 87, 0.3);
-}
-.page-footer-logo-link svg:focus {
-	fill: #756257;
-}
-.page-footer-logo-link:focus {
-	outline: 4px solid #68a2ca;
-	outline-offset: 10px;
-}
-
+/*телефон*/
 .page-footer-tel-link {
   display: inline-block;
 
@@ -532,11 +518,31 @@ body {
 	border-radius: 10px;
 }
 
+/*логотип*/
 .page-footer-logo-link {
   display: inline-block;
   width: 115px;
   height: 34px;
 }
+.page-footer-logo-link svg:hover {
+	fill: #756257;
+}
+.page-footer-logo-link svg:active {
+	fill: rgba(117, 98, 87, 0.3);
+}
+.page-footer-logo-link svg:focus {
+	fill: #756257;
+	
+}
+
+.page-footer-logo-link:focus {
+	outline: none; /*обнуляем браузерные стили*/
+	padding: 19px 22px;
+	
+	border: 3px solid #83b3d3;
+	border-radius: 10px;
+}
+
 
 /*вторая страница*/
 .wrapper-inner {
@@ -586,7 +592,7 @@ body {
 	display: block;
 }
 .form-submit {
-  width: 180px;
+  width: 160px;
   margin-bottom: 20px;
 
   font-size: 18px;
@@ -618,8 +624,13 @@ body {
   padding-bottom: 70px;
 }
 .sorting-control {
-	width: 141px;
-	height: 23px;
+	
+	width: 287px;
+	padding: 12px 19px;/*правый не работает !!!*/
+	
+	color: #333333;
+	border: 2px solid #e6e6e6;
+	
 }
 .sorting-title {
   font-weight: 700;
