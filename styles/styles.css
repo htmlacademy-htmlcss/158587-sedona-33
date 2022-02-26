@@ -628,11 +628,29 @@ body {
   font-size: 18px;
   line-height: 23px;
 }
+.form-submit:hover {
+	background-color: #68a2ca;
+}
+.form-submit:active {
+	background-color: #68a2ca;
+}
+.form-submit:focus {
+	outline: none;
+	background-color: #68a2ca;
+	border: 3px solid #ffffff;
+}
 .form-reset {
   color: #ffffff;
 
   background-color: inherit;
   border: none;
+}
+.form-reset:hover {
+	opacity: 0.6;
+}
+.form-reset:focus {
+	outline: none;
+	border: 3px solid #83b3d3;
 }
 .form-part legend {
   margin-bottom: 35px;
@@ -677,7 +695,7 @@ body {
 .sorting-link:hover {
 	border: 2px solid #83b3d3;
 }
-.sorting-link:active {
+.sorting-link-current {
 	border: 2px solid #000000;
 }
 .sorting-link:focus {
@@ -698,9 +716,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-.sorting-view-link-current {
-  border: 2px solid #000000;
-}
 
 /* result-list -выбранные гостиницы*/
 
@@ -714,6 +729,17 @@ body {
 .result-img {
 	margin-bottom: 16px;
 }
+.result-img:hover {
+	opacity: 60%;
+}
+.result-img:active {
+	opacity: 30%;
+}
+.result-img:focus {
+	border: 3px solid #83b3d3;
+}
+
+
 .result-wrapper {
   display: flex;
   justify-content: space-between;
@@ -779,13 +805,30 @@ body {
   font-weight: 700;
   text-align: center;
   color: #ffffff;
+  text-transform: uppercase;
   text-decoration: none;
 
   background-color: #83b3d3;
 }
+.pagination-link:hover {
+	background-color: #68a2ca;
+}
+.pagination-link:active {
+	opacity: 30%;
+	background-color: #68a2ca;
+}
+.pagination-link:focus {
+	background-color: #68a2ca;
+	border: 3px solid #756257;
+}
 .pagination-link-current {
 	color: #000000;
-	
 	background-color: #f2f2f2;
 }
-
+.quantity-in-page span {
+	margin-right: 51px;
+}
+.select-control {
+	width: 160px;
+	padding: 13px 20px 12px 17px;
+}
