@@ -218,8 +218,6 @@ body {
 	justify-content: space-between;
 	width: 100%;
 	margin-left: 47px;
-
-	outline: 2px solid red; /*временно*/
 }
 .navigation-list {
   display: flex;
@@ -262,11 +260,11 @@ body {
 	display: inline-block;
 	margin-right: 23px;
 }
-.navigation-user-link:hover {
-	color: #756257;
+.navigation-user-link:hover .user-icon {
+	fill: #756257;
 }
-.navigation-user-link:active {
-	color: #756257;
+.navigation-user-link:active .user-icon {
+	fill: #756257;
 	opacity: 0.3;
 }
 
@@ -616,6 +614,27 @@ body {
 }
 .form-part {
 	border: none;
+}
+.form-coste-wrapper {
+	display: flex;
+}
+.form-coste-input {
+	width: 143px;
+	padding: 14px 19px 11px;
+	color: #ffffff;   /*не работает*/
+	background-color: transparent;
+	
+	border: 2px solid  #ffffff;
+}
+.min {
+	border-radius: 4px 0 0 4px;
+}
+.max {
+	border-radius: 0 4px 4px 0;
+}
+.form-coste-input + input {
+	border-radius: 14px 4px 0 0;
+	;
 }
 .form-part-button button  {
 	display: block;
