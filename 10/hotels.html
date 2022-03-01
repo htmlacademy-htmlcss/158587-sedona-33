@@ -54,6 +54,7 @@
 	<div class="beginning">
 	   <h1 class="title-hotels">Гостиницы Седоны</h1>
 		<section class="breadrumbs">
+			<h2 class="visuality-hidden">Дополнительная навигация по сайту</h2>
 			<ul class="breadrumbs-list list-reset">
 				<li class="breadrumbs-item">
 					<a class="breadrumbs-link" href="index.html">
@@ -125,16 +126,18 @@
 				</fieldset>		  
 				<fieldset class="form-part form-coste">
 					<legend>Стоимость, ₽:</legend>
-						<div class="form-coste-wrapper">
-							<div class="form-coste-wrapper-item">
-								<input class="form-coste-input min" type="number" placeholder="0 от">
-							</div>
-							<div class="form-coste-wrapper-item">
-								<input class="form-coste-input max" type="number" placeholder="9000 до">
-							</div>
+					<div class="form-coste-wrapper">
+						<div class="form-coste-wrapper-item">
+							<input class="form-coste-input min" type="number" id="min" placeholder="0">
+							<label for="min">от</label>
 						</div>
-						<div class="form-range-container"><!--Потом сделать -->
+						<div class="form-coste-wrapper-item">
+							<input class="form-coste-input max" type="number" id="max" placeholder="9000">
+							<label for="max">до</label>
 						</div>
+					</div>
+					<div class="form-range-container"><!--Потом сделать -->
+					</div>
 				</fieldset>
 				<fieldset class="form-part form-part-button">
 					<button class="button form-submit" type="submit">Применить</button>
