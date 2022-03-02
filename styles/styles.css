@@ -605,6 +605,14 @@ body {
 .breadrumbs-item {
 	margin-right: 30px;
 }
+.breadrumbs-item::after {
+	content: "";
+	display: block;
+	width: 12px;
+	height: 12px;
+	background-image: url("images/to-index.svg");
+}
+
 .breadrumbs-link {
   display: inline-block;
 }
