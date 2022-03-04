@@ -112,7 +112,7 @@ body {
 	line-height: 36px;
 
 	background-color: #756257;
-	forder: 3px solid transparent;
+	border: 3px solid transparent;
 	border-radius: 10px;
 }
 .button-search:hover {
@@ -614,30 +614,42 @@ body {
 	position: relative;
 }
 .breadrumbs-list {
-/*  position: relative;*/
   display: flex;
   margin-top: 5px;
   margin-bottom: 45px;
 }
+/*
 .breadrumbs-list li:nth-child(odd)::after {
 	position: absolute;
 	left: 19px; /*наглаз*/
 	top: 14px; /*наглаз*/
-	content: url("../images/arrow.svg");/*не знаю, как сдедать, изьенить цвет, исползуя код, а не рисунок svg и в интернете смотрел и пробовал всё*/
+	/*content: url("../images/arrow.svg");/*не знаю, как сдедать, изьенить цвет, исползуя код, а не рисунок svg и в интернете смотрел и пробовал всё*/
 	/*
 	content:"<svg width="12" height="7" viewBox="0 0 12 7" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.6 6.7001L11.7 1.4001C12 1.1001 12 0.500098 11.7 0.200098C11.4 -0.0999023 10.8 -0.0999023 10.5 0.200098L6 4.9001L1.5 0.200098C1.2 -0.0999023 0.6 -0.0999023 0.3 0.200098C0.1 0.300098 0 0.600098 0 0.800098C0 1.0001 0.1 1.2001 0.3 1.4001L5.4 6.7001C5.7 7.1001 6.3 7.1001 6.6 6.7001Z"/>
 </svg>
 ";
-*/	
+	
 	display: inline-block;
-	width: 12px;
+	width: 12px;/*это всёsvg для селекта
 	height: 7px;
 	transform: rotate(-90deg);
 }
+*/
+
 
 .breadrumbs-item {
+	position: relative;
 	margin-right: 30px;
+}
+.breadrumbs-item:not(:last-child)::after {
+	content: url("../images/arrow-rumbs.svg");
+	display: inline-block;
+	/*position: absolute;
+	right: 1020px;*/
+	margin: 0 10px 0 11px;
+	width: 5px;
+	height: 8px;
 }
 .breadrumbs-link {
   display: inline-block;
@@ -666,6 +678,9 @@ body {
 }
 .form-coste-wrapper-item {
 	position: relative;
+}
+.form-coste-wrapper-item label {
+	position: absolute;
 }
 .form-coste-input {
 	width: 143px;
@@ -710,6 +725,9 @@ body {
 .form-reset {
   color: #ffffff;
   text-transform: none;
+  
+  width: 100px;
+  height: 32px;
 
   background-color: inherit;
   border: 3px solid transparent;
@@ -719,7 +737,6 @@ body {
 }
 .form-reset:focus {
 	outline: 3px solid #83b3d3;/*плохая рамка*/
-	outline-offset: 4px;
 }
 .form-part legend {
   margin-bottom: 35px;
