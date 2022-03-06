@@ -92,7 +92,6 @@ body {
 	line-height: 20px;
 	color: #ffffff;
 	background-color: #756257;
-	border: 3px solid transparent;
 }
 .button-nav:hover {
 	background-color: #615048;
@@ -149,7 +148,6 @@ body {
 	font-size: 16px;
 	line-height: 21px;
 }
-
 .button-result-more {
 	width: 133px;
 	margin-right: 26px;
@@ -170,7 +168,6 @@ body {
 	background-color: #615048;
 	outline: 3px solid #83b3d3;
 }
-
 .button-result-favorites {
 	width: 141px;
 	border: 3px solid  transparent;
@@ -185,7 +182,6 @@ body {
 	background-color: #68a2ca;
 	outline: 3px solid #756257;
 }
-
 .button-result-favorites-current {
 	width: 141px;
 	border: 3px solid transparent;
@@ -201,7 +197,6 @@ body {
 	background-color: #6c9f42;
 	outline: 3px solid #756257;
 }
-
 .button-result-add {
 	display: block;
 	width: 619px;
@@ -223,6 +218,7 @@ body {
 	width: 139px;
 	height: 70px;
 }
+
 /*навигация*/
 .navigation { 
 	display: flex;
@@ -278,7 +274,6 @@ body {
 	fill: #756257;
 	opacity: 0.3;
 }
-
 /*Конец шапки и навигации*/
 
 /*приглашение*/
@@ -618,25 +613,6 @@ body {
   margin-top: 5px;
   margin-bottom: 45px;
 }
-/*
-.breadrumbs-list li:nth-child(odd)::after {
-	position: absolute;
-	left: 19px; /*наглаз*/
-	top: 14px; /*наглаз*/
-	/*content: url("../images/arrow.svg");/*не знаю, как сдедать, изьенить цвет, исползуя код, а не рисунок svg и в интернете смотрел и пробовал всё*/
-	/*
-	content:"<svg width="12" height="7" viewBox="0 0 12 7" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.6 6.7001L11.7 1.4001C12 1.1001 12 0.500098 11.7 0.200098C11.4 -0.0999023 10.8 -0.0999023 10.5 0.200098L6 4.9001L1.5 0.200098C1.2 -0.0999023 0.6 -0.0999023 0.3 0.200098C0.1 0.300098 0 0.600098 0 0.800098C0 1.0001 0.1 1.2001 0.3 1.4001L5.4 6.7001C5.7 7.1001 6.3 7.1001 6.6 6.7001Z"/>
-</svg>
-";
-	
-	display: inline-block;
-	width: 12px;/*это всёsvg для селекта
-	height: 7px;
-	transform: rotate(-90deg);
-}
-*/
-
 
 .breadrumbs-item {
 	position: relative;
@@ -645,8 +621,6 @@ body {
 .breadrumbs-item:not(:last-child)::after {
 	content: url("../images/arrow-rumbs.svg");
 	display: inline-block;
-	/*position: absolute;
-	right: 1020px;*/
 	margin: 0 10px 0 11px;
 	width: 5px;
 	height: 8px;
@@ -681,6 +655,13 @@ body {
 }
 .form-coste-wrapper-item label {
 	position: absolute;
+	opacity: 30%;
+	right: 20px;
+	top:10px; /*наглаз*/
+}
+
+.form-coste-wrapper-item input {
+	/*padding-right: 22px;*/
 }
 .form-coste-input {
 	width: 143px;
@@ -689,6 +670,10 @@ body {
 	background-color: transparent;
 	
 	border: 2px solid  #ffffff;
+	/*appearance: none;*/
+}
+.form-coste-input placeholder {
+	color:red;
 }
 .min {
 	border-radius: 4px 0 0 4px;
@@ -698,7 +683,6 @@ body {
 }
 .form-coste-input + input {
 	border-radius: 14px 4px 0 0;
-	;
 }
 .form-part-button button  {
 	display: block;
@@ -709,8 +693,6 @@ body {
 
   font-size: 18px;
   line-height: 23px;
-  
-  border: 3px solid transparent;
 }
 .form-submit:hover {
 	background-color: #68a2ca;
@@ -759,11 +741,27 @@ body {
 }
 .sorting-control {
 	width: 287px;
-	padding: 12px 19px;/*правый не работает !!!*/
+	padding: 12px 20px 13px 19px;
 	
+	font: inherit;
+	font-size: 18ox;
+	line-height: 23px;
 	color: #333333;
+	
+	background-image: url("../images/arrow.svg");
+	background-repeat: no-repeat;
+	background-position: right 20px center;
+	
 	border: 2px solid #e6e6e6;
 	border-radius: 4px;
+	appearance: none;
+}
+.sorting-control:active  {
+	border: 2px solid #83b3d3;
+	opacity: 30%;
+}
+.sorting-control:hover, .sorting-control:focus  {
+	border: 2px solid #83b3d3;
 }
 .sorting-title {
   font-weight: 700;
@@ -825,8 +823,6 @@ body {
 .result-img:focus {
 	border: 3px solid #83b3d3;
 }
-
-
 .result-wrapper {
   display: flex;
   justify-content: space-between;
@@ -835,8 +831,6 @@ body {
 .result-item {
   width: 340px;
   padding: 20px;
-
-  outline: 1px solid red; /*временно*/
 }
 .result-title {
   font-weight: 700;
@@ -848,10 +842,7 @@ body {
 
   font-size: 18px;
   line-height: 23px;
-  outline: 1px solid red; /*временно*/
 }
-
-
 .result-rating {
   width: 160px;
   text-align: center;
@@ -916,4 +907,17 @@ body {
 .select-control {
 	width: 160px;
 	padding: 13px 20px 12px 17px;
+	
+	font: inherit;
+	font-size: 18ox;
+	line-height: 23px;
+	color: #333333;
+	
+	background-image: url("../images/arrow.svg");
+	background-repeat: no-repeat;
+	background-position: right 20px center;
+	
+	border: 2px solid #e6e6e6;
+	border-radius: 4px;
+	appearance: none;
 }
