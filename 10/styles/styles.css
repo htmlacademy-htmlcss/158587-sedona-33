@@ -122,7 +122,7 @@ body {
 }
 .button-search:focus {
 	background-color: #615048;
-	outline: 3px solid #83b3d3;
+	border: 3px solid #83b3d3;
 }
 .button-mailing {
 	width: 200px;
@@ -131,8 +131,7 @@ body {
 	font-size: 20px;
 	line-height: 26px;
 	
-	border: 3px solid transparent;
-	border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;/*для скругления outline*/
 }
 .button-mailing:hover {
 	background-color: #68a2ca;
@@ -142,7 +141,7 @@ body {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #68a2ca;
 	
-	border: 3px solid #756257;
+	outline: 3px solid #756257;
 }
 .result-list .button {
 	font-size: 16px;
@@ -152,11 +151,8 @@ body {
 	width: 133px;
 	margin-right: 26px;
 
-	font-size: 16px;
-	line-height: 21px;
-	
 	background-color: #756257;
-	border: 3px solid transparent;
+	/*border: 3px solid transparent;*/
 }
 .button-result-more:hover {
 	background-color: #615048;
@@ -170,7 +166,6 @@ body {
 }
 .button-result-favorites {
 	width: 141px;
-	border: 3px solid  transparent;
 }
 .button-result-favorites:hover {
 	background-color: #68a2ca;
@@ -514,7 +509,7 @@ body {
   border-radius: 10px; /*взято наглаз*/
 }
 .footer-social-link:focus {
-   outline: 3px solid #83b3d3;;       
+   border: 3px solid #83b3d3;;       
 }
 .social-icon:hover {
 	fill: #68a2ca;
@@ -549,11 +544,39 @@ body {
 	opacity: 0.3;
 }
 .page-footer-tel-link:focus {
-	outline: 3px solid #83b3d3; 
+	border: 3px solid #83b3d3; 
 	color: #756257;
 }
 
 /*логотип*/
+
+.page-footer-logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 160px;
+  height: 70px;
+  
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+.page-footer-logo-link:hover svg {
+	fill: #756257;
+}
+.page-footer-logo-link:active svg {
+	fill: rgba(117, 98, 87, 0.3);
+}
+.page-footer-logo-link:focus svg {
+	fill: #756257;
+}
+.page-footer-logo-link:focus {     
+	border: 3px solid #83b3d3;
+}
+
+
+
+/*
 .page-footer-logo-link {
   display: inline-block;
   
@@ -577,7 +600,7 @@ body {
 .page-footer-logo-link:focus {     
 	outline: 3px solid #83b3d3;
 }
-
+*/
 
 /*вторая страница*/
 .wrapper-inner {
@@ -621,7 +644,9 @@ body {
 .breadrumbs-item:not(:last-child)::after {
 	content: url("../images/arrow-rumbs.svg");
 	display: inline-block;
-	margin: 0 10px 0 11px;
+	position: absolute;
+	right: -18px;
+	top: 3px;
 	width: 5px;
 	height: 8px;
 }
@@ -657,23 +682,20 @@ body {
 	position: absolute;
 	opacity: 30%;
 	right: 20px;
-	top:10px; /*наглаз*/
-}
-
-.form-coste-wrapper-item input {
-	/*padding-right: 22px;*/
+	top:12px; /*наглаз*/
 }
 .form-coste-input {
 	width: 143px;
 	padding: 14px 19px 11px;
-	color: #ffffff;   /*не работает*/
 	background-color: transparent;
 	
+	font-size: 18px;
+	line-height: 23px;
+	
 	border: 2px solid  #ffffff;
-	/*appearance: none;*/
 }
-.form-coste-input placeholder {
-	color:red;
+.form-coste-input::placeholder {
+	color: #ffffff;;
 }
 .min {
 	border-radius: 4px 0 0 4px;
@@ -684,15 +706,17 @@ body {
 .form-coste-input + input {
 	border-radius: 14px 4px 0 0;
 }
-.form-part-button button  {
-	display: block;
+.form-part-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .form-submit {
   width: 160px;
   margin-bottom: 20px;
 
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 16px;
+  line-height: 21px;
 }
 .form-submit:hover {
 	background-color: #68a2ca;
@@ -705,11 +729,14 @@ body {
 	outline: 3px solid #ffffff;
 }
 .form-reset {
+  font-size: 18px;
+  line-height: 23px;
   color: #ffffff;
   text-transform: none;
   
+  padding: 5px 10px;
+  
   width: 100px;
-  height: 32px;
 
   background-color: inherit;
   border: 3px solid transparent;
@@ -718,7 +745,7 @@ body {
 	opacity: 0.6;
 }
 .form-reset:focus {
-	outline: 3px solid #83b3d3;/*плохая рамка*/
+	outline: 3px solid #83b3d3;
 }
 .form-part legend {
   margin-bottom: 35px;
@@ -744,7 +771,7 @@ body {
 	padding: 12px 20px 13px 19px;
 	
 	font: inherit;
-	font-size: 18ox;
+	font-size: 18px;
 	line-height: 23px;
 	color: #333333;
 	
@@ -883,8 +910,6 @@ body {
   min-width: 55px;
   min-height: 55px;
   padding-top: 13px;
-  
-  border: 3px solid transparent;
 }
 .pagination-link:hover {
 	background-color: #68a2ca;
