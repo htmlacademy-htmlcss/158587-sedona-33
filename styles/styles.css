@@ -137,7 +137,6 @@ body {
 	background-color: #68a2ca;
 }
 .button-mailing:focus {
-	outline: 3px solid #756257; 
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #68a2ca;
 	
@@ -258,16 +257,37 @@ body {
 	align-items: center;
 	margin-left: auto;
 }
+.navigation-user-item {
+	position: relative;
+}
 .navigation-user-link {
 	display: inline-block;
 	margin-right: 23px;
 }
+
 .navigation-user-link:hover .user-icon {
 	fill: #756257;
 }
 .navigation-user-link:active .user-icon {
 	fill: #756257;
 	opacity: 0.3;
+}
+.navigation-user li:nth-child(2)::after {
+	content: "12";
+	display: flex;
+    align-items: center;
+    text-align: center;  /*НЕ РАБОТАЕТ*/
+    letter-spacing: -0.1em;
+	width: 19px;
+	height: 19px;
+	color: #ffffff;
+	border-radius: 50%;
+	background-color: #7db54f;
+	font-size: 10px;
+	line-height: 13px;
+	position: absolute;
+	right: 10px;
+	top: -5px;
 }
 /*Конец шапки и навигации*/
 
@@ -575,33 +595,6 @@ body {
 }
 
 
-
-/*
-.page-footer-logo-link {
-  display: inline-block;
-  
-  width: 160px;
-  height: 70px;
-  
-  padding: 19px 22px;
-  
-  border: 3px solid transparent;
-  border-radius: 10px;
-}
-.page-footer-logo-link svg:hover {
-	fill: #756257;
-}
-.page-footer-logo-link svg:active {
-	fill: rgba(117, 98, 87, 0.3);
-}
-.page-footer-logo-link svg:focus {
-	fill: #756257;
-}
-.page-footer-logo-link:focus {     
-	outline: 3px solid #83b3d3;
-}
-*/
-
 /*вторая страница*/
 .wrapper-inner {
 	padding: 0 72px;
@@ -687,6 +680,7 @@ body {
 .form-coste-input {
 	width: 143px;
 	padding: 14px 19px 11px;
+/*	padding-right: 45px;            не работает и непоняттно зачем, всё соответствует макету*/
 	background-color: transparent;
 	
 	font-size: 18px;
@@ -695,7 +689,7 @@ body {
 	border: 2px solid  #ffffff;
 }
 .form-coste-input::placeholder {
-	color: #ffffff;;
+	color: #ffffff;
 }
 .min {
 	border-radius: 4px 0 0 4px;
@@ -703,9 +697,11 @@ body {
 .max {
 	border-radius: 0 4px 4px 0;
 }
+/*
 .form-coste-input + input {
 	border-radius: 14px 4px 0 0;
 }
+*/
 .form-part-button {
   display: flex;
   flex-direction: column;
