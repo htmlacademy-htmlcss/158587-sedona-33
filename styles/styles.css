@@ -667,6 +667,7 @@ body {
 }
 .form-coste-wrapper {
 	display: flex;
+	margin-bottom: 32px;
 }
 .form-coste-wrapper-item {
 	position: relative;
@@ -697,11 +698,37 @@ body {
 .max {
 	border-radius: 0 4px 4px 0;
 }
-/*
-.form-coste-input + input {
-	border-radius: 14px 4px 0 0;
+
+/*ползунок*/
+.range-scale {
+	position: relative;
+	height: 4px;
+	background-color: #ffffff;
+	width: 216px;
 }
-*/
+.range-scale-part {
+	position: absolute;
+	left: 234px;
+	width: 51px;
+	height: 4px;
+	background-color: #ffffff;
+	opacity: 0.3;
+}
+.range-toggle {
+	width: 20px;
+	height: 20px;
+}
+.toggle-min {
+	position: absolute;
+	top: -8px;
+}
+.toggle-max {
+	position: absolute;
+	left: 216px;
+	top: -8px;
+}
+/*конец ползунка*/
+
 .form-part-button {
   display: flex;
   flex-direction: column;
