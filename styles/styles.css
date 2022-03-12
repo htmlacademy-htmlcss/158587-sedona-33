@@ -662,9 +662,40 @@ body {
 	display: flex;
 	justify-content: space-between;
 }
-.form-part {
+.form-part {  /*это fieldset*/
+	margin: 0;
+	padding: 0;
 	border: none;
 }
+
+
+.filter-label {
+  position: relative;
+  display: block;
+}
+
+/* Mark */
+.filter-mark-check {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.filter-mark-radio {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #ffffff;
+}
+
+
+.filter-label-text {
+	margin-left: 45px;
+}
+
 .form-coste-wrapper {
 	display: flex;
 	margin-bottom: 32px;
@@ -681,7 +712,7 @@ body {
 .form-coste-input {
 	width: 143px;
 	padding: 14px 19px 11px;
-/*	padding-right: 45px;            не работает и непоняттно зачем, всё соответствует макету*/
+/*	padding-right: 45px;            не работает и непоняттно зачем, всё итак соответствует макету*/
 	background-color: transparent;
 	
 	font-size: 18px;
@@ -715,15 +746,26 @@ body {
 	opacity: 0.3;
 }
 .range-toggle {
+	position: absolute;
 	width: 20px;
 	height: 20px;
+	border-radius: 5px;
+}
+.range-toggle:hover {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.range-toggle:active {
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+	outline: 2px solid #83b3d3;
+}
+.range-toggle:focus {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+	outline: 3px solid #83b3d3;
 }
 .toggle-min {
-	position: absolute;
 	top: -8px;
 }
 .toggle-max {
-	position: absolute;
 	left: 216px;
 	top: -8px;
 }
