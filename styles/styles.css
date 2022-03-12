@@ -668,19 +668,34 @@ body {
 	border: none;
 }
 
-
 .filter-label {
   position: relative;
   display: block;
 }
 
-/* Mark */
 .filter-mark-check {
-  position: absolute;
+  position: absolute;/* ПОЧЕМУ БЕЗ ЭТОГО НИЧЕГО НЕ ПОЯВЛЯЕТСЯ ???*/
   width: 20px;
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
+}
+
+.check-current {
+	background-image: url("../images/check-mark.svg"); /*ПОЧЕМУ НЕ РАБОТАЕТ С "парковка"  ???*/
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.radio-current::after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #3f5e72;
+	position: absolute;
+	top: 5px;
+	left: 4px;
 }
 
 .filter-mark-radio {
@@ -690,8 +705,21 @@ body {
 	border-radius: 50%;
 	background-color: #ffffff;
 }
+.filter-input-check:hover + .filter-mark-check, .filter-input-check:active + .filter-mark-check {
+	opacity: 0.6;
+}
+.filter-input-check:focus + .filter-mark-check {
+	outline: 3px solid #83b3d3;
+	opacity: 0.3;
+}
 
-
+.filter-input-radio:hover + .filter-mark-radio, .filter-input-radio:active + .filter-mark-radio {
+	opacity: 0.6;
+}
+.filter-input-radio:focus + .filter-mark-radio {
+	outline: 3px solid #83b3d3;
+	opacity: 0.3;
+}
 .filter-label-text {
 	margin-left: 45px;
 }
