@@ -593,7 +593,57 @@ body {
 .page-footer-logo-link:focus {     
 	border: 3px solid #83b3d3;
 }
+/*модальное окно*/
 
+.modal-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.modal {
+	position: relative;
+	margin: auto;
+	padding: 70px;
+	padding-top: 62px;
+	background-color: #ffffff;
+}
+.modal-inner {
+	width: 715px;
+	height: 561px; /*ВРЕМЕННО*/
+	border: 1px solid red; /*ВРЕМЕННО*/
+	border-radius: 30px;
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+.modal-close-button {
+	position: absolute;
+	padding: 0;
+	top: 0;
+	right: 0;
+	width: 53px;
+	height: 53px;
+	border-radius: 50%;
+	
+	background-color: #f2f2f2;
+	border: none;
+	background-image: url("../images/triangle.svg");
+	background-repeat: no-repeatd;
+	background-position: center;
+	
+	cursor: pointer;
+}
+.modal-title {
+	margin: 0;
+	margin-bottom: 32px;
+	
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 40px;
+	text-transform: uppercase;
+}
 
 /*вторая страница*/
 .wrapper-inner {
