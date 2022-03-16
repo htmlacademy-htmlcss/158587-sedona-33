@@ -197,7 +197,7 @@
 			</svg>
 		</a>
 	</footer>
-	<!--<div class="modal-container modal-container-close">  ВРЕМЕННО-->
+	<!--<div class="modal-container modal-container-close">  ВРЕМЕННО Для вёрстки-->
 	<div class="modal-container">
 		<div class="modal modal-inner">
 			<button class="modal-close-button">
@@ -215,16 +215,16 @@
 						<label class="modal-label" for="departure-date">Дата выезда</label>
 						<input class="modal-input" type="date" id="departure-date" name="departure-date" placeholder="1 сентября 2021">
 					</p>
-					
-					<p class="field-group">
-						<label class="modal-label" for="number-adults">Взрослые</label>
-						<input class="modal-input" type="number" id="number-adults" name="number-adults" placeholder="2">
-					</p>
-					
-					<p class="field-group">
-						<label class="modal-label" for="number-children">Дети</label>
-						<input class="modal-input" type="number" id="number-children" name="number-children" placeholder="1">
-					</p>
+					<div class="number-wrapper">
+						<p class="field-group">
+							<label class="modal-label" for="number-adults">Взрослые</label>
+							<input class="modal-input number" type="number" id="number-adults" name="number-adults" placeholder="2">
+						</p>
+						<p class="field-group">
+							<label class="modal-label" for="number-children">Дети</label>
+							<input class="modal-input number" type="number" id="number-children" name="number-children" placeholder="1">
+						</p>
+					</div>
 					<p class="field-group">
 						<button class="button modal-button">Найти</button>
 					</p>
