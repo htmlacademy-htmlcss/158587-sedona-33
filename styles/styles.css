@@ -78,6 +78,8 @@ body {
 	background-color: #83b3d3;
 	border: none;
 	border-radius: 4px;
+	
+	cursor: pointer;
 }
 .button:active {
 	color: rgba(255, 255, 255, 0.3);
@@ -613,12 +615,35 @@ body {
 	padding: 70px;
 	padding-top: 62px;
 	background-color: #ffffff;
+	text-align: center;
 }
 .modal-inner {
 	width: 715px;
 	height: 561px; /*ВРЕМЕННО*/
 	border-radius: 30px;
 	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+.field-group {
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+	
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 40px;
+}
+.modal-input {
+	width: 420px;
+	height: 50px;
+	font: inherit;
+	color: #000000;
+	background-color: #f2f2f2;
+	border-radius: 4px;
+	padding-left: 19px;
+	padding-right: 20px;
+}
+.modal-button {
+	flex-grow: 1;
 }
 .modal-close-button {
 	position: absolute;
@@ -724,23 +749,41 @@ body {
   position: relative;
   display: block;
 }
+/*рисунки вместо инпутов*/
 
-.filter-mark-check {
-  position: absolute;/* ПОЧЕМУ БЕЗ ЭТОГО НИЧЕГО НЕ ПОЯВЛЯЕТСЯ ???*/
+.control-input[type="checkbox"] {
   width: 20px;
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
 }
 
-.check-current {
-	background-image: url("../images/check-mark.svg"); /*ПОЧЕМУ НЕ РАБОТАЕТ С "парковка"  ???*/
+.control-input[type="checkbox"]:checked + .control-mark::before {
+	position: absolute;
+	width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 4px;
+	
+	background-image: url("../images/check-mark.svg"); 
 	background-repeat: no-repeat;
 	background-position: center;
+	content: "";
 }
 
-.radio-current::after {
-	content: "";
+.control-input[type="radio"] {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #ffffff;
+}
+.control-input[type="radio"]:checked + .control-mark::before {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
@@ -748,33 +791,19 @@ body {
 	position: absolute;
 	top: 5px;
 	left: 4px;
+	content: "";
 }
-
-.filter-mark-radio {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background-color: #ffffff;
-}
-.filter-input-check:hover + .filter-mark-check, .filter-input-check:active + .filter-mark-check {
+.control-input:hover {
 	opacity: 0.6;
 }
-.filter-input-check:focus + .filter-mark-check {
+.control-input:focus {
 	outline: 3px solid #83b3d3;
 	opacity: 0.3;
 }
-
-.filter-input-radio:hover + .filter-mark-radio, .filter-input-radio:active + .filter-mark-radio {
-	opacity: 0.6;
-}
-.filter-input-radio:focus + .filter-mark-radio {
-	outline: 3px solid #83b3d3;
-	opacity: 0.3;
-}
-.filter-label-text {
+.label-text {
 	margin-left: 45px;
 }
+/*конец рисованных инпутов*/
 
 .form-coste-wrapper {
 	display: flex;
@@ -790,6 +819,7 @@ body {
 	top:12px; /*наглаз*/
 }
 .form-coste-input {
+	margin: 0;
 	width: 143px;
 	padding: 14px 19px 11px;
 /*	padding-right: 45px;            не работает и непоняттно зачем, всё итак соответствует макету*/
@@ -799,6 +829,11 @@ body {
 	line-height: 23px;
 	
 	border: 2px solid  #ffffff;
+}
+/*убираем встроенное для изменения чисел*/
+.form-coste-input::-webkit-outher-spin-button,
+.form-coste-input::-webkit-inner-spin-button {
+	appearance: none;
 }
 .form-coste-input::placeholder {
 	color: #ffffff;
@@ -830,6 +865,7 @@ body {
 	width: 20px;
 	height: 20px;
 	border-radius: 5px;
+	cursor: pointer;
 }
 .range-toggle:hover {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
