@@ -78,6 +78,8 @@ body {
 	background-color: #83b3d3;
 	border: none;
 	border-radius: 4px;
+	
+	cursor: pointer;
 }
 .button:active {
 	color: rgba(255, 255, 255, 0.3);
@@ -137,7 +139,6 @@ body {
 	background-color: #68a2ca;
 }
 .button-mailing:focus {
-	outline: 3px solid #756257; 
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #68a2ca;
 	
@@ -258,16 +259,37 @@ body {
 	align-items: center;
 	margin-left: auto;
 }
+.navigation-user-item {
+	position: relative;
+}
 .navigation-user-link {
 	display: inline-block;
 	margin-right: 23px;
 }
+
 .navigation-user-link:hover .user-icon {
 	fill: #756257;
 }
 .navigation-user-link:active .user-icon {
 	fill: #756257;
 	opacity: 0.3;
+}
+.navigation-user li:nth-child(2)::after {
+	content: "12";
+	display: flex;
+    align-items: center;
+	justify-content: center;
+    letter-spacing: -0.1em;
+	width: 19px;
+	height: 19px;
+	color: #ffffff;
+	border-radius: 50%;
+	background-color: #7db54f;
+	font-size: 10px;
+	line-height: 13px;
+	position: absolute;
+	right: 10px;
+	top: -5px;
 }
 /*Конец шапки и навигации*/
 
@@ -315,7 +337,6 @@ body {
 
 /*Конец приглашения*/
 
-/* блок info - убрать потом в разметке лишние классы, будут */
 .info-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -573,34 +594,216 @@ body {
 .page-footer-logo-link:focus {     
 	border: 3px solid #83b3d3;
 }
+/*модальное окно*/
 
-
-
-/*
-.page-footer-logo-link {
-  display: inline-block;
-  
-  width: 160px;
-  height: 70px;
-  
-  padding: 19px 22px;
-  
-  border: 3px solid transparent;
-  border-radius: 10px;
+.modal-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
 }
-.page-footer-logo-link svg:hover {
-	fill: #756257;
+.modal-container-close {
+	display: none;
 }
-.page-footer-logo-link svg:active {
-	fill: rgba(117, 98, 87, 0.3);
+.modal {
+	position: relative;
+	margin: auto;
+	padding: 70px;
+	padding-top: 62px;
+	background-color: #ffffff;
 }
-.page-footer-logo-link svg:focus {
-	fill: #756257;
+.modal-inner {
+	width: 715px;
+	height: 561px; /*ВРЕМЕННО???? */
+	border-radius: 30px;
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
-.page-footer-logo-link:focus {     
+.field-group {
+	display: flex;
+	justify-content: space-between; 
+    align-items: baseline;  /*это я молодец!!*/
+	margin: 0;
+	
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 40px;
+	
+	position: relative;
+}
+.field-group span {
+	font-size: 16px;
+	line-height: 40px;
+}
+.invalid {
+	color: #ff5757;
+	position: absolute;
+	top: 40px;
+	left: 154px;
+}
+.ok {
+	color: # 333333;
+	position: absolute;
+	top: 40px;
+	left: 154px;
+}
+.modal-input {
+	width: 420px;
+	height: 50px;
+	font: inherit;
+	color: #000000;
+	background-color: #f2f2f2;
+	border-radius: 4px;
+	padding-left: 19px;
+	padding-right: 20px;
+	margin-bottom: 40px;
+}
+.modal-input:hover {
+	background-color: #e6e6e6;
+}
+.modal-input:active {
+	background-color: #ffffff;
+}
+.modal-input:focus {
+	background-color: #e6e6e6;
 	outline: 3px solid #83b3d3;
 }
+.number {
+	width: 133px;
+	margin-left: 75px;
+	text-align: center;
+}
+.date {
+	background-image: url("../images/switch.svg");
+	background-repeat: no-repeat;
+	background-position: right 20px center;
+}
+
+.number::-webkit-outher-spin-button,
+.number::-webkit-inner-spin-button {
+	appearance: none;
+}
+.number-wrapper {  
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	margin-bottom: 40px;
+	position: relative;
+}
+.info::after {
+	position: absolute;
+	right: 165px;
+	top: 12px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	
+	background-color: #83b3d3;
+	background-image: url("../images/information.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	content: "";
+}
+.info::before {  /*НЕ РАБОТАЕТ*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 19px;
+	height: 9px;
+	
+	background-image: url("../images/triangle.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.info-children {
+	position: absolute;
+	top: 52px;
+	right: 40px;
+	width: 256px;
+	padding: 15px 18px 18px 22px;
+	border-radius: 10px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+	background-color: #333333;
+	color: #ffffff;
+	z-index: 2;
+}
+.info-children img {
+	position: absolute;
+	top: -9px;
+	right: 127px;
+}
+/*
+.number::after {
+	position: absollute;
+	width: 25px;
+	height: 25px;
+	background-color: #83b3d3;
+	content: "";
+}
+
+/*
+.molal-label::after { ничего не работает
+	position: absolute;
+	right: 30px;
+	width: 25px;
+	height: 25px;
+	background-color: #83b3d3;
+	content: "../images/information.svg";
+}
 */
+/*
+.number-wrapper:nth-child(2)::after {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-color: #83b3d3;
+	content: "";
+}
+*/
+.modal-button {
+	flex-grow: 1;
+	font-size: 20px;
+	line-height: 40px;
+}
+.modal-close-button {
+	position: absolute;
+	padding: 0;
+	top: 62px;
+	right: 70px;
+	width: 53px;
+	height: 53px;
+	border-radius: 50%;
+	
+	background-color: #f2f2f2;
+	border: none;
+	background-image: url("../images/cross.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	cursor: pointer;
+}
+.modal-close-button:hover {
+	background-color: #e6e6e6;
+}
+.modal-close-button:active {
+	background-color: #e6e6e6;
+	opacity: 0.3;
+}
+.modal-close-button:focus {
+	background-color: #e6e6e6;
+	outline: 3px solid #83b3d3;                 
+}
+.modal-title {
+	margin: 0;
+	margin-bottom: 32px;
+	
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 40px;
+	text-transform: uppercase;
+}
 
 /*вторая страница*/
 .wrapper-inner {
@@ -669,11 +872,73 @@ body {
 	display: flex;
 	justify-content: space-between;
 }
-.form-part {
+.form-part {  /*это fieldset*/
+	margin: 0;
+	padding: 0;
 	border: none;
 }
+
+.filter-label {
+  position: relative;
+  display: block;
+}
+/*рисунки вместо инпутов*/
+
+.control-input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.control-input[type="checkbox"]:checked + .control-mark::before {
+	position: absolute;
+	width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 4px;
+	
+	background-image: url("../images/check-mark.svg"); 
+	background-repeat: no-repeat;
+	background-position: center;
+	content: "";
+}
+.control-input[type="radio"] {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #ffffff;
+}
+.control-input[type="radio"]:checked + .control-mark::before {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #3f5e72;
+	position: absolute;
+	top: 5px;
+	left: 4px;
+	content: "";
+}
+.control-input:hover {
+	opacity: 0.6;
+}
+.control-input:focus {
+	outline: 3px solid #83b3d3;
+	opacity: 0.3;
+}
+.label-text {
+	margin-left: 45px;
+}
+/*конец рисованных инпутов*/
+
 .form-coste-wrapper {
 	display: flex;
+	margin-bottom: 32px;
 }
 .form-coste-wrapper-item {
 	position: relative;
@@ -685,8 +950,10 @@ body {
 	top:12px; /*наглаз*/
 }
 .form-coste-input {
+	margin: 0;
 	width: 143px;
 	padding: 14px 19px 11px;
+/*	padding-right: 45px;            не работает и непоняттно зачем, всё итак соответствует макету*/
 	background-color: transparent;
 	
 	font-size: 18px;
@@ -694,8 +961,14 @@ body {
 	
 	border: 2px solid  #ffffff;
 }
+/*убираем встроенное для изменения чисел*/
+
+.form-coste-input::-webkit-outher-spin-button,
+.form-coste-input::-webkit-inner-spin-button {
+	appearance: none;
+}
 .form-coste-input::placeholder {
-	color: #ffffff;;
+	color: #ffffff;
 }
 .min {
 	border-radius: 4px 0 0 4px;
@@ -703,9 +976,50 @@ body {
 .max {
 	border-radius: 0 4px 4px 0;
 }
-.form-coste-input + input {
-	border-radius: 14px 4px 0 0;
+
+/*ползунок*/
+
+.range-scale {
+	position: relative;
+	height: 4px;
+	background-color: #ffffff;
+	width: 216px;
 }
+.range-scale-part {
+	position: absolute;
+	left: 234px;
+	width: 51px;
+	height: 4px;
+	background-color: #ffffff;
+	opacity: 0.3;
+}
+.range-toggle {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.range-toggle:hover {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.range-toggle:active {
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+	outline: 2px solid #83b3d3;
+}
+.range-toggle:focus {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+	outline: 3px solid #83b3d3;
+}
+.toggle-min {
+	top: -8px;
+}
+.toggle-max {
+	left: 216px;
+	top: -8px;
+}
+/*конец ползунка*/
+
 .form-part-button {
   display: flex;
   flex-direction: column;
@@ -811,7 +1125,7 @@ body {
 	border: 2px solid #000000;
 }
 .sorting-link:focus {
-	border: #2px solid #83b3d3;
+	border: 2px solid #83b3d3;
 }
 .sorting-link-tile {
   background-image: url("../images/mode-tile.svg");
@@ -934,7 +1248,7 @@ body {
 	padding: 13px 20px 12px 17px;
 	
 	font: inherit;
-	font-size: 18ox;
+	font-size: 18px;
 	line-height: 23px;
 	color: #333333;
 	
