@@ -337,7 +337,6 @@ body {
 
 /*Конец приглашения*/
 
-/* блок info - убрать потом в разметке лишние классы, будут */
 .info-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -616,10 +615,6 @@ body {
 	padding-top: 62px;
 	background-color: #ffffff;
 }
-.modal-close-button {
-	margin-top: 62px;
-	margin-right: 70px;
-}
 .modal-inner {
 	width: 715px;
 	height: 561px; /*ВРЕМЕННО???? */
@@ -635,6 +630,24 @@ body {
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 40px;
+	
+	position: relative;
+}
+.field-group span {
+	font-size: 16px;
+	line-height: 40px;
+}
+.invalid {
+	color: #ff5757;
+	position: absolute;
+	top: 40px;
+	left: 154px;
+}
+.ok {
+	color: # 333333;
+	position: absolute;
+	top: 40px;
+	left: 154px;
 }
 .modal-input {
 	width: 420px;
@@ -647,34 +660,118 @@ body {
 	padding-right: 20px;
 	margin-bottom: 40px;
 }
+.modal-input:hover {
+	background-color: #e6e6e6;
+}
+.modal-input:active {
+	background-color: #ffffff;
+}
+.modal-input:focus {
+	background-color: #e6e6e6;
+	outline: 3px solid #83b3d3;
+}
 .number {
 	width: 133px;
 	margin-left: 75px;
+	text-align: center;
+}
+.date {
+	background-image: url("../images/switch.svg");
+	background-repeat: no-repeat;
+	background-position: right 20px center;
 }
 
 .number::-webkit-outher-spin-button,
 .number::-webkit-inner-spin-button {
 	appearance: none;
 }
-.modal-input {
-	appearance: none;/*не  работает*/
-}	
-}
-.number-wrapper {
+.number-wrapper {  
 	display: flex;
 	justify-content: space-between;
 	margin: 0;
 	margin-bottom: 40px;
-	outline: 2px solid red;
+	position: relative;
 }
+.info::after {
+	position: absolute;
+	right: 165px;
+	top: 12px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	
+	background-color: #83b3d3;
+	background-image: url("../images/information.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	content: "";
+}
+.info::before {  /*НЕ РАБОТАЕТ*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 19px;
+	height: 9px;
+	
+	background-image: url("../images/triangle.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.info-children {
+	position: absolute;
+	top: 52px;
+	right: 40px;
+	width: 256px;
+	padding: 15px 18px 18px 22px;
+	border-radius: 10px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+	background-color: #333333;
+	color: #ffffff;
+	z-index: 2;
+}
+.info-children img {
+	position: absolute;
+	top: -9px;
+	right: 127px;
+}
+/*
+.number::after {
+	position: absollute;
+	width: 25px;
+	height: 25px;
+	background-color: #83b3d3;
+	content: "";
+}
+
+/*
+.molal-label::after { ничего не работает
+	position: absolute;
+	right: 30px;
+	width: 25px;
+	height: 25px;
+	background-color: #83b3d3;
+	content: "../images/information.svg";
+}
+*/
+/*
+.number-wrapper:nth-child(2)::after {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-color: #83b3d3;
+	content: "";
+}
+*/
 .modal-button {
 	flex-grow: 1;
+	font-size: 20px;
+	line-height: 40px;
 }
 .modal-close-button {
 	position: absolute;
 	padding: 0;
-	top: 0;
-	right: 0;
+	top: 62px;
+	right: 70px;
 	width: 53px;
 	height: 53px;
 	border-radius: 50%;
@@ -686,6 +783,17 @@ body {
 	background-position: center;
 	
 	cursor: pointer;
+}
+.modal-close-button:hover {
+	background-color: #e6e6e6;
+}
+.modal-close-button:active {
+	background-color: #e6e6e6;
+	opacity: 0.3;
+}
+.modal-close-button:focus {
+	background-color: #e6e6e6;
+	outline: 3px solid #83b3d3;                 
 }
 .modal-title {
 	margin: 0;
@@ -782,7 +890,6 @@ body {
   background-color: #ffffff;
   border-radius: 4px;
 }
-
 .control-input[type="checkbox"]:checked + .control-mark::before {
 	position: absolute;
 	width: 20px;
@@ -795,7 +902,6 @@ body {
 	background-position: center;
 	content: "";
 }
-
 .control-input[type="radio"] {
 	width: 20px;
 	height: 20px;
@@ -856,6 +962,7 @@ body {
 	border: 2px solid  #ffffff;
 }
 /*убираем встроенное для изменения чисел*/
+
 .form-coste-input::-webkit-outher-spin-button,
 .form-coste-input::-webkit-inner-spin-button {
 	appearance: none;
@@ -871,6 +978,7 @@ body {
 }
 
 /*ползунок*/
+
 .range-scale {
 	position: relative;
 	height: 4px;
