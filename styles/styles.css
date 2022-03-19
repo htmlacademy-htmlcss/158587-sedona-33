@@ -410,7 +410,6 @@ body {
 
 /*Конец приглашения*/
 
-/* блок info - убрать потом в разметке лишние классы, будут */
 .info-list {
   display: flex;
   flex-wrap: wrap;
@@ -677,6 +676,7 @@ body {
 
 /*конец соц сетей*/
 /*телефон*/
+
 .page-footer-tel-link {
   display: inline-block;
   padding: 15px;
@@ -835,7 +835,7 @@ body {
 
 .modal-input::-webkit-outher-spin-button,
 .modal-input::-webkit-inner-spin-button {
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
 }
 
 .modal-input {
@@ -1167,7 +1167,7 @@ body {
 
 .breadrumbs-link:focus {
   outline: 3px solid #83b3d3;
-  outline-offset: 3px; /*наглаз*/
+  outline-offset: 3px; 
 }
 
 .form {
@@ -1307,6 +1307,11 @@ body {
   appearance: none;
 }
 
+.form-coste-input:active {
+	outline: 2px solid #ffffff;
+	background-color: #756257;
+}
+
 .form-coste-input-min {
   border-radius: 4px 0 0 4px;
 }
@@ -1382,7 +1387,7 @@ body {
 
 .form-coste-input::-webkit-outher-spin-button,
 .form-coste-input::-webkit-inner-spin-button {
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
 }
 
 .form-coste-input {
