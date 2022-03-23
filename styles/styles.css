@@ -277,6 +277,8 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap; /*Для возможного добаления пунктов меню*/
+  
+  max-width: 680px; /*Для возможного добаления пунктов меню*/
 
   font-weight: 700;
   font-size: 20px;
@@ -1194,6 +1196,9 @@ body {
   padding: 0;
 
   border: none;
+}
+.form .form-part:nth-child(2) { /*убираем переполнение в ширину ТИП ЖИЛЬЯ*/
+	max-width: 300px;
 }
 
 .form-part:first-child {
