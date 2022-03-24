@@ -25,14 +25,11 @@
 
 html {
   height: 100%;
-
-  background-color: #e5e5e5;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  width: 1280px;
   min-height: 100%;
   margin: 0 auto;
 
@@ -93,6 +90,12 @@ body {
 }
 
 /*Конец общих стилей*/
+
+.wrapper-common {
+	width: 1280px;
+	padding: 0 40px;
+	margin: 0 auto;
+}
 
 .wrapper-large {
 	width: 1200px;
@@ -878,11 +881,12 @@ body {
 }
 
 .modal-message-error {
-  display: none;
+  visibility: hidden;
   color: #ff5757;
 }
+
 .modal-message-succes {
-	display: none;
+	visibility: hidden;
 }
 
 .number-wrapper {
@@ -1197,6 +1201,7 @@ body {
 
   border: none;
 }
+
 .form .form-part:nth-child(2) { /*убираем переполнение в ширину ТИП ЖИЛЬЯ*/
 	max-width: 300px;
 }
